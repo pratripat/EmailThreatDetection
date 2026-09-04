@@ -1,0 +1,22 @@
+Received: by mail.suspicious-relay.ru (Postfix) with ESMTP id AB12CD34; Wed, 03 Sep 2026 08:12:44 +0000
+Received: from unknown [185.220.101.47] by mail.suspicious-relay.ru with SMTP id XY98ZW76; Wed, 03 Sep 2026 08:12:40 +0000
+Received: from mx1.freehostingnow.net (mx1.freehostingnow.net [45.135.232.19]) by mail.suspicious-relay.ru with ESMTP; Wed, 03 Sep 2026 08:12:38 +0000
+Authentication-Results: mx.google.com; spf=fail smtp.mailfrom=freehostingnow.net; dkim=none; dmarc=fail
+From: "PayPal Security Team" <security@freehostingnow.net>
+Return-Path: <bounce@freehostingnow.net>
+Message-ID: <20260903081244.AB12CD34@freehostingnow.net>
+Subject: Urgent: Your Account Has Been Limited - Verify Now
+To: victim@example.com
+Content-Type: text/plain
+
+Dear Customer,
+
+We have detected unusual activity on your PayPal account. Your account
+has been temporarily limited. Please verify your information immediately
+by clicking the link below or your account will be permanently suspended
+within 24 hours.
+
+http://paypal-verify-account.freehostingnow.net/login
+
+Regards,
+PayPal Security Team
