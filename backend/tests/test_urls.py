@@ -2,10 +2,14 @@ import json
 import sys
 import os
 
-# Ensure modules folder can be imported when running from tests/
+# Ensure backend folder can be imported when running from tests/
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from module.url_detector import analyze_urls
+try:
+    from backend.app.analyzers.url_analysis import analyze_urls
+except ImportError:
+    from app.analyzers.url_analysis import analyze_urls
 
 # 10 Diverse Test Cases (Benign, Phishing, IP-based, Punycode, Shortened)
 test_urls = [
@@ -41,6 +45,13 @@ def run_tests():
     print(f"Flagged (Risk >= 30):  {summary['suspicious_count']}")
     print(f"Overall Max Threat:    {summary['overall_url_score']}/100")
     print("=" * 60)
+
+def test_urls_detection_suite():
+    summary = analyze_urls(test_urls)
+    assert len(summary["analyzed_urls"]) == len(test_urls)
+    assert summary["suspicious_count"] >= 5
+    assert summary["overall_url_score"] == 100
+
 
 if __name__ == "__main__":
     run_tests()

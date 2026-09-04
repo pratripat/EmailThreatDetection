@@ -1,1 +1,285 @@
-# EmailThreatDetection
+# Email Threat Detection & Forensic Analysis System
+
+SIH26106 Email Threat Detection Prototype: A high-accuracy, explainable email forensics platform featuring deterministic header forensics, dual-stack relay path reconstruction, heuristic URL analysis, baseline content inspection, and a FastAPI backend service.
+
+---
+
+## Repository Architecture
+
+```
+sih/
+├── backend/                        # Backend Application & Analysis Engine
+│   ├── app/
+│   │   ├── main.py                 # FastAPI application entrypoint & middleware
+│   │   ├── config.py               # Path & API configuration settings
+│   │   ├── api/
+│   │   │   └── routes.py           # REST endpoints (/api/health, /api/analyze-email)
+│   │   ├── models/
+│   │   │   └── investigation.py    # Canonical Pydantic schemas (InvestigationData)
+│   │   ├── services/
+│   │   │   └── investigation_service.py # Core orchestrator coordinating all analyzers
+│   │   └── analyzers/
+│   │       ├── header_forensics.py # RFC 5322 relay extraction & anomaly engine
+│   │       ├── origin_analysis.py  # Dual-stack IPv4/IPv6 indexed CIDR origin lookup
+│   │       ├── url_analysis.py     # PSL-aware URL heuristic & typosquat detector
+│   │       ├── mime_analysis.py    # Multipart MIME parser & attachment hash calculator
+│   │       ├── content_analysis.py # Heuristic intent & social engineering analyzer
+│   │       ├── ioc_extraction.py   # Normalized deduplicated IOC extractor
+│   │       └── attack_graph.py     # Directed attack & provenance graph synthesizer
+│   ├── data/                       # Datacenter & VPN IP range feeds, TLD cache
+│   ├── tests/                      # Pytest suite (53 tests: unit, contract, API, regressions)
+│   │   └── fixtures/               # Sample .eml artifacts & canonical JSON response fixture
+│   ├── requirements.txt            # Backend Python dependencies
+│   └── README.md                   # Backend setup, architecture & API guide
+│
+├── frontend/                       # Frontend Application Workspace
+│   └── README.md                   # Client-side integration specifications & contract
+│
+├── sample_clean.eml                # Baseline clean email artifact
+├── sample_spoofed.eml              # Baseline spoofed email artifact
+├── requirements.txt                # Root requirements pointer
+└── README.md                       # Project overview & documentation
+```
+
+---
+
+## Quickstart Guide
+
+### 1. Install Backend Dependencies
+
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+### 2. Start the Backend API Server
+
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+The service will be live on `http://localhost:8000`.
+- Swagger UI Documentation: `http://localhost:8000/docs`
+- Health Probe: `http://localhost:8000/api/health`
+
+### 3. Analyze an Email via `curl`
+
+```bash
+curl -X POST "http://localhost:8000/api/analyze-email" \
+     -H "Accept: application/json" \
+     -F "email=@tests/fixtures/sample_spoofed.eml"
+```
+
+#### Real Backend Response (`InvestigationData`)
+
+```json
+{
+  "id": "7b79d20c-550a-48d0-9941-944f2d3d3cfa",
+  "subject": "Urgent: Your Account Has Been Limited - Verify Now",
+  "from": "PayPal Security Team <security@freehostingnow.net>",
+  "to": [
+    "victim@example.com"
+  ],
+  "receivedDate": "2026-09-04T23:31:23.484201+00:00",
+  "threatScore": 85,
+  "threatLevel": "HIGH",
+  "threatType": "PHISHING",
+  "confidence": 0.9,
+  "authStatus": "FAILED",
+  "breakdown": {
+    "headerAnomalies": 85,
+    "authentication": 45,
+    "urlRisk": 100,
+    "contentNlp": 80,
+    "senderReputation": 0
+  },
+  "suspiciousReasons": [
+    "SPF check: FAIL (hard failure — domain owner explicitly disavows this sender)",
+    "DKIM check: none (expected 'pass')",
+    "DMARC check: fail (expected 'pass')",
+    "Display name impersonates 'paypal' but sending domain is 'freehostingnow.net' with failing authentication — critical display-name spoofing indicator",
+    "Embedded URL 'http://paypal-verify-account.freehostingnow.net/login' flagged as MALICIOUS: Uses unencrypted HTTP instead of HTTPS (+20), Multiple hyphens in domain (+15), Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25), Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)",
+    "Email body exhibits social engineering indicators: Credential Harvesting, Urgent Coercion"
+  ],
+  "headerHops": [
+    {
+      "hopNumber": 1,
+      "ip": "0.0.0.0",
+      "hostname": "mail.suspicious-relay.ru",
+      "country": null,
+      "city": null,
+      "asn": null,
+      "isp": null,
+      "reputation": "UNKNOWN",
+      "firstSeen": null,
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhaus": "NOT_CHECKED"
+      }
+    },
+    {
+      "hopNumber": 2,
+      "ip": "185.220.101.47",
+      "hostname": "unknown [185.220.101.47]",
+      "country": null,
+      "city": null,
+      "asn": null,
+      "isp": null,
+      "reputation": "VPN",
+      "firstSeen": null,
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhaus": "NOT_CHECKED"
+      }
+    },
+    {
+      "hopNumber": 3,
+      "ip": "45.135.232.19",
+      "hostname": "mx1.freehostingnow.net (mx1.freehostingnow.net [45.135.232.19])",
+      "country": null,
+      "city": null,
+      "asn": null,
+      "isp": null,
+      "reputation": "UNKNOWN",
+      "firstSeen": null,
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhaus": "NOT_CHECKED"
+      }
+    }
+  ],
+  "authentication": {
+    "spf": "FAILED",
+    "dkim": "NONE",
+    "dmarc": "FAILED",
+    "fromDomain": "freehostingnow.net",
+    "returnPathDomain": "freehostingnow.net",
+    "alignmentMatched": true,
+    "notes": [
+      "Authserv ID (mx.google.com) does not match top receiving MTA (mail.suspicious-relay.ru)"
+    ]
+  },
+  "urls": [
+    {
+      "url": "http://paypal-verify-account.freehostingnow.net/login",
+      "domain": "freehostingnow.net",
+      "registeredAgeDays": null,
+      "reputation": "MALICIOUS",
+      "threatScore": 100,
+      "flags": [
+        "Uses unencrypted HTTP instead of HTTPS (+20)",
+        "Multiple hyphens in domain (+15)",
+        "Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25)",
+        "Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)"
+      ],
+      "redirectChain": []
+    }
+  ],
+  "contentAi": {
+    "classification": "PHISHING",
+    "confidence": 0.5,
+    "intents": [
+      "Credential Harvesting",
+      "Urgent Coercion"
+    ],
+    "suspiciousPhrases": [
+      "unusual activity",
+      "urgent",
+      "limited",
+      "immediately",
+      "suspended",
+      "within 24 hours",
+      "account has been limited"
+    ],
+    "featureContributions": {}
+  },
+  "iocs": {
+    "ips": [
+      "185.220.101.47",
+      "45.135.232.19"
+    ],
+    "domains": [
+      "example.com",
+      "freehostingnow.net"
+    ],
+    "urls": [
+      "http://paypal-verify-account.freehostingnow.net/login"
+    ],
+    "emails": [
+      "bounce@freehostingnow.net",
+      "security@freehostingnow.net",
+      "victim@example.com"
+    ],
+    "hashes": []
+  },
+  "attackGraph": {
+    "nodes": [
+      {
+        "id": "node_email",
+        "label": "Urgent: Your Account Has Been Limited - Verify Now",
+        "type": "email"
+      },
+      {
+        "id": "domain_freehostingnow.net",
+        "label": "freehostingnow.net",
+        "type": "domain"
+      },
+      {
+        "id": "ip_45.135.232.19",
+        "label": "45.135.232.19",
+        "type": "ip"
+      },
+      {
+        "id": "url_0",
+        "label": "http://paypal-verify-account.freehostingnow.net/login",
+        "type": "page"
+      },
+      {
+        "id": "action_harvest",
+        "label": "Harvest Credentials",
+        "type": "action"
+      }
+    ],
+    "edges": [
+      {
+        "source": "node_email",
+        "target": "domain_freehostingnow.net",
+        "relation": "Sent From"
+      },
+      {
+        "source": "domain_freehostingnow.net",
+        "target": "ip_45.135.232.19",
+        "relation": "Relayed Via"
+      },
+      {
+        "source": "node_email",
+        "target": "url_0",
+        "relation": "Embedded Link"
+      },
+      {
+        "source": "url_0",
+        "target": "domain_freehostingnow.net",
+        "relation": "Sent From"
+      },
+      {
+        "source": "url_0",
+        "target": "action_harvest",
+        "relation": "Submits To"
+      }
+    ]
+  }
+}
+```
+
+---
+
+## Running the Automated Test Suite
+
+Run all 53 automated unit, contract, API, and regression tests:
+
+```bash
+python3 -m pytest -v backend/tests
+```
