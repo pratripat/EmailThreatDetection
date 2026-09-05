@@ -59,7 +59,7 @@ class AnalyzedUrl(BaseModel):
 
     url: str
     domain: str
-    registeredAgeDays: int = Field(default=-1, description="Domain age in days (-1 = unqueried WHOIS in offline mode)")
+    registeredAgeDays: Optional[int] = Field(default=-1, description="Domain age in days (-1 or null = unqueried WHOIS in offline mode)")
     reputation: Literal["MALICIOUS", "SUSPICIOUS", "SAFE", "UNKNOWN"] = Field(
         default="UNKNOWN",
         description="Reputation verdict"

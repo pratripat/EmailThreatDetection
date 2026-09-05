@@ -236,11 +236,12 @@ class EvidenceFusionEngine:
             threat_level = "CLEAN"
 
         # 11. Threat Type Classification
+        content_intents = content_ai.intents if content_ai else []
         if has_executable_attachment:
             threat_type = "MALWARE_DROP"
-        elif "Credential Harvesting" in content_ai.intents or max_url_risk >= 60:
+        elif "Credential Harvesting" in content_intents or max_url_risk >= 60:
             threat_type = "PHISHING" if final_threat_score >= 40 else "BENIGN"
-        elif "Executive Impersonation" in content_ai.intents or "Financial Solicitation" in content_ai.intents:
+        elif "Executive Impersonation" in content_intents or "Financial Solicitation" in content_intents:
             threat_type = "BEC_FRAUD" if final_threat_score >= 40 else "BENIGN"
         elif final_threat_score >= 40:
             threat_type = "SPOOFING"
