@@ -132,11 +132,11 @@ class IPReputationService:
         self.cache = cache or TTLCache(maxsize=MAX_CACHE_ENTRIES, default_ttl=CACHE_TTL_SECONDS)
 
     def lookup(self, ip_str: str) -> IPIntelligenceResult:
-        if not ip_str or ip_str in ("0.0.0.0", "::"):
+        if not ip_str or ip_str in ("0.0.0.0", "::", "UNKNOWN"):
             return IPIntelligenceResult(
-                ip=ip_str or "0.0.0.0",
+                ip=ip_str or "UNKNOWN",
                 is_non_routable=True,
-                non_routable_reason="unspecified_address",
+                non_routable_reason="unspecified_address" if ip_str in ("0.0.0.0", "::") else "no_ip_extracted",
                 reputation="UNKNOWN",
                 abuse_category="NOT_CHECKED",
                 provenance=ProvenanceType.NOT_CHECKED,

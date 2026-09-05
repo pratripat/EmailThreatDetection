@@ -42,8 +42,10 @@ class OriginDataError(Exception):
 
 def classify_ip_type(ip_obj) -> str:
     """Classify an IPv4 or IPv6 address object into its standard network category.
-    Returns: 'multicast', 'loopback', 'link_local', 'private', 'reserved',
+    Returns: 'unspecified', 'multicast', 'loopback', 'link_local', 'private', 'reserved',
     'documentation_or_special', or 'global'."""
+    if ip_obj.is_unspecified or (isinstance(ip_obj, ipaddress.IPv4Address) and ip_obj in ipaddress.IPv4Network("0.0.0.0/8")):
+        return "unspecified"
     if ip_obj.is_multicast:
         return "multicast"
     if ip_obj.is_loopback:
@@ -179,6 +181,8 @@ class OriginAnalyzer:
         """V2 fix: multicast/reserved/private/documentation/loopback IPs must never be
         reported as 'residential' — real internet mail should never legitimately
         carry these in a Received: header."""
+        if ip_obj.is_unspecified or (isinstance(ip_obj, ipaddress.IPv4Address) and ip_obj in ipaddress.IPv4Network("0.0.0.0/8")):
+            return "unspecified special-use address (0.0.0.0/8 or ::) — not a valid internet-routable IP"
         if ip_obj.is_multicast:
             return "multicast address — cannot originate unicast SMTP traffic or valid mail relays"
         if ip_obj.is_loopback:

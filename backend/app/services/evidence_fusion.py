@@ -249,7 +249,7 @@ class EvidenceFusionEngine:
             threat_type = "BENIGN"
 
         # 12. Investigation Confidence
-        # Honest representation: 0.0 for clean/unverified heuristic
+        # Honest representation: external verified threat intel vs local heuristic rules
         verified_count = sum(1 for a in audit_log if a.provenance == "VERIFIED")
         if final_threat_score == 0:
             confidence = 0.0
@@ -258,7 +258,7 @@ class EvidenceFusionEngine:
         elif verified_count == 1:
             confidence = 0.75
         else:
-            confidence = 0.0  # Baseline honest heuristic confidence when purely local
+            confidence = 0.50  # Baseline honest heuristic confidence when local anomalies detected
 
         return FusionResult(
             threat_score=final_threat_score,

@@ -30,8 +30,12 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ data }) => {
       {/* 2. Confidence */}
       <div className="kpi-card">
         <div className="kpi-label">CONFIDENCE</div>
-        <div className="kpi-value text-white">{data.confidence}%</div>
-        <div className="kpi-subtext">NLP Model</div>
+        <div className="kpi-value text-white">
+          {data.confidence > 0 ? `${data.confidence}%` : 'N/A'}
+        </div>
+        <div className="kpi-subtext">
+          {data.confidence >= 75 ? 'Verified Feeds' : data.confidence > 0 ? 'Heuristic Analysis' : 'Clean / Unverified'}
+        </div>
       </div>
 
       {/* 3. IOCs Found */}

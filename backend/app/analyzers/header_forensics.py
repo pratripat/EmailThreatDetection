@@ -19,7 +19,7 @@ from email.parser import BytesParser
 import ipaddress
 import re
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union, List, Dict, Any
 import unicodedata
 import tldextract
 import sys
@@ -211,6 +211,24 @@ def parse_received_header(raw_header: str) -> RelayHop:
     return hop
 
 
+def is_valid_relay_ip(ip_obj: Union[ipaddress.IPv4Address, ipaddress.IPv6Address]) -> bool:
+    """Validate that an IP is meaningful for relay attribution.
+    Rejects non-meaningful special-use / unspecified / broadcast addresses (0.0.0.0/8, 255.255.255.255, ::),
+    while strictly preserving genuinely private/reserved/multicast IPs (RFC 1918, RFC 6598, etc.)
+    which provide meaningful routing signal in relay chains.
+    """
+    if ip_obj.is_unspecified:  # 0.0.0.0 or ::
+        return False
+    if isinstance(ip_obj, ipaddress.IPv4Address):
+        # 0.0.0.0/8 ('This host on this network', RFC 1122 section 3.2.1.3)
+        if ip_obj in ipaddress.IPv4Network("0.0.0.0/8"):
+            return False
+        # 255.255.255.255/32 (Limited Broadcast, RFC 919)
+        if ip_obj == ipaddress.IPv4Address("255.255.255.255"):
+            return False
+    return True
+
+
 def extract_ip_candidates(text: str) -> list:
     """Extract all valid IPv4 and IPv6 candidate addresses from text in priority order."""
     if not text:
@@ -221,7 +239,9 @@ def extract_ip_candidates(text: str) -> list:
     for b in re.findall(r'\[(?:IPv6:)?([^\]]+)\]', text, re.IGNORECASE):
         cleaned = b.split('%')[0].strip()
         try:
-            candidates.append(str(ipaddress.ip_address(cleaned)))
+            ip_obj = ipaddress.ip_address(cleaned)
+            if is_valid_relay_ip(ip_obj):
+                candidates.append(str(ip_obj))
         except ValueError:
             pass
 
@@ -229,14 +249,18 @@ def extract_ip_candidates(text: str) -> list:
     for b in re.findall(r'IPv6:([0-9a-fA-F:]+(?:%[a-zA-Z0-9_-]+)?)', text, re.IGNORECASE):
         cleaned = b.split('%')[0].strip()
         try:
-            candidates.append(str(ipaddress.ip_address(cleaned)))
+            ip_obj = ipaddress.ip_address(cleaned)
+            if is_valid_relay_ip(ip_obj):
+                candidates.append(str(ip_obj))
         except ValueError:
             pass
 
     # 3. Standard IPv4 addresses
     for m in IPV4_PATTERN.findall(text):
         try:
-            candidates.append(str(ipaddress.IPv4Address(m)))
+            ip_obj = ipaddress.IPv4Address(m)
+            if is_valid_relay_ip(ip_obj):
+                candidates.append(str(ip_obj))
         except ValueError:
             pass
 
@@ -246,7 +270,7 @@ def extract_ip_candidates(text: str) -> list:
             cleaned = token.split('%')[0].strip()
             try:
                 ip_obj = ipaddress.ip_address(cleaned)
-                if isinstance(ip_obj, ipaddress.IPv6Address):
+                if isinstance(ip_obj, ipaddress.IPv6Address) and is_valid_relay_ip(ip_obj):
                     candidates.append(str(ip_obj))
             except ValueError:
                 pass
@@ -268,23 +292,25 @@ def extract_ip_from_hop(hop: RelayHop) -> Optional[str]:
     candidates = extract_ip_candidates(hop.from_host or '')
     if candidates:
         return candidates[0]
-    raw_candidates = extract_ip_candidates(hop.raw or '')
-    return raw_candidates[0] if raw_candidates else None
+    return None
 
 
 def select_origin_ip(relay_chain: list) -> tuple:
     """Select the first publicly routable/global origin IP candidate from the Received chain.
     V2.5 Item 1: Traverses from earliest hop (bottom) to latest hop (top), preserving
-    all observed internal/private/multicast hops while correctly preferring the public ingress IP."""
+    all observed internal/private/multicast hops while correctly preferring the public ingress IP.
+
+    Origin IP must strictly reflect the sending client/MTA (from_host), never receiving MTA hops
+    (by_host) to prevent receiving infrastructure (e.g. Gmail receiving hops) from being falsely
+    attributed as the message origin."""
     observed_candidates = []
     selected_ip = None
     selection_reason = ""
 
     # Chronological traversal: bottom (earliest) to top (latest)
     for hop in reversed(relay_chain):
+        # Strictly consider sender candidates (from_host), not receiving MTA infrastructure
         candidates = extract_ip_candidates(hop.from_host or '')
-        if not candidates:
-            candidates = extract_ip_candidates(hop.raw or '')
 
         for ip_str in candidates:
             try:

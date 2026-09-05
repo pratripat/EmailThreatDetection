@@ -69,7 +69,13 @@ export const DashboardCaseCard: React.FC<DashboardCaseCardProps> = ({
             <span className="score-big">{data.threatScore}</span>
             <span className="score-base"> / 100</span>
           </div>
-          <div className="verdict-subtext">Threat Probability: {data.confidence}%</div>
+          <div className="verdict-subtext">
+            {data.threatScore === 0
+              ? 'Verdict: Clean Email'
+              : data.confidence > 0
+              ? `Investigation Confidence: ${data.confidence}%`
+              : 'Content Analysis: Heuristic (ML Pending)'}
+          </div>
         </div>
       </div>
 

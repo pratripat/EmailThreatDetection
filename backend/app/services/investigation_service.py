@@ -207,7 +207,7 @@ class InvestigationService:
             hop_candidates = extract_ip_candidates(hop.from_host or '')
             if not hop_candidates:
                 hop_candidates = extract_ip_candidates(hop.raw or '')
-            hop_ip = hop_candidates[0] if hop_candidates else "0.0.0.0"
+            hop_ip = hop_candidates[0] if hop_candidates else "UNKNOWN"
 
             # Query IP Intelligence
             ip_intel = self.ip_intel_service.lookup(hop_ip)

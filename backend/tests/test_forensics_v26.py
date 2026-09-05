@@ -243,6 +243,25 @@ class TestV26ReceivedHeaderTrust(unittest.TestCase):
         self.assertEqual(selected, '93.184.216.34')
         self.assertEqual(len(candidates), 2)
 
+    def test_10_special_unspecified_ips_rejected(self):
+        # 0.0.0.0, 255.255.255.255, and :: must never be extracted as candidates
+        header = 'Received: from bad.node [0.0.0.0] by mx.target.com [255.255.255.255]'
+        hop = parse_received_header(header)
+        selected, reason, candidates = select_origin_ip([hop])
+        self.assertIsNone(selected)
+        self.assertEqual(len(candidates), 0)
+
+    def test_11_receiving_hop_not_selected_as_origin(self):
+        # Google transit receiving hop (Received: by ...) must not be selected as origin over sender hop
+        headers = [
+            'Received: by mail-yx1-xb12e.google.com with SMTP id xyz (2607:f8b0:4864:20::b12e) for <user@gmail.com>',
+            'Received: from mail.company.com (mail.company.com [93.184.216.34]) by mx.google.com with ESMTPS id abc',
+        ]
+        hops = [parse_received_header(h) for h in headers]
+        selected, reason, candidates = select_origin_ip(hops)
+        self.assertEqual(selected, '93.184.216.34')
+
+
 
 class TestV26AuthenticationTrustModel(unittest.TestCase):
     """Hardened testing of authentication trust, multi-header handling, and DKIM alignment."""
