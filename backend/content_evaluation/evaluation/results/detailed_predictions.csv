@@ -1,0 +1,101 @@
+id,true_label,predicted_label,fraud_probability,legitimate_probability,score,threshold,correct,subject
+1,legitimate,legitimate,0.0006,0.9994,0.0006,0.5,True,[UAI] CFP: CLIMA 06
+2,legitimate,legitimate,0.196,0.804,0.196,0.5,True,Changing email address for these
+3,legitimate,legitimate,0.0007,0.9993,0.0007,0.5,True,Was child beating mom an enraged con artist?
+4,fraudulent,fraudulent,0.999,0.001,0.999,0.5,True,CNN Alerts: My Custom Alert
+5,fraudulent,fraudulent,0.8992,0.1008,0.8992,0.5,True,"fw : 2 minutes to read what i have to say . . . p . s . charset = windows - 1252 "" > i know you want to look at pussy , but first you need to learnthe truth about the adult industry : get into paysite free ! if you take 2 minutes to read what i have to say you will have full accessto some of the largest membership sites for free . trutha recent internet survey showed that almost 28 % of all the revenue generated on the internet today is from adult products websites . making it the # 1 product / service in demand on the internet . truthyahoo conducted a adult internet survey that showed more than more than half of all adult surfers have paid up to $ 50 for a pay site membership . we wonder why ? it is really easy to ge"
+6,fraudulent,fraudulent,0.8544,0.1456,0.8544,0.5,True,Upgrade Your Mail Quota !!
+7,fraudulent,fraudulent,0.9987,0.0013,0.9987,0.5,True,From Sheree Kern
+8,legitimate,legitimate,0.0008,0.9992,0.0008,0.5,True,[perl #47241] Re: Core dump caused by goto
+9,fraudulent,fraudulent,0.9987,0.0013,0.9987,0.5,True,Awesome presents to give
+10,fraudulent,fraudulent,0.9925,0.0075,0.9925,0.5,True,claims
+11,fraudulent,fraudulent,0.9967,0.0033,0.9967,0.5,True,"ar : logos , letterheads , business cards , envelops"
+12,fraudulent,legitimate,0.006,0.994,0.006,0.5,False,returned mail : response error
+13,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [opensuse] amavisd warning failure?
+14,fraudulent,fraudulent,0.9979,0.0021,0.9979,0.5,True,Upsize your trouser snake into a python
+15,legitimate,legitimate,0.0014,0.9986,0.0014,0.5,True,conference announcement / call for papers : celtic linguistics
+16,fraudulent,fraudulent,0.9914,0.0086,0.9914,0.5,True,G-spot location techniques for men
+17,legitimate,legitimate,0.0218,0.9782,0.0218,0.5,True,schedule crawler : hourahead failure
+18,legitimate,legitimate,0.0116,0.9884,0.0116,0.5,True,"darden case study on "" the transformation of enron """
+19,fraudulent,fraudulent,0.9864,0.0136,0.9864,0.5,True,Just have a look at our NEW GIRLS today:
+20,fraudulent,fraudulent,0.999,0.001,0.999,0.5,True,The hottest femmes will long for you!
+21,legitimate,legitimate,0.0003,0.9997,0.0003,0.5,True,Re: [opensuse] system seems hacked...
+22,legitimate,legitimate,0.3616,0.6384,0.3616,0.5,True,eol average deal count by trader and product as of 7 - 23 - 01
+23,fraudulent,fraudulent,0.9975,0.0025,0.9975,0.5,True,"Your payment didn't succeed, so your ads have been suspended."
+24,fraudulent,fraudulent,0.9991,0.0009,0.9991,0.5,True,CNN Alerts: My Custom Alert
+25,legitimate,fraudulent,0.9274,0.0726,0.9274,0.5,False,tenaska iv oct 2000
+26,fraudulent,fraudulent,0.9944,0.0056,0.9944,0.5,True,this is scary ! ! !
+27,fraudulent,fraudulent,0.9979,0.0021,0.9979,0.5,True,no compromise ! ! wear only rolex ! ! [ scruple ]
+28,legitimate,legitimate,0.0459,0.9541,0.0459,0.5,True,re : apache deal 384247 10 / 00
+29,fraudulent,fraudulent,0.999,0.001,0.999,0.5,True,TOP Legal advice.. for PENNIES a day!
+30,legitimate,legitimate,0.0005,0.9995,0.0005,0.5,True,Re: [Python-Dev] Reminder: last alphas next Wednesday 07-May-2008
+31,fraudulent,fraudulent,0.9218,0.0782,0.9218,0.5,True,=?big5?Q?=A7A=B7=C7=B3=C6=A6n=A4F=B6=DC=3F?=
+32,fraudulent,fraudulent,0.9965,0.0035,0.9965,0.5,True,Dreams can cost less Replica watches from Rolex here
+33,legitimate,legitimate,0.0023,0.9977,0.0023,0.5,True,Direct message from SpamExperts via web
+34,fraudulent,fraudulent,0.9987,0.0013,0.9987,0.5,True,CNN Alerts: My Custom Alert
+35,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [Python-Dev] NeedsReview keyword
+36,fraudulent,fraudulent,0.9098,0.0902,0.9098,0.5,True,""" quit your job and wo : rk on ebay , . sktiondenoy"
+37,legitimate,legitimate,0.0003,0.9997,0.0003,0.5,True,Re: [Python-3000] range() issues
+38,legitimate,legitimate,0.0003,0.9997,0.0003,0.5,True,Re: [Python-3000] lambda
+39,fraudulent,fraudulent,0.9301,0.0699,0.9301,0.5,True,- Custom Websites for $399 Complete! (1709D@5)
+40,fraudulent,legitimate,0.3607,0.6393,0.3607,0.5,False,office xp - $ 60
+41,fraudulent,fraudulent,0.996,0.004,0.996,0.5,True,you deserve a better loan
+42,fraudulent,fraudulent,0.999,0.001,0.999,0.5,True,Order Rolex Replica //atches 0nline!
+43,fraudulent,fraudulent,0.7431,0.2569,0.7431,0.5,True,nathaniel energy ( otcbb : necx ) strap your portfolio to a rocket ?
+44,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [Python-3000] python-safethread project status
+45,fraudulent,fraudulent,0.9971,0.0029,0.9971,0.5,True,need low priced software ? walgreen ploy
+46,fraudulent,fraudulent,0.9994,0.0006,0.9994,0.5,True,From Katy Padilla
+47,legitimate,legitimate,0.1497,0.8503,0.1497,0.5,True,fw : credit watch list - - week of 9 / 17 / 01
+48,fraudulent,fraudulent,0.9983,0.0017,0.9983,0.5,True,Have wild nights of love back again to life.
+49,legitimate,legitimate,0.0042,0.9958,0.0042,0.5,True,new book - concise encyclopedia of philosophy of language
+50,fraudulent,fraudulent,0.9899,0.0101,0.9899,0.5,True,re : woorks great
+51,fraudulent,fraudulent,0.9868,0.0132,0.9868,0.5,True,Account termination notice
+52,fraudulent,fraudulent,0.998,0.002,0.998,0.5,True,NewProductsInfoForValuedCustomer
+53,fraudulent,fraudulent,0.9995,0.0005,0.9995,0.5,True,Optimal alternative to buying original Swiss watches!
+54,fraudulent,fraudulent,0.9993,0.0007,0.9993,0.5,True,CNN.com Daily Top 10
+55,fraudulent,fraudulent,0.9961,0.0039,0.9961,0.5,True,i can do it so can you
+56,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [perl #47181] Try OO semantics before throwing fatal error
+57,fraudulent,fraudulent,0.9997,0.0003,0.9997,0.5,True,Exclusive stuff for mans
+58,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,"Re: sa-learn ""not"" learning?"
+59,fraudulent,fraudulent,0.999,0.001,0.999,0.5,True,CNN Alerts: My Custom Alert
+60,legitimate,legitimate,0.0416,0.9584,0.0416,0.5,True,re : petronas benchmarking visit
+61,legitimate,legitimate,0.1829,0.8171,0.1829,0.5,True,New OldFriends members
+62,legitimate,legitimate,0.0045,0.9955,0.0045,0.5,True,re : japan update
+63,legitimate,legitimate,0.0191,0.9809,0.0191,0.5,True,re : zisman
+64,fraudulent,fraudulent,0.9997,0.0003,0.9997,0.5,True,"With our medication, you will get a new 9 inch schlong in no time YR"
+65,legitimate,legitimate,0.001,0.999,0.001,0.5,True,"[UAI] Last Reminder: IIPWM05 Call due Tue., Nov. 2"
+66,legitimate,legitimate,0.0007,0.9993,0.0007,0.5,True,"[Spambayes-checkins] spambayes/spambayes i18n.py,1.7,1.8"
+67,fraudulent,fraudulent,0.9993,0.0007,0.9993,0.5,True,CNN.com Daily Top 10
+68,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,"RE: OSCOM Berkeley report: Xopus, Bitflux, Plone, Xoops"
+69,legitimate,legitimate,0.0008,0.9992,0.0008,0.5,True,re : 2002 it systems development allocations
+70,legitimate,legitimate,0.0009,0.9991,0.0009,0.5,True,[ie-rant] Re: some tales from Slash
+71,legitimate,legitimate,0.0151,0.9849,0.0151,0.5,True,phone call today
+72,fraudulent,fraudulent,0.9995,0.0005,0.9995,0.5,True,Our best decision is suitable for every age urrq n rsp
+73,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [ILUG] ILUG events this week
+74,fraudulent,fraudulent,0.5896,0.4104,0.5896,0.5,True,Email Account Suspension Notice!: (jose@monkey.org) verify ownership
+75,legitimate,legitimate,0.0008,0.9992,0.0008,0.5,True,ANN: PyAMF 0.2
+76,legitimate,legitimate,0.0011,0.9989,0.0011,0.5,True,re : kwi user group
+77,legitimate,legitimate,0.0226,0.9774,0.0226,0.5,True,schedule crawler : hourahead failure
+78,fraudulent,fraudulent,0.9956,0.0044,0.9956,0.5,True,would you like to earn extra money working from home ?
+79,legitimate,legitimate,0.1471,0.8529,0.1471,0.5,True,entouch newsletter
+80,legitimate,legitimate,0.0604,0.9396,0.0604,0.5,True,Rebuild at Ground Zero
+81,legitimate,legitimate,0.0004,0.9996,0.0004,0.5,True,Re: [FoRK] Re: [ptp-general] Facebook used for wifi access control
+82,legitimate,legitimate,0.0808,0.9192,0.0808,0.5,True,request for visit and meeting
+83,fraudulent,fraudulent,0.9993,0.0007,0.9993,0.5,True,CNN.com Daily Top 10
+84,fraudulent,legitimate,0.4684,0.5316,0.4684,0.5,False,re : good news - in ^ ~ cr ~ eas _ ^ ed drive and performance
+85,fraudulent,fraudulent,0.9945,0.0055,0.9945,0.5,True,Re: ÐÐÐÐ ÐÐÐ¥-Ð ÐÐ¡ÐÐ ÐÐÐÐÐ!!!
+86,legitimate,legitimate,0.0036,0.9964,0.0036,0.5,True,re : new color printer
+87,fraudulent,fraudulent,0.9961,0.0039,0.9961,0.5,True,looking for a new date
+88,fraudulent,fraudulent,0.9988,0.0012,0.9988,0.5,True,Replica for you
+89,fraudulent,fraudulent,0.9986,0.0014,0.9986,0.5,True,ProductsMoreinfoForValuedCustomer
+90,legitimate,legitimate,0.0046,0.9954,0.0046,0.5,True,"Spontaneous ""queue file write error""s"
+91,legitimate,legitimate,0.0937,0.9063,0.0937,0.5,True,revised - bullets 7 / 7
+92,legitimate,legitimate,0.0046,0.9954,0.0046,0.5,True,re : allan roberts email
+93,legitimate,legitimate,0.0518,0.9482,0.0518,0.5,True,please pass on to your groups
+94,legitimate,legitimate,0.0099,0.9901,0.0099,0.5,True,genie video update
+95,fraudulent,fraudulent,0.9993,0.0007,0.9993,0.5,True,hundreds of hours of teens porn video .
+96,legitimate,legitimate,0.002,0.998,0.002,0.5,True,Build a Web site without learning HTML
+97,legitimate,legitimate,0.0015,0.9985,0.0015,0.5,True,New Titles on Safari Books Online
+98,fraudulent,fraudulent,0.9175,0.0825,0.9175,0.5,True,+ cialis online - = + _
+99,legitimate,fraudulent,0.6531,0.3469,0.6531,0.5,False,weekly deal report
+100,legitimate,legitimate,0.0125,0.9875,0.0125,0.5,True,accenture presentation in eb 2601

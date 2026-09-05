@@ -6,6 +6,15 @@ APP_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = APP_DIR.parent
 ROOT_DIR = BACKEND_DIR.parent
 
+# Load environment variables safely
+try:
+    from dotenv import load_dotenv
+    for env_candidate in [ROOT_DIR / ".env", BACKEND_DIR / ".env"]:
+        if env_candidate.exists():
+            load_dotenv(env_candidate, override=False)
+except Exception:
+    pass
+
 # Data Directory Resolution
 DEFAULT_DATA_DIR = BACKEND_DIR / "data"
 if not DEFAULT_DATA_DIR.exists():
@@ -53,3 +62,7 @@ MAX_CACHE_ENTRIES = int(os.environ.get("MAX_CACHE_ENTRIES", "1000"))
 EMAIL_MODEL_PATH = os.environ.get("EMAIL_MODEL_PATH", "").strip()
 USE_GPU_FOR_INFERENCE = os.environ.get("USE_GPU_FOR_INFERENCE", "false").lower() in ("true", "1", "yes")
 
+# Grok AI Configuration
+GROK_API_BASE_URL = os.environ.get("GROK_BASE_URL", "https://api.x.ai/v1")
+GROK_MODEL = os.environ.get("GROK_MODEL", "grok-4.6")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY") or os.environ.get("GROK_API_KEY") or os.environ.get("XAI_API_KEY")

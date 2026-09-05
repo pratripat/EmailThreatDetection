@@ -134,4 +134,9 @@ tmp/
 temp/
 *.tmp
 run/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.lock
 

@@ -1,285 +1,217 @@
-# Email Threat Detection & Forensic Analysis System
+# SIH-26106 Email Threat Forensics & Grok AI URL Intelligence Platform
 
-SIH26106 Email Threat Detection Prototype: A high-accuracy, explainable email forensics platform featuring deterministic header forensics, dual-stack relay path reconstruction, heuristic URL analysis, baseline content inspection, and a FastAPI backend service.
-
----
-
-## Repository Architecture
-
-```
-sih/
-├── backend/                        # Backend Application & Analysis Engine
-│   ├── app/
-│   │   ├── main.py                 # FastAPI application entrypoint & middleware
-│   │   ├── config.py               # Path & API configuration settings
-│   │   ├── api/
-│   │   │   └── routes.py           # REST endpoints (/api/health, /api/analyze-email)
-│   │   ├── models/
-│   │   │   └── investigation.py    # Canonical Pydantic schemas (InvestigationData)
-│   │   ├── services/
-│   │   │   └── investigation_service.py # Core orchestrator coordinating all analyzers
-│   │   └── analyzers/
-│   │       ├── header_forensics.py # RFC 5322 relay extraction & anomaly engine
-│   │       ├── origin_analysis.py  # Dual-stack IPv4/IPv6 indexed CIDR origin lookup
-│   │       ├── url_analysis.py     # PSL-aware URL heuristic & typosquat detector
-│   │       ├── mime_analysis.py    # Multipart MIME parser & attachment hash calculator
-│   │       ├── content_analysis.py # Heuristic intent & social engineering analyzer
-│   │       ├── ioc_extraction.py   # Normalized deduplicated IOC extractor
-│   │       └── attack_graph.py     # Directed attack & provenance graph synthesizer
-│   ├── data/                       # Datacenter & VPN IP range feeds, TLD cache
-│   ├── tests/                      # Pytest suite (53 tests: unit, contract, API, regressions)
-│   │   └── fixtures/               # Sample .eml artifacts & canonical JSON response fixture
-│   ├── requirements.txt            # Backend Python dependencies
-│   └── README.md                   # Backend setup, architecture & API guide
-│
-├── frontend/                       # Frontend Application Workspace
-│   └── README.md                   # Client-side integration specifications & contract
-│
-├── sample_clean.eml                # Baseline clean email artifact
-├── sample_spoofed.eml              # Baseline spoofed email artifact
-├── requirements.txt                # Root requirements pointer
-└── README.md                       # Project overview & documentation
-```
+A production-grade, explainable cybersecurity email forensics and threat intelligence platform. Combines RFC 5322 header inspection, dual-stack origin infrastructure attribution, deterministic heuristic safeguards, and **xAI Grok (grok-4.6)** intelligence for robust phishing, credential harvesting, and malware detection.
 
 ---
 
-## Quickstart Guide
+## 🏛️ Repository Architecture
 
-### 1. Install Backend Dependencies
+```
+sih26106-email-forensics/
+├── README.md                         # Complete project documentation & quickstart
+├── requirements.txt                  # Consolidated Python dependencies
+├── .env.example                      # Template environment variables (safe for git)
+├── config/
+│   ├── __init__.py
+│   └── settings.py                   # API keys, timeouts, cache TTL, thresholds, feature flags
+│
+├── data/
+│   ├── ip_ranges/                    # Dual-stack CIDR range feeds
+│   │   ├── datacenter_ipv4.txt / ipv6.txt
+│   │   └── vpn_ipv4.txt / ipv6.txt
+│   ├── brand_list.json               # Protected brand list for impersonation/typosquatting
+│   ├── samples/                      # Forensic demonstration email artifacts
+│   │   ├── sample_clean.eml
+│   │   └── sample_spoofed.eml
+│   └── cache/
+│       └── url_checks.sqlite         # Persistent TTL-aware SHA-256 URL threat cache
+│
+├── src/
+│   ├── header_forensics/             # RFC 5322 header & authentication analysis
+│   │   ├── parser.py                 # Relay hop extraction & IP candidate isolation
+│   │   ├── domain_utils.py           # PSL resolution, homoglyphs, and brand loading
+│   │   ├── auth_trust.py             # SPF / DKIM / DMARC verification & MTA alignment
+│   │   ├── anomalies.py              # Header anomaly & display-name spoofing engine
+│   │   ├── scoring.py                # Weighted forensic scoring with evidence gating
+│   │   └── report.py                 # Explainable forensic report dataclasses
+│   │
+│   ├── origin_analysis/              # Dual-stack sender IP infrastructure attribution
+│   │   ├── ip_classifier.py          # Global, private, loopback, bogon classification
+│   │   ├── range_lookup.py           # O(log N) bisect binary search over CIDR blocks
+│   │   └── analyzer.py               # Origin infrastructure risk evaluator
+│   │
+│   ├── url_analysis/                 # Grok-powered URL threat analysis engine
+│   │   ├── extractor.py              # Multi-part URL extraction (text, HTML, headers)
+│   │   ├── features.py               # Deterministic lexical, brand, and TLD indicators
+│   │   ├── grok_client.py            # xAI client with circuit breaker & retry fallback
+│   │   ├── prompts.py                # Structured prompts & multi-format response parsers
+│   │   ├── cache.py                  # SQLite cache manager (SHA-256 keys, TTL purge)
+│   │   └── analyzer.py               # Orchestrator blending Grok AI with heuristics
+│   │
+│   └── fusion/                       # Multi-vector intelligence synthesis
+│       └── hybrid_score.py           # Calibrated threat scoring & operational tiering
+│
+├── backend/
+│   ├── api/
+│   │   ├── main.py                   # Primary FastAPI application entrypoint
+│   │   ├── routes/
+│   │   │   └── analyze.py            # POST /analyze & POST /check-url
+│   │   └── schemas.py                # Pydantic request & response models
+│   ├── dashboard/
+│   │   └── app.py                    # Interactive Streamlit security analyst workstation
+│   ├── app/                          # Classic FastAPI service (backward compatible)
+│   └── tests/                        # Full test suite (unit, contract, API, regression)
+│
+├── tests/                            # Modular unit test suite (offline / mocked)
+│   ├── test_url_analysis/            # Deterministic features & Grok client tests
+│   ├── test_header_forensics/        # Header parsing & anomaly tests
+│   ├── test_origin_analysis/         # IP classification & CIDR bisect tests
+│   └── test_fusion/                  # Threat fusion & escalation tests
+│
+└── scripts/
+    ├── download_ip_ranges.sh         # IP range updater script
+    └── precache_demo_urls.py         # SQLite cache pre-warming script
+```
+
+---
+
+## ⚡ Quickstart Guide
+
+### 1. Environment Setup
 
 ```bash
-cd backend
+# Clone the repository and navigate to root
+git clone <repo-url>
+cd EmailThreatDetection
+
+# Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install all dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Start the Backend API Server
+### 2. Configure Environment Variables
+
+Copy the sanitized template to `.env`:
 
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+cp .env.example .env
 ```
 
-The service will be live on `http://localhost:8000`.
-- Swagger UI Documentation: `http://localhost:8000/docs`
-- Health Probe: `http://localhost:8000/api/health`
+Edit `.env` to add your Grok (xAI) API key:
 
-### 3. Analyze an Email via `curl`
+```ini
+OPENAI_API_KEY=xai-your-actual-api-key-here
+GROK_BASE_URL=https://api.x.ai/v1
+GROK_MODEL=grok-4.6
+```
+
+> **Note:** If `OPENAI_API_KEY` is omitted or set to a placeholder, the system automatically runs in **offline deterministic mode** without failing.
+
+### 3. Pre-Cache Demo URLs (Optional)
+
+Pre-populate the SQLite cache for instant response times on common demo URLs:
 
 ```bash
-curl -X POST "http://localhost:8000/api/analyze-email" \
-     -H "Accept: application/json" \
-     -F "email=@tests/fixtures/sample_spoofed.eml"
+python scripts/precache_demo_urls.py
 ```
 
-#### Real Backend Response (`InvestigationData`)
+### 4. Run the FastAPI Service
 
-```json
-{
-  "id": "7b79d20c-550a-48d0-9941-944f2d3d3cfa",
-  "subject": "Urgent: Your Account Has Been Limited - Verify Now",
-  "from": "PayPal Security Team <security@freehostingnow.net>",
-  "to": [
-    "victim@example.com"
-  ],
-  "receivedDate": "2026-09-04T23:31:23.484201+00:00",
-  "threatScore": 85,
-  "threatLevel": "HIGH",
-  "threatType": "PHISHING",
-  "confidence": 0.9,
-  "authStatus": "FAILED",
-  "breakdown": {
-    "headerAnomalies": 85,
-    "authentication": 45,
-    "urlRisk": 100,
-    "contentNlp": 80,
-    "senderReputation": 0
-  },
-  "suspiciousReasons": [
-    "SPF check: FAIL (hard failure — domain owner explicitly disavows this sender)",
-    "DKIM check: none (expected 'pass')",
-    "DMARC check: fail (expected 'pass')",
-    "Display name impersonates 'paypal' but sending domain is 'freehostingnow.net' with failing authentication — critical display-name spoofing indicator",
-    "Embedded URL 'http://paypal-verify-account.freehostingnow.net/login' flagged as MALICIOUS: Uses unencrypted HTTP instead of HTTPS (+20), Multiple hyphens in domain (+15), Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25), Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)",
-    "Email body exhibits social engineering indicators: Credential Harvesting, Urgent Coercion"
-  ],
-  "headerHops": [
-    {
-      "hopNumber": 1,
-      "ip": "0.0.0.0",
-      "hostname": "mail.suspicious-relay.ru",
-      "country": null,
-      "city": null,
-      "asn": null,
-      "isp": null,
-      "reputation": "UNKNOWN",
-      "firstSeen": null,
-      "threatFeeds": {
-        "abuseIpDb": "NOT_CHECKED",
-        "virusTotal": "NOT_QUERIED",
-        "spamhaus": "NOT_CHECKED"
-      }
-    },
-    {
-      "hopNumber": 2,
-      "ip": "185.220.101.47",
-      "hostname": "unknown [185.220.101.47]",
-      "country": null,
-      "city": null,
-      "asn": null,
-      "isp": null,
-      "reputation": "VPN",
-      "firstSeen": null,
-      "threatFeeds": {
-        "abuseIpDb": "NOT_CHECKED",
-        "virusTotal": "NOT_QUERIED",
-        "spamhaus": "NOT_CHECKED"
-      }
-    },
-    {
-      "hopNumber": 3,
-      "ip": "45.135.232.19",
-      "hostname": "mx1.freehostingnow.net (mx1.freehostingnow.net [45.135.232.19])",
-      "country": null,
-      "city": null,
-      "asn": null,
-      "isp": null,
-      "reputation": "UNKNOWN",
-      "firstSeen": null,
-      "threatFeeds": {
-        "abuseIpDb": "NOT_CHECKED",
-        "virusTotal": "NOT_QUERIED",
-        "spamhaus": "NOT_CHECKED"
-      }
-    }
-  ],
-  "authentication": {
-    "spf": "FAILED",
-    "dkim": "NONE",
-    "dmarc": "FAILED",
-    "fromDomain": "freehostingnow.net",
-    "returnPathDomain": "freehostingnow.net",
-    "alignmentMatched": true,
-    "notes": [
-      "Authserv ID (mx.google.com) does not match top receiving MTA (mail.suspicious-relay.ru)"
-    ]
-  },
-  "urls": [
-    {
-      "url": "http://paypal-verify-account.freehostingnow.net/login",
-      "domain": "freehostingnow.net",
-      "registeredAgeDays": null,
-      "reputation": "MALICIOUS",
-      "threatScore": 100,
-      "flags": [
-        "Uses unencrypted HTTP instead of HTTPS (+20)",
-        "Multiple hyphens in domain (+15)",
-        "Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25)",
-        "Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)"
-      ],
-      "redirectChain": []
-    }
-  ],
-  "contentAi": {
-    "classification": "PHISHING",
-    "confidence": 0.5,
-    "intents": [
-      "Credential Harvesting",
-      "Urgent Coercion"
-    ],
-    "suspiciousPhrases": [
-      "unusual activity",
-      "urgent",
-      "limited",
-      "immediately",
-      "suspended",
-      "within 24 hours",
-      "account has been limited"
-    ],
-    "featureContributions": {}
-  },
-  "iocs": {
-    "ips": [
-      "185.220.101.47",
-      "45.135.232.19"
-    ],
-    "domains": [
-      "example.com",
-      "freehostingnow.net"
-    ],
-    "urls": [
-      "http://paypal-verify-account.freehostingnow.net/login"
-    ],
-    "emails": [
-      "bounce@freehostingnow.net",
-      "security@freehostingnow.net",
-      "victim@example.com"
-    ],
-    "hashes": []
-  },
-  "attackGraph": {
-    "nodes": [
-      {
-        "id": "node_email",
-        "label": "Urgent: Your Account Has Been Limited - Verify Now",
-        "type": "email"
-      },
-      {
-        "id": "domain_freehostingnow.net",
-        "label": "freehostingnow.net",
-        "type": "domain"
-      },
-      {
-        "id": "ip_45.135.232.19",
-        "label": "45.135.232.19",
-        "type": "ip"
-      },
-      {
-        "id": "url_0",
-        "label": "http://paypal-verify-account.freehostingnow.net/login",
-        "type": "page"
-      },
-      {
-        "id": "action_harvest",
-        "label": "Harvest Credentials",
-        "type": "action"
-      }
-    ],
-    "edges": [
-      {
-        "source": "node_email",
-        "target": "domain_freehostingnow.net",
-        "relation": "Sent From"
-      },
-      {
-        "source": "domain_freehostingnow.net",
-        "target": "ip_45.135.232.19",
-        "relation": "Relayed Via"
-      },
-      {
-        "source": "node_email",
-        "target": "url_0",
-        "relation": "Embedded Link"
-      },
-      {
-        "source": "url_0",
-        "target": "domain_freehostingnow.net",
-        "relation": "Sent From"
-      },
-      {
-        "source": "url_0",
-        "target": "action_harvest",
-        "relation": "Submits To"
-      }
-    ]
-  }
-}
+```bash
+python -m backend.api.main
+# Or:
+uvicorn backend.api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
+
+- Interactive Swagger Docs: `http://localhost:8000/docs`
+- ReDoc API Reference: `http://localhost:8000/redoc`
+
+### 5. Launch the Security Analyst Dashboard
+
+```bash
+streamlit run backend/dashboard/app.py
+```
+
+Opens at `http://localhost:8501`. Features:
+- 1-click loading of sample clean and spoofed emails.
+- Live threat score gauge, operational tiering, and primary attack vector attribution.
+- Interactive Grok AI URL Scanner with technical reasoning and heuristic breakdown.
+- Cache management and circuit breaker status.
 
 ---
 
-## Running the Automated Test Suite
+## 📡 API Endpoints
 
-Run all 53 automated unit, contract, API, and regression tests:
+### 1. `POST /api/check-url` (or `POST /check-url`)
+Inspect an isolated URL using Grok AI and deterministic heuristics.
+
+**Request:**
+```json
+{
+  "url": "https://paypa1-security-verify.com/login"
+}
+```
+
+**Response (HTTP 200):**
+```json
+{
+  "url": "https://paypa1-security-verify.com/login",
+  "domain": "paypa1-security-verify.com",
+  "reputation": "MALICIOUS",
+  "threatScore": 95,
+  "flags": [
+    "Possible brand impersonation: Leetspeak/typo impersonation of brand 'paypal' in token 'paypa1'",
+    "Contains security-sensitive keywords: ['login']",
+    "Grok: Typosquatted brand credential harvesting"
+  ],
+  "grok_analysis": {
+    "verdict": "PHISHING",
+    "confidence": 0.96,
+    "reason": "Deceptive homoglyph domain mimicking PayPal to harvest login credentials."
+  },
+  "cached": true
+}
+```
+
+### 2. `POST /api/analyze` (or `POST /analyze`)
+Ingest raw email `.eml` artifact, multipart form, or JSON for multi-vector threat investigation.
+
+**Response includes:**
+- `final_threat_score`: 0-100 calibrated risk score.
+- `threat_tier`: `CRITICAL`, `HIGH`, `SUSPICIOUS`, or `LOW`.
+- `primary_threat_vector`: Primary detected cyberattack tactic.
+- `header_forensics`: SPF, DKIM, DMARC alignment, Received relay hops, detected anomalies.
+- `origin_analysis`: IP classification, datacenter CIDR match, VPN/Tor exit node match.
+- `url_analysis`: Complete breakdown of all extracted URLs with Grok AI classifications.
+- `recommendation`: Concrete SOC / end-user advisory.
+
+### 3. `GET /api/health`
+System liveness probe and Grok AI circuit breaker state.
+
+---
+
+## 🧪 Running Automated Tests
+
+Run the modular unit test suite (zero network dependencies, fully mocked):
 
 ```bash
-python3 -m pytest -v backend/tests
+python -m pytest tests/ -v
 ```
+
+Run the complete backend integration and regression test suite (111 tests total):
+
+```bash
+python -m pytest backend/tests/ -v
+```
+
+All 111 tests pass with zero network dependencies.
+
+---
+
+## 🔒 Security Best Practices
+- **No Hardcoded Keys:** Secrets are read from environment variables or `.env`. `.env` and `*.sqlite` are strictly git-ignored.
+- **Circuit Breaker:** Automatically trips after 3 consecutive failures to avoid latency spikes and unneeded upstream requests.
+- **Deterministic Heuristics:** Brand typosquatting, raw IP detection, and abuse-prone TLD heuristics guarantee protection even if the LLM endpoint is degraded or offline.
