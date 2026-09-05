@@ -283,34 +283,48 @@ curl -X POST "http://localhost:8000/api/analyze-email" \
 
 ---
 
-## 5. Current Capabilities vs. Deferred V3 Capabilities
+## 5. V3 Threat Intelligence & AI Investigation Layer
 
-| Area | Currently Implemented (V2.6 Backend) | Deferred to V3 (External Threat Intel) |
+The system features a multi-stream threat intelligence and AI layer that preserves forensic truthfulness and explicit provenance (`VERIFIED`, `OBSERVED`, `HEURISTIC`, `MODEL_PREDICTION`, `NOT_CHECKED`, `UNAVAILABLE`, `ERROR`).
+
+| Intelligence Vector | Implementation & Guardrails | Provenance |
 | :--- | :--- | :--- |
-| **MIME / Headers** | Robust standard library RFC 5322/MIME parsing, attachments, embedded URLs | Multi-part archive unpacking |
-| **Relay Chain** | Bottom-up routing-based origin candidate selection, RFC 5737 doc handling | BGP AS-path verification |
-| **Origin IP** | Offline indexed CIDR check for VPN / Datacenter / Non-routable IPs | Live Tor exit list, MaxMind GeoIP, live AbuseIPDB query |
-| **Authentication** | Claimed SPF/DKIM/DMARC parsing, DKIM alignment vs From, boundary correlation | Live DNS TXT query, live DKIM RSA/Ed25519 signature crypto verify |
-| **URLs** | 11-step heuristic detection, PSL registered domain extraction, typosquats | Live WHOIS domain age, URL redirect unshortening, Google SafeBrowsing |
-| **Content** | Deterministic intent pattern matching (Urgent, Credential, Financial) | Fine-tuned DeBERTa/RoBERTa transformer, SHAP feature attribution |
-| **Attack Graph** | Directed graph derived strictly from parsed headers, URLs, and intents | External infrastructure pivoting (C2 attribution, passive DNS) |
+| **IP Intelligence** | AbuseIPDB v2 + VirusTotal v3 with thread-safe TTL LRU caching. **Strict non-routable filter**: never queries private (RFC1918), loopback, link-local, multicast, or documentation IPs. | `VERIFIED` (external API) / `OBSERVED` (private IP) / `NOT_CHECKED` |
+| **Domain Intelligence** | Internationalized Domain Name (IDN) Punycode normalization and public RDAP (RFC 7480) query for domain registration date, age, and registrar. Flags newly registered domains (<30 days). | `VERIFIED` (RDAP query) / `NOT_CHECKED` (offline) |
+| **DNS Intelligence** | DNS record resolution (MX, A, TXT/SPF, DMARC, NS) and DNSBL inspection (`zen.spamhaus.org`, `bl.spamcop.net`) via `dnspython` with bounded 2s timeouts. | `VERIFIED` (DNS answers) / `NOT_CHECKED` |
+| **URL Reputation** | VirusTotal URL API v3 and URLhaus with unpadded base64 identifier lookup and category aggregation. | `VERIFIED` (VT/URLhaus) / `HEURISTIC` (local heuristics) |
+| **SSRF-Safe Redirects** | Pre-flight DNS resolution checking **every candidate destination IP**. Strictly blocks 127.0.0.0/8, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, cloud metadata `169.254.169.254`, IPv6 `::1`, and multicast before establishing any connection. Caps hops at 5 with stream size limit. | `VERIFIED` (public hops) / `OBSERVED` (SSRF attempt blocked) |
+| **Content AI / ML** | Local HuggingFace / PyTorch transformer pipeline support with honest heuristic fallback. **Forensic honesty invariant**: never fabricates synthetic ML probabilities or fake SHAP/LIME values when running heuristic rules. | `MODEL_PREDICTION` (loaded model) / `HEURISTIC` (pattern matcher) |
+| **Evidence Fusion Engine** | Multivariate mathematical score derivation, centralized threat level classification (`CRITICAL`, `HIGH`, `SUSPICIOUS`, `LOW`, `CLEAN`), and auditable explanation log. Preserves deterministic baseline scores while boosting on verified threat indicators. | Mathematical synthesis |
 
 ---
 
 ## 6. Running Tests
 
-Run the complete test suite with `pytest`:
+Run the complete test suite (80 tests) with `pytest`:
 
 ```bash
-pytest -v backend/tests
+python3 -m pytest backend/tests -v
 ```
 
-Or run individual test modules:
+Or run individual test suites:
 
 ```bash
-python -m unittest backend/tests/test_api.py
-python -m unittest backend/tests/test_contract.py
-python -m unittest backend/tests/test_forensics_v25.py
-python -m unittest backend/tests/test_forensics_v26.py
-python backend/tests/test_urls.py
+# Baseline contract & API tests:
+python3 -m pytest backend/tests/test_api.py -v
+python3 -m pytest backend/tests/test_contract.py -v
+
+# V2.5 & V2.6 forensic hardening tests:
+python3 -m pytest backend/tests/test_forensics_v25.py -v
+python3 -m pytest backend/tests/test_forensics_v26.py -v
+python3 -m pytest backend/tests/test_urls.py -v
+
+# V3 Intelligence & Fusion tests:
+python3 -m pytest backend/tests/test_v3_cache.py -v
+python3 -m pytest backend/tests/test_v3_ip_and_domain.py -v
+python3 -m pytest backend/tests/test_v3_dns.py -v
+python3 -m pytest backend/tests/test_v3_urls.py -v
+python3 -m pytest backend/tests/test_v3_content.py -v
+python3 -m pytest backend/tests/test_v3_fusion.py -v
 ```
+

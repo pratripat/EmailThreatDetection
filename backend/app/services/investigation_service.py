@@ -48,6 +48,14 @@ from ..models.investigation import (
     AttackGraphNode,
     AttackGraphEdge,
 )
+from ..intelligence.ip_reputation import IPReputationService
+from ..intelligence.domain_intelligence import DomainIntelligenceService
+from ..intelligence.dns_intelligence import DNSIntelligenceService
+from ..intelligence.url_reputation import URLReputationService
+from ..intelligence.redirect_analyzer import RedirectAnalyzer
+from ..intelligence.models import ProvenanceType, RedirectAnalysisResult
+from ..ml.content_classifier import ContentClassifierService
+from .evidence_fusion import EvidenceFusionEngine
 
 
 class InvestigationService:
@@ -58,6 +66,14 @@ class InvestigationService:
         except Exception:
             # OriginAnalyzer gracefully handles missing data via OriginDataError
             self.origin_analyzer = None
+
+        self.ip_intel_service = IPReputationService(origin_analyzer=self.origin_analyzer)
+        self.domain_intel_service = DomainIntelligenceService()
+        self.dns_intel_service = DNSIntelligenceService()
+        self.url_intel_service = URLReputationService()
+        self.redirect_analyzer = RedirectAnalyzer()
+        self.content_classifier = ContentClassifierService()
+        self.fusion_engine = EvidenceFusionEngine()
 
     def analyze_email(self, eml_bytes: bytes, filename: Optional[str] = None) -> InvestigationData:
         """
@@ -185,7 +201,7 @@ class InvestigationService:
             notes=auth_notes
         )
 
-        # 5. Header Hops Mapping
+        # 5. Header Hops Mapping with IP Intelligence
         header_hops: List[HeaderHop] = []
         for idx, hop in enumerate(relay_chain, start=1):
             hop_candidates = extract_ip_candidates(hop.from_host or '')
@@ -193,132 +209,120 @@ class InvestigationService:
                 hop_candidates = extract_ip_candidates(hop.raw or '')
             hop_ip = hop_candidates[0] if hop_candidates else "0.0.0.0"
 
-            # Determine hop reputation matching 'MALICIOUS' | 'SUSPICIOUS' | 'CLEAN' | 'UNKNOWN'
-            hop_rep: Literal["MALICIOUS", "SUSPICIOUS", "CLEAN", "UNKNOWN"] = "UNKNOWN"
-            if hop_ip != "0.0.0.0" and self.origin_analyzer:
-                try:
-                    ass = self.origin_analyzer.assess(hop_ip)
-                    if ass.is_vpn or ass.is_datacenter:
-                        hop_rep = "SUSPICIOUS"
-                    elif ass.is_non_global:
-                        hop_rep = "UNKNOWN"
-                except Exception:
-                    pass
+            # Query IP Intelligence
+            ip_intel = self.ip_intel_service.lookup(hop_ip)
 
             header_hops.append(HeaderHop(
                 hopNumber=idx,
                 ip=hop_ip,
                 hostname=hop.from_host or hop.by_host or "",
-                country="UNKNOWN",
-                city=None,
-                asn="UNKNOWN",
-                isp="UNKNOWN",
-                reputation=hop_rep,
+                country=ip_intel.country_code,
+                city=ip_intel.city,
+                asn=ip_intel.asn,
+                isp=ip_intel.isp,
+                reputation=ip_intel.reputation,
                 firstSeen="UNKNOWN",
                 threatFeeds=HopThreatFeeds(
-                    abuseIpDb="NOT_CHECKED",
-                    virusTotal="NOT_QUERIED",
-                    spamhausListed=False
+                    abuseIpDb=ip_intel.abuse_category,
+                    virusTotal=ip_intel.virus_total_ratio,
+                    spamhausListed=ip_intel.spamhaus_listed
                 )
             ))
 
-        # 6. URL Analysis
+        # 6. URL Analysis & SSRF-Safe Redirect Inspection
         analyzed_urls: List[AnalyzedUrl] = []
+        redirect_results: List[RedirectAnalysisResult] = []
         for u_str in parsed.embedded_urls:
             u_res = analyze_url(u_str)
-            u_rep = u_res["reputation"]
+            u_intel = self.url_intel_service.lookup(u_str)
+            red_res = self.redirect_analyzer.trace_redirects(u_str)
+            redirect_results.append(red_res)
+
+            dom_url = u_res.get("domain", "")
+            dom_intel = self.domain_intel_service.lookup(dom_url) if dom_url else None
+            registered_age = dom_intel.registered_age_days if dom_intel else -1
+
+            u_rep = u_intel.reputation if u_intel.provenance == ProvenanceType.VERIFIED else u_res["reputation"]
             if u_rep not in ("MALICIOUS", "SUSPICIOUS", "SAFE"):
                 u_rep = "UNKNOWN"
+
+            flags = list(dict.fromkeys(u_res["flags"] + u_intel.categories))
+            if red_res.is_ssrf_blocked:
+                flags.append("SSRF Attempt Blocked")
+            if red_res.is_disguised_domain:
+                flags.append("Disguised Redirect Domain")
+
+            threat_score = max(u_res["threatScore"], u_intel.threat_score)
+            if red_res.is_ssrf_blocked:
+                threat_score = max(threat_score, 90)
+
             analyzed_urls.append(AnalyzedUrl(
                 url=u_res["url"],
                 domain=u_res["domain"],
-                registeredAgeDays=-1,  # -1 indicates unqueried WHOIS in offline mode
+                registeredAgeDays=registered_age,
                 reputation=u_rep,
-                threatScore=u_res["threatScore"],
-                flags=u_res["flags"],
-                redirectChain=u_res.get("redirectChain", [])
+                threatScore=threat_score,
+                flags=flags,
+                redirectChain=red_res.redirect_chain if red_res.redirect_chain else u_res.get("redirectChain", [])
             ))
 
-        max_url_score = max((u.threatScore for u in analyzed_urls), default=0)
-
-        # 7. Content Analysis
-        content_res = analyze_content(parsed.subject, parsed.body_plain, parsed.body_html)
-        suspicious_phrases = [
-            SuspiciousPhrase(phrase=sp["phrase"], signalType=sp["signalType"])
-            for sp in content_res.suspicious_phrases
-        ]
-        content_summary = ContentAiSummary(
-            classification=content_res.classification,
-            confidence=content_res.confidence,
-            intents=content_res.intents,
-            suspiciousPhrases=suspicious_phrases,
-            featureContributions=[]  # Honest: no fabricated SHAP/LIME values
+        # 7. Content Analysis & ML Classifier
+        content_summary = self.content_classifier.classify(
+            parsed.subject, parsed.body_plain, parsed.body_html
         )
+        content_risk = 0
+        if "Urgent Coercion" in content_summary.intents:
+            content_risk += 35
+        if "Credential Harvesting" in content_summary.intents:
+            content_risk += 45
+        if "Financial Solicitation" in content_summary.intents:
+            content_risk += 30
+        if "Executive Impersonation" in content_summary.intents:
+            content_risk += 30
+        content_risk_score = min(content_risk, 100)
 
         # 8. IOC Extraction
         observed_ips_list = [c['ip'] for c in observed_candidates if 'ip' in c]
         iocs_raw = extract_iocs(parsed, observed_ips_list, [u.model_dump() for u in analyzed_urls])
         iocs_summary = IocSummary(**iocs_raw)
 
-        # 9. Multi-Vector Score Breakdown & Aggregation
-        # Preserve existing header forensics score as primary deterministic signal
-        overall_threat_score = forensic_score
-
-        # Authentication sub-score
-        auth_score = 0
-        if auth_status == "FAILED":
-            auth_score = 45
-        elif auth_status == "PARTIAL":
-            auth_score = 15
-
-        breakdown = Breakdown(
-            headerAnomalies=min(forensic_score, 100),
-            authentication=auth_score,
-            urlRisk=max_url_score,
-            contentNlp=content_res.risk_score,
-            senderReputation=origin_score_contrib
-        )
-
-        # 10. Centralized Threat Level & Threat Type Mapping
-        # Documented centralized threshold tiers:
-        # 0-14: CLEAN, 15-39: LOW, 40-69: SUSPICIOUS, 70-89: HIGH, 90-100: CRITICAL
-        if overall_threat_score >= 90:
-            threat_level = "CRITICAL"
-        elif overall_threat_score >= 70:
-            threat_level = "HIGH"
-        elif overall_threat_score >= 40:
-            threat_level = "SUSPICIOUS"
-        elif overall_threat_score >= 15:
-            threat_level = "LOW"
-        else:
-            threat_level = "CLEAN"
-
-        # Threat Type classification based on evidenced indicators
+        # 9. Attachment Inspection
         has_executable_attachment = any(
             att.filename.lower().endswith(('.exe', '.scr', '.vbs', '.js', '.iso', '.bat'))
             for att in parsed.attachments
         )
 
-        if has_executable_attachment:
-            threat_type = "MALWARE_DROP"
-        elif "Credential Harvesting" in content_res.intents or max_url_score >= 60:
-            threat_type = "PHISHING" if overall_threat_score >= 40 else "BENIGN"
-        elif "Executive Impersonation" in content_res.intents or "Financial Solicitation" in content_res.intents:
-            threat_type = "BEC_FRAUD" if overall_threat_score >= 40 else "BENIGN"
-        elif overall_threat_score >= 40:
-            threat_type = "SPOOFING"
-        else:
-            threat_type = "BENIGN"
+        # 10. Multi-Stream Threat Intelligence Lookups
+        origin_ip_intel = self.ip_intel_service.lookup(selected_ip) if selected_ip else None
+        sender_domain_intel = self.domain_intel_service.lookup(from_domain) if from_domain else None
+        sender_dns_intel = self.dns_intel_service.resolve_domain(from_domain) if from_domain else None
 
-        # 11. Attack Graph Construction
+        # 11. Evidence Fusion
+        fusion_res = self.fusion_engine.fuse(
+            forensic_score=forensic_score,
+            forensic_anomalies=anomalies,
+            auth_status=auth_status,
+            auth_results=auth_results,
+            origin_score_contrib=origin_score_contrib,
+            content_risk_score=content_risk_score,
+            origin_ip_intel=origin_ip_intel,
+            domain_intel=sender_domain_intel,
+            dns_intel=sender_dns_intel,
+            analyzed_urls=analyzed_urls,
+            redirect_results=redirect_results,
+            content_ai=content_summary,
+            has_executable_attachment=has_executable_attachment,
+        )
+
+        # 12. Attack Graph Construction
         graph_raw = build_attack_graph(
             subject=parsed.subject,
             sender_domain=from_domain,
             origin_ip=selected_ip,
             relay_hops=[h.model_dump() for h in header_hops],
             analyzed_urls=[u.model_dump() for u in analyzed_urls],
-            detected_intents=content_res.intents,
-            threat_score=overall_threat_score,
+            detected_intents=content_summary.intents,
+            threat_score=fusion_res.threat_score,
             auth_status=auth_status,
         )
         attack_graph = AttackGraph(
@@ -326,39 +330,19 @@ class InvestigationService:
             edges=[AttackGraphEdge(**e) for e in graph_raw["edges"]]
         )
 
-        # 12. Suspicious Reasons Generation
-        suspicious_reasons: List[str] = list(anomalies)
-
-        # Include prominent URL flags if URLs are elevated risk
-        if max_url_score >= 60:
-            for u in analyzed_urls:
-                if u.threatScore >= 60:
-                    suspicious_reasons.append(
-                        f"Embedded URL '{u.url}' flagged as {u.reputation}: {', '.join(u.flags)}"
-                    )
-
-        # Include social engineering intent reasons
-        if content_res.intents:
-            suspicious_reasons.append(
-                f"Email body exhibits social engineering indicators: {', '.join(content_res.intents)}"
-            )
-
-        # 13. Overall Confidence (Task 4: honest representation without fabricated ML probability)
-        overall_confidence = 0.0
-
         return InvestigationData(
             id=investigation_id,
             subject=subject_str,
             from_=from_str,
             to=to_str,
             receivedDate=received_date_str,
-            threatScore=overall_threat_score,
-            threatLevel=threat_level,
-            threatType=threat_type,
-            confidence=overall_confidence,
+            threatScore=fusion_res.threat_score,
+            threatLevel=fusion_res.threat_level,
+            threatType=fusion_res.threat_type,
+            confidence=fusion_res.confidence,
             authStatus=auth_status,
-            breakdown=breakdown,
-            suspiciousReasons=suspicious_reasons,
+            breakdown=fusion_res.breakdown,
+            suspiciousReasons=fusion_res.suspicious_reasons,
             headerHops=header_hops,
             authentication=authentication_summary,
             urls=analyzed_urls,
