@@ -99,8 +99,10 @@ class ContentClassifierService:
             try:
                 bert_res = self._bert_classifier.classify(subject=subject, body=body_plain or body_html)
 
-                is_fraud = bert_res.fraud_probability >= 0.60 or (
-                    bert_res.fraud_probability >= 0.45 and (heuristic_res.classification != "BENIGN" or bool(heuristic_res.intents))
+                has_corroboration = (heuristic_res.classification != "BENIGN" or bool(heuristic_res.intents) or bool(heuristic_res.suspicious_phrases))
+                is_fraud = (
+                    (bert_res.fraud_probability >= 0.90) or
+                    (bert_res.fraud_probability >= 0.45 and has_corroboration)
                 )
 
                 if is_fraud:

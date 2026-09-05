@@ -96,3 +96,55 @@ def test_ssrf_boost_and_critical_tier():
     assert result.threat_score == 95
     assert result.threat_level == "CRITICAL"
     assert any("SSRF-ATTEMPT" in r for r in result.suspicious_reasons)
+
+
+def test_content_and_url_threats_not_zeroed_when_forensic_zero():
+    engine = EvidenceFusionEngine()
+    # Malicious URL with 0 forensic score must not be zeroed out
+    mal_url = AnalyzedUrl(
+        url="http://phish-site.xyz/login",
+        domain="phish-site.xyz",
+        registeredAgeDays=-1,
+        reputation="MALICIOUS",
+        threatScore=100,
+        flags=["credential harvesting"],
+        redirectChain=[]
+    )
+    res_url = engine.fuse(
+        forensic_score=0,
+        forensic_anomalies=[],
+        auth_status="PASSED",
+        auth_results={"spf": "pass", "dkim": "pass", "dmarc": "pass"},
+        analyzed_urls=[mal_url],
+        content_ai=ContentAiSummary(
+            classification="BENIGN",
+            confidence=0.0,
+            intents=[],
+            suspiciousPhrases=[],
+            featureContributions=[]
+        ),
+        has_executable_attachment=False
+    )
+    assert res_url.threat_score >= 70
+    assert res_url.threat_level in ("HIGH", "CRITICAL")
+    assert len(res_url.suspicious_reasons) > 0
+
+    # Phishing content with 0 forensic score must not be zeroed out
+    res_content = engine.fuse(
+        forensic_score=0,
+        forensic_anomalies=[],
+        auth_status="PASSED",
+        auth_results={"spf": "pass", "dkim": "pass", "dmarc": "pass"},
+        content_risk_score=45,
+        content_ai=ContentAiSummary(
+            classification="PHISHING",
+            confidence=0.95,
+            intents=["Credential Harvesting"],
+            suspiciousPhrases=[],
+            featureContributions=[]
+        ),
+        has_executable_attachment=False
+    )
+    assert res_content.threat_score >= 40
+    assert res_content.threat_level in ("SUSPICIOUS", "HIGH")
+    assert len(res_content.suspicious_reasons) > 0

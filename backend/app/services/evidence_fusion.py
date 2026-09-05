@@ -83,7 +83,7 @@ class EvidenceFusionEngine:
                 provenance="HEURISTIC",
             ))
 
-        # 2. Append URL warnings (preserving baseline suspiciousReasons structure)
+        # 2. Append URL warnings and incorporate URL risk
         max_url_risk = max((u.threatScore for u in analyzed_urls), default=0)
         has_malicious_url = any(u.reputation == "MALICIOUS" for u in analyzed_urls)
         if max_url_risk >= 60:
@@ -93,11 +93,31 @@ class EvidenceFusionEngine:
                         f"Embedded URL '{u.url}' flagged as {u.reputation}: {', '.join(u.flags)}"
                     )
 
-        # 3. Append Content AI / Social Engineering warnings
+        if has_malicious_url or max_url_risk >= 60:
+            url_weight = 75 if has_malicious_url else min(70, int(max_url_risk * 0.75))
+            score = max(score, url_weight)
+            audit_log.append(FusionAuditEntry(
+                category="url_risk",
+                weight=url_weight,
+                rule="Malicious or high-risk embedded URL detected",
+                provenance="HEURISTIC",
+            ))
+
+        # 3. Append Content AI / Social Engineering warnings and incorporate content risk
         if content_ai and content_ai.intents:
             suspicious_reasons.append(
                 f"Email body exhibits social engineering indicators: {', '.join(content_ai.intents)}"
             )
+
+        if content_risk_score >= 35 or (content_ai and content_ai.intents):
+            content_weight = min(60, content_risk_score) if content_risk_score > 0 else 40
+            score = max(score, content_weight)
+            audit_log.append(FusionAuditEntry(
+                category="content_ai",
+                weight=content_weight,
+                rule="Social engineering or phishing intent detected in content",
+                provenance="HEURISTIC",
+            ))
 
         # 4. External Verified Intelligence Adjustments
         # Only verified external signals or SSRF blocks boost the score beyond the deterministic baseline
@@ -203,8 +223,18 @@ class EvidenceFusionEngine:
             ))
 
         # 8. Clean Email Invariant:
-        # If base forensic score is 0 and no external verified indicators fired, threat score is 0
-        if forensic_score == 0 and not any(a.provenance == "VERIFIED" for a in audit_log if a.weight > 0):
+        # If base forensic score is 0 and no malicious content/URLs or verified indicators fired, threat score is 0
+        has_content_threat = bool(content_ai and content_ai.intents) or (content_risk_score >= 30)
+        has_url_threat = (max_url_risk >= 50) or has_malicious_url
+        is_clean_email = (
+            forensic_score == 0
+            and not has_content_threat
+            and not has_url_threat
+            and not has_executable_attachment
+            and origin_score_contrib == 0
+            and not any(a.provenance == "VERIFIED" for a in audit_log if a.weight > 0)
+        )
+        if is_clean_email:
             score = 0
             suspicious_reasons = []
 
