@@ -118,6 +118,11 @@ class InvestigationService:
         # 3. Origin IP Intelligence Assessment
         origin_label = "UNKNOWN"
         origin_score_contrib = 0
+        all_auth_passed = (
+            auth_results.get('spf') == 'pass' and
+            auth_results.get('dkim') == 'pass' and
+            auth_results.get('dmarc') == 'pass'
+        )
         if selected_ip and self.origin_analyzer:
             try:
                 assessment = self.origin_analyzer.assess(selected_ip)
@@ -129,11 +134,19 @@ class InvestigationService:
                     )
                     origin_score_contrib = 20
                 elif assessment.is_datacenter:
-                    anomalies.append(
-                        f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
-                        f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
-                    )
-                    origin_score_contrib = 0
+                    if not all_auth_passed:
+                        anomalies.append(
+                            f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                            f"datacenter/email-service/hosting infrastructure ({assessment.matched_range}) "
+                            f"— combined with failing authentication."
+                        )
+                        origin_score_contrib = 15
+                    else:
+                        anomalies.append(
+                            f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                            f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
+                        )
+                        origin_score_contrib = 0
                 elif assessment.is_non_global:
                     anomalies.append(
                         f"NON-ROUTABLE-ORIGIN: selected origin IP ({selected_ip}) is "

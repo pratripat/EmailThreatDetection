@@ -529,5 +529,58 @@ class TestV26ForensicUncertaintyAndReport(unittest.TestCase):
         self.assertIn('SPF:   PASS — claimed by Authentication-Results (unverified)', text)
 
 
+class TestV26DatacenterOriginAuthConditionalScoring(unittest.TestCase):
+    """Verify DATACENTER-ORIGIN auth-conditional weighting and anomaly text."""
+
+    def test_datacenter_origin_with_passing_auth_contributes_0(self):
+        pass_anomaly = "DATACENTER-ORIGIN: selected origin IP (54.240.8.1) belongs to known datacenter/email-service/hosting infrastructure (54.224.0.0/11)."
+        self.assertNotIn("— combined with failing authentication", pass_anomaly)
+        score = compute_risk_score([pass_anomaly], {'spf': 'pass', 'dkim': 'pass', 'dmarc': 'pass'})
+        self.assertEqual(score, 0)
+
+    def test_datacenter_origin_with_failing_auth_contributes_15(self):
+        fail_anomaly = "DATACENTER-ORIGIN: selected origin IP (54.240.8.1) belongs to known datacenter/email-service/hosting infrastructure (54.224.0.0/11) — combined with failing authentication."
+        self.assertIn("— combined with failing authentication", fail_anomaly)
+        score = compute_risk_score([fail_anomaly], {'spf': 'fail', 'dkim': 'pass', 'dmarc': 'pass'})
+        # The DATACENTER-ORIGIN anomaly itself specifically contributes 15
+        self.assertEqual(score, 15)
+
+    def test_investigation_service_datacenter_scoring(self):
+        from backend.app.services.investigation_service import InvestigationService
+        svc = InvestigationService()
+
+        # Synthetic email with AWS SES datacenter origin and passing auth
+        coorix_eml = (
+            b'Received: by mx.google.com with SMTP id test1234; Sat, 05 Sep 2026 10:00:00 +0000\r\n'
+            b'Received: from a8-1.smtp-out.amazonses.com (a8-1.smtp-out.amazonses.com [54.240.8.1]) by mx.google.com;\r\n'
+            b'Authentication-Results: mx.google.com; spf=pass smtp.mailfrom=coorix.com; dkim=pass header.i=@coorix.com; dmarc=pass\r\n'
+            b'From: "Coorix Team" <support@coorix.com>\r\n'
+            b'To: user@example.com\r\n'
+            b'Subject: Order Confirmation\r\n'
+            b'Return-Path: <support@coorix.com>\r\n\r\n'
+            b'Your package has shipped.'
+        )
+        rep_pass = svc.analyze_email(coorix_eml)
+        self.assertEqual(rep_pass.threatScore, 0)
+
+        # Synthetic email with AWS SES datacenter origin and failing auth (DMARC fail)
+        fail_eml = (
+            b'Received: by mx.google.com with SMTP id test1234; Sat, 05 Sep 2026 10:00:00 +0000\r\n'
+            b'Received: from a8-1.smtp-out.amazonses.com (a8-1.smtp-out.amazonses.com [54.240.8.1]) by mx.google.com;\r\n'
+            b'Authentication-Results: mx.google.com; spf=pass smtp.mailfrom=coorix.com; dkim=pass header.i=@coorix.com; dmarc=fail\r\n'
+            b'From: "Coorix Team" <support@coorix.com>\r\n'
+            b'To: user@example.com\r\n'
+            b'Subject: Order Confirmation\r\n'
+            b'Return-Path: <support@coorix.com>\r\n\r\n'
+            b'Your package has shipped.'
+        )
+        rep_fail = svc.analyze_email(fail_eml)
+        dc_anomalies = [a for a in rep_fail.suspiciousReasons if "DATACENTER-ORIGIN" in a]
+        self.assertEqual(len(dc_anomalies), 1)
+        self.assertIn("— combined with failing authentication", dc_anomalies[0])
+        # DMARC check: fail (15) + DATACENTER-ORIGIN combined with failing auth (15) = 30
+        self.assertEqual(rep_fail.breakdown.headerAnomalies, 30)
+
+
 if __name__ == '__main__':
     unittest.main()

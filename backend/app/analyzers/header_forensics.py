@@ -614,6 +614,7 @@ POSITIVE_INDICATORS = [
     'weak mismatch + authentication failure',
     'VPN-ORIGIN',
     'NON-ROUTABLE-ORIGIN',
+    'combined with failing authentication',
     'SPF check: FAIL',
     'SPF check: SOFTFAIL',
     'DKIM check: fail',
@@ -643,6 +644,8 @@ def compute_risk_score(anomalies: list, auth_results: dict) -> int:
         'header stripping': 25,
         'VPN-ORIGIN': 20,
         'NON-ROUTABLE-ORIGIN': 15,
+        'combined with failing authentication': 15,
+        'DATACENTER-ORIGIN': 0,
     }
     for anomaly in anomalies:
         for key, weight in weights.items():
@@ -700,10 +703,22 @@ def analyze_eml(filepath: str, analyzer: OriginAnalyzer = None) -> ForensicRepor
                     f"exit node ({assessment.matched_range}) — true origin obscured"
                 )
             elif assessment.is_datacenter:
-                anomalies.append(
-                    f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
-                    f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
+                all_auth_passed = (
+                    auth_results.get('spf') == 'pass' and
+                    auth_results.get('dkim') == 'pass' and
+                    auth_results.get('dmarc') == 'pass'
                 )
+                if not all_auth_passed:
+                    anomalies.append(
+                        f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                        f"datacenter/email-service/hosting infrastructure ({assessment.matched_range}) "
+                        f"— combined with failing authentication."
+                    )
+                else:
+                    anomalies.append(
+                        f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                        f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
+                    )
             elif assessment.is_non_global:
                 anomalies.append(
                     f"NON-ROUTABLE-ORIGIN: selected origin IP ({selected_ip}) is "
