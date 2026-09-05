@@ -70,12 +70,31 @@ export const App: React.FC = () => {
   const handleRunBackendAnalysis = async (req: EmailAnalysisRequest): Promise<InvestigationData> => {
     try {
       const { report, source } = await analyzeEmailWithBackend(req, config);
-      const resultData = createInvestigationFromInput(req);
-      if (source === 'backend' && report) {
-        resultData.threatScore = report.overallScore;
-        resultData.threatLevel = report.threatLevel;
+      if (source === 'backend' && report?.raw) {
+        const raw = report.raw;
+        const fallback = createInvestigationFromInput(req);
+        return {
+          ...fallback,
+          ...raw,
+          id: raw.id || fallback.id,
+          threatScore: typeof raw.threatScore === 'number' ? raw.threatScore : (report.overallScore ?? fallback.threatScore),
+          threatLevel: raw.threatLevel || report.threatLevel || fallback.threatLevel,
+          threatType: raw.threatType || fallback.threatType,
+          confidence: typeof raw.confidence === 'number' ? (raw.confidence <= 1 ? +(raw.confidence * 100).toFixed(1) : raw.confidence) : fallback.confidence,
+          authStatus: raw.authStatus || fallback.authStatus,
+          breakdown: raw.breakdown ? { ...fallback.breakdown, ...raw.breakdown } : fallback.breakdown,
+          suspiciousReasons: Array.isArray(raw.suspiciousReasons) && raw.suspiciousReasons.length > 0 ? raw.suspiciousReasons : fallback.suspiciousReasons,
+          headerHops: Array.isArray(raw.headerHops) && raw.headerHops.length > 0 ? raw.headerHops : fallback.headerHops,
+          authentication: raw.authentication ? { ...fallback.authentication, ...raw.authentication } : fallback.authentication,
+          urls: Array.isArray(raw.urls) ? raw.urls : fallback.urls,
+          contentAi: raw.contentAi ? { ...fallback.contentAi, ...raw.contentAi } : fallback.contentAi,
+          iocs: raw.iocs ? { ...fallback.iocs, ...raw.iocs } : fallback.iocs,
+          attackGraph: raw.attackGraph ? { ...fallback.attackGraph, ...raw.attackGraph } : fallback.attackGraph,
+          rawHeaders: raw.rawHeaders || req.rawHeaders,
+          rawBody: raw.rawBody || req.emailBody,
+        };
       }
-      return resultData;
+      return createInvestigationFromInput(req);
     } catch {
       return createInvestigationFromInput(req);
     }

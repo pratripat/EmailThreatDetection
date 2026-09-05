@@ -49,7 +49,7 @@ export const analyzeEmailWithBackend = async (
 
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
 
     const response = await fetch(config.backendUrl, {
       method: 'POST',
@@ -68,14 +68,15 @@ export const analyzeEmailWithBackend = async (
     }
 
     const data = await response.json();
-    const overallScore = typeof data.overallScore === 'number' ? data.overallScore : (data.threatScore ?? 92);
-    const threatLevel = overallScore > 85 ? 'HIGH' : overallScore > 40 ? 'SUSPICIOUS' : 'CLEAN';
+    const overallScore = typeof data.threatScore === 'number' ? data.threatScore : (data.overallScore ?? 50);
+    const threatLevel = data.threatLevel || (overallScore > 85 ? 'HIGH' : overallScore > 40 ? 'SUSPICIOUS' : 'CLEAN');
 
     return {
       report: { overallScore, threatLevel, raw: data },
       source: 'backend',
     };
   } catch (err) {
+    console.warn('[ThreatShield] Backend fetch failed or timed out, using fallback simulation:', err);
     return {
       report: { overallScore: 94, threatLevel: 'HIGH' },
       source: 'simulation',

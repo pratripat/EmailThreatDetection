@@ -18,7 +18,7 @@ export const ContentAiTab: React.FC<ContentAiTabProps> = ({ data }) => {
 
         <div className="mb-3">
           <div><span className="text-muted">Classification:</span> <span className="text-red font-bold">{ai.classification}</span></div>
-          <div><span className="text-muted">Confidence:</span> <span className="text-white">{ai.confidence}%</span></div>
+          <div><span className="text-muted">Confidence:</span> <span className="text-white">{ai.confidence <= 1 ? (ai.confidence * 100).toFixed(1) : ai.confidence}%</span></div>
         </div>
 
         <div className="ai-intent-section">

@@ -85,6 +85,8 @@ async def analyze_email_endpoint(
                             parts.append(headers.strip())
                         if sender and "From:" not in headers:
                             parts.append(f"From: {sender}")
+                        if sender and "Return-Path:" not in headers:
+                            parts.append(f"Return-Path: <{sender}>")
                         if subj and "Subject:" not in headers:
                             parts.append(f"Subject: {subj}")
                         parts.append("")

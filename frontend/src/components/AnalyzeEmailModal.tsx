@@ -111,11 +111,41 @@ export const AnalyzeEmailModal: React.FC<AnalyzeEmailModalProps> = ({
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (event) => {
-      const content = event.target?.result as string;
-      setRawHeaders(content.slice(0, 1000));
-      setEmailBody(content.slice(1000, 3000));
-      setSenderEmail('security@paypa1-support.com');
-      setSubject(file.name.replace('.eml', ''));
+      const content = (event.target?.result as string) || '';
+      if (!content) return;
+
+      // RFC boundary: headers and body are separated by a double newline
+      const splitIdx = content.search(/\r?\n\r?\n/);
+      let headers = '';
+      let body = '';
+
+      if (splitIdx !== -1) {
+        headers = content.slice(0, splitIdx);
+        body = content.slice(splitIdx).replace(/^\r?\n\r?\n/, '');
+      } else {
+        headers = content;
+        body = '';
+      }
+
+      setRawHeaders(headers);
+      setEmailBody(body);
+
+      // Extract From: address
+      const fromMatch = headers.match(/^From:\s*(.+)$/im);
+      if (fromMatch) {
+        const bracketMatch = fromMatch[1].match(/<([^>]+)>/);
+        const emailMatch = fromMatch[1].match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+        const extracted = bracketMatch ? bracketMatch[1] : (emailMatch ? emailMatch[1] : fromMatch[1]);
+        setSenderEmail(extracted.trim());
+      }
+
+      // Extract Subject:
+      const subjMatch = headers.match(/^Subject:\s*(.+)$/im);
+      if (subjMatch) {
+        setSubject(subjMatch[1].trim());
+      } else {
+        setSubject(file.name.replace(/\.eml$/i, ''));
+      }
     };
     reader.readAsText(file);
   };
