@@ -27,7 +27,7 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
     'Sender domain resembles a trusted brand domain (Typosquatting: "paypa1")',
     'URL redirects to suspicious external domain (paypal-secure-login.xyz)',
     'Urgency & credential-harvesting language detected by ML NLP model',
-    'Originating IP (185.220.101.5) has negative reputation on AbuseIPDB & VirusTotal',
+    'Originating IP (198.51.100.1) has negative reputation on AbuseIPDB & VirusTotal',
   ],
 
   headerHops: [
@@ -49,7 +49,7 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
     },
     {
       hopNumber: 2,
-      ip: '185.220.101.5',
+      ip: '198.51.100.1',
       hostname: 'mail-relay-sg01.hosting-cloud.net',
       country: 'Singapore (SG)',
       city: 'Singapore Central',
@@ -105,7 +105,7 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
     returnPathDomain: 'bounce-collector.suspicious-relay.net',
     alignmentMatched: false,
     notes: [
-      'SPF Check: IP 185.220.101.5 is not in SPF record for paypa1-support.com',
+      'SPF Check: IP 198.51.100.1 is not in SPF record for paypa1-support.com',
       'DKIM Check: Invalid cryptographic signature block or missing public key in DNS TXT',
       'DMARC Check: Action policy rejected due to SPF and DKIM alignment failure',
       'Domain Mismatch: Header From domain does not match envelope return-path domain',
@@ -162,13 +162,13 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
   },
 
   iocs: {
-    ipAddresses: ['185.220.101.5', '194.38.20.12', '91.240.118.5'],
+    ipAddresses: ['198.51.100.1', '194.38.20.12', '91.240.118.5'],
     domains: ['paypa1-support.com', 'paypal-secure-login.xyz', 'suspicious-relay.net', 'bit.ly'],
     urls: [
       'https://paypal-secure-login.xyz/auth/verify?session=9942a',
       'https://paypa1-support.com/terms',
       'https://bit.ly/3xSecLogin',
-      'http://185.220.101.5/c2/gate.php',
+      'http://198.51.100.1/c2/gate.php',
       'https://paypal-secure-login.xyz/favicon.ico',
       'https://paypal-secure-login.xyz/assets/app.js',
     ],
@@ -180,7 +180,7 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
     nodes: [
       { id: 'n1', label: 'EMAIL INGRESS', sublabel: 'PHISHING ATTEMPT', type: 'email', status: 'critical' },
       { id: 'n2', label: 'paypa1-support.com', sublabel: 'Spoofed Domain', type: 'domain', status: 'critical' },
-      { id: 'n3', label: '185.220.101.5', sublabel: 'Singapore (Tor Exit)', type: 'ip', status: 'critical' },
+      { id: 'n3', label: '198.51.100.1', sublabel: 'Singapore (Tor Exit)', type: 'ip', status: 'critical' },
       { id: 'n4', label: 'paypal-secure-login.xyz', sublabel: 'Credential Harvester', type: 'page', status: 'critical' },
       { id: 'n5', label: 'Credential Theft C2', sublabel: 'Exfiltration Destination', type: 'action', status: 'critical' },
     ],
@@ -192,7 +192,7 @@ export const DEFAULT_INVESTIGATION: InvestigationData = {
     ],
   },
 
-  rawHeaders: `Received: from mail-relay-sg01.hosting-cloud.net (185.220.101.5)
+  rawHeaders: `Received: from mail-relay-sg01.hosting-cloud.net (198.51.100.1)
  by mx-gateway.enterprise-corp.in (10.24.8.100) with ESMTP id m9921
  for <victim-analyst@enterprise-corp.in>; 05 Sep 2026 01:42:15 +0530
 From: "Security Center" <security@paypa1-support.com>
@@ -201,13 +201,13 @@ Subject: URGENT: Your account requires verification
 Date: 05 Sep 2026 01:42:00 +0530
 Authentication-Results: mx-gateway.enterprise-corp.in;
  dkim=fail (bad sig);
- spf=fail (185.220.101.5 is not permitted sender);
+ spf=fail (198.51.100.1 is not permitted sender);
  dmarc=fail (p=reject sp=reject)
 Return-Path: <bounce-collector@suspicious-relay.net>`,
 
   rawBody: `Dear Customer,
 
-We detected unauthorized sign-in attempts on your PayPal corporate account from IP 185.220.101.5 (Singapore).
+We detected unauthorized sign-in attempts on your PayPal corporate account from IP 198.51.100.1 (Singapore).
 
 Your account will be suspended within 2 hours unless you confirm your identity.
 
@@ -265,7 +265,7 @@ export const createInvestigationFromInput = (req: EmailAnalysisRequest): Investi
     headerHops: [
       {
         hopNumber: 1,
-        ip: isSafe ? '209.85.220.41' : '185.220.101.5',
+        ip: isSafe ? '209.85.220.41' : '198.51.100.1',
         hostname: isSafe ? 'mail-sor-f41.google.com' : 'tor-exit-relay-04.net',
         country: isSafe ? 'United States (US)' : 'Singapore (SG)',
         city: isSafe ? 'Mountain View' : 'Singapore Central',
@@ -341,7 +341,7 @@ export const createInvestigationFromInput = (req: EmailAnalysisRequest): Investi
     },
 
     iocs: {
-      ipAddresses: isSafe ? ['209.85.220.41'] : ['185.220.101.5', '194.38.20.12'],
+      ipAddresses: isSafe ? ['209.85.220.41'] : ['198.51.100.1', '194.38.20.12'],
       domains: [domain],
       urls: isSafe ? [] : [`https://${domain}/secure/auth-session`],
       emailAddresses: [req.senderEmail],
@@ -352,7 +352,7 @@ export const createInvestigationFromInput = (req: EmailAnalysisRequest): Investi
       nodes: [
         { id: 'n1', label: 'EMAIL INGRESS', sublabel: isSafe ? 'CLEAN MAIL' : 'PHISHING ATTEMPT', type: 'email', status: isSafe ? 'clean' : 'critical' },
         { id: 'n2', label: domain, sublabel: isSafe ? 'Verified Domain' : 'Suspicious Domain', type: 'domain', status: isSafe ? 'clean' : 'critical' },
-        { id: 'n3', label: isSafe ? '209.85.220.41' : '185.220.101.5', sublabel: isSafe ? 'Google MTA' : 'Origin Tor Relay', type: 'ip', status: isSafe ? 'clean' : 'critical' },
+        { id: 'n3', label: isSafe ? '209.85.220.41' : '198.51.100.1', sublabel: isSafe ? 'Google MTA' : 'Origin Tor Relay', type: 'ip', status: isSafe ? 'clean' : 'critical' },
       ],
       edges: [
         { from: 'n1', to: 'n2', label: 'Sent From' },

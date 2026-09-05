@@ -675,9 +675,8 @@ def analyze_eml(filepath: str, analyzer: OriginAnalyzer = None) -> ForensicRepor
                 )
             elif assessment.is_datacenter:
                 anomalies.append(
-                    f"VPN-ORIGIN: selected origin IP ({selected_ip}) is known datacenter/"
-                    f"hosting infrastructure ({assessment.matched_range}) — not a "
-                    f"residential connection"
+                    f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                    f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
                 )
             elif assessment.is_non_global:
                 anomalies.append(

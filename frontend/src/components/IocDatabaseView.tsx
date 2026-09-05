@@ -12,7 +12,7 @@ interface IocRecord {
 }
 
 const SAMPLE_IOCS: IocRecord[] = [
-  { id: 'ioc-101', type: 'IP', value: '185.220.101.5', threatCategory: 'Tor Exit Node / Phishing Relay', severity: 'CRITICAL', firstSeen: '2026-07-12', associatedCase: '#EML-2026-00421' },
+  { id: 'ioc-101', type: 'IP', value: '198.51.100.1', threatCategory: 'Tor Exit Node / Phishing Relay', severity: 'CRITICAL', firstSeen: '2026-07-12', associatedCase: '#EML-2026-00421' },
   { id: 'ioc-102', type: 'DOMAIN', value: 'paypa1-support.com', threatCategory: 'Brand Impersonation / Typosquat', severity: 'CRITICAL', firstSeen: '2026-08-01', associatedCase: '#EML-2026-00421' },
   { id: 'ioc-103', type: 'URL', value: 'https://paypal-secure-login.xyz/auth/verify', threatCategory: 'Credential Harvester Page', severity: 'CRITICAL', firstSeen: '2026-08-02', associatedCase: '#EML-2026-00421' },
   { id: 'ioc-104', type: 'EMAIL', value: 'security@paypa1-support.com', threatCategory: 'Phishing Sender Header', severity: 'HIGH', firstSeen: '2026-08-02', associatedCase: '#EML-2026-00421' },

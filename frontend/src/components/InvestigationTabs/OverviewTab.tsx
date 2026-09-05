@@ -110,7 +110,22 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ data }) => {
         <div className="action-callout-box font-mono">
           <div className="callout-header">RECOMMENDATION</div>
           <div className="callout-desc">
-            Quarantine email. Block domain {data.authentication.fromDomain} and origin IP 185.220.101.5 at edge gateway.
+            {(() => {
+              switch (data.threatLevel) {
+                case 'CLEAN':
+                  return 'No action required.';
+                case 'LOW':
+                  return 'Low-risk indicators detected. No immediate action required.';
+                case 'SUSPICIOUS':
+                  return 'Review the email and verify the sender before interacting with links or attachments.';
+                case 'HIGH':
+                  return 'Quarantine recommended. Investigate the sender and associated indicators.';
+                case 'CRITICAL':
+                  return 'Quarantine immediately and investigate associated indicators.';
+                default:
+                  return 'Review the email and verify the sender before interacting with links or attachments.';
+              }
+            })()}
           </div>
         </div>
       </div>

@@ -92,7 +92,7 @@ export const AnalyzeEmailModal: React.FC<AnalyzeEmailModalProps> = ({
       setSenderEmail('security@paypa1-support.com');
       setSubject('URGENT: Your account requires verification');
       setEmailBody('We detected unauthorized sign-in attempts on your PayPal corporate account. Verify immediately:\nhttps://paypal-secure-login.xyz/auth/verify');
-      setRawHeaders('Received: from mail-relay-sg01.hosting-cloud.net (185.220.101.5)\nAuthentication-Results: spf=fail dkim=fail dmarc=fail');
+      setRawHeaders('Received: from mail-relay-sg01.hosting-cloud.net (198.51.100.1)\nAuthentication-Results: spf=fail dkim=fail dmarc=fail');
     } else if (type === 'bec') {
       setSenderEmail('ceo-office@enterprise-global-corp.top');
       setSubject('Confidential: Immediate Wire Transfer Needed Today');
@@ -271,7 +271,7 @@ export const AnalyzeEmailModal: React.FC<AnalyzeEmailModalProps> = ({
               <textarea
                 className="minimal-textarea font-mono text-xs"
                 rows={2}
-                placeholder="Received: from mail.attacker.net (185.220.101.5)..."
+                placeholder="Received: from mail.attacker.net (198.51.100.1)..."
                 value={rawHeaders}
                 onChange={(e) => setRawHeaders(e.target.value)}
               />

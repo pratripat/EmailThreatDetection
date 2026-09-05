@@ -92,7 +92,7 @@ export const INITIAL_COMMUNITY_THREATS: CommunityThreatEntry[] = [
     threatType: 'Brand Impersonation / Credential Phishing',
     severity: 'CRITICAL',
     originCountry: 'Singapore (SG)',
-    originIp: '185.220.101.5',
+    originIp: '198.51.100.1',
     flaggedCount: 142,
     firstSeen: '2 hours ago',
     lastReported: '5 mins ago',

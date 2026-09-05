@@ -129,10 +129,10 @@ class InvestigationService:
                     origin_score_contrib = 20
                 elif assessment.is_datacenter:
                     anomalies.append(
-                        f"VPN-ORIGIN: selected origin IP ({selected_ip}) is known datacenter/"
-                        f"hosting infrastructure ({assessment.matched_range}) — not a residential connection"
+                        f"DATACENTER-ORIGIN: selected origin IP ({selected_ip}) belongs to known "
+                        f"datacenter/email-service/hosting infrastructure ({assessment.matched_range})."
                     )
-                    origin_score_contrib = 20
+                    origin_score_contrib = 0
                 elif assessment.is_non_global:
                     anomalies.append(
                         f"NON-ROUTABLE-ORIGIN: selected origin IP ({selected_ip}) is "

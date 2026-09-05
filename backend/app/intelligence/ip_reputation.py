@@ -233,7 +233,7 @@ class IPReputationService:
             if abuse_score >= 80 or vt_malicious >= 3:
                 reputation = "MALICIOUS"
                 abuse_category = "HIGH RISK"
-            elif abuse_score >= 20 or vt_malicious >= 1 or is_vpn or is_datacenter:
+            elif abuse_score >= 20 or vt_malicious >= 1 or is_vpn:
                 reputation = "SUSPICIOUS"
                 abuse_category = "MEDIUM RISK"
             elif abuse_score < 20 and vt_malicious == 0:
@@ -245,10 +245,15 @@ class IPReputationService:
             source = "external_intel"
         else:
             # Offline or unconfigured
-            if is_vpn or is_datacenter:
+            if is_vpn:
                 reputation = "SUSPICIOUS"
                 abuse_category = "MEDIUM RISK"
                 provenance = ProvenanceType.HEURISTIC
+                source = "local_origin_lists"
+            elif is_datacenter:
+                reputation = "UNKNOWN"
+                abuse_category = "NOT_CHECKED"
+                provenance = ProvenanceType.OBSERVED
                 source = "local_origin_lists"
             else:
                 reputation = "UNKNOWN"

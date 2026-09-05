@@ -7,6 +7,23 @@ interface ForensicReportModalProps {
   data: InvestigationData;
 }
 
+const getRecommendation = (threatLevel: string): string => {
+  switch (threatLevel) {
+    case 'CLEAN':
+      return 'No action required.';
+    case 'LOW':
+      return 'Low-risk indicators detected. No immediate action required.';
+    case 'SUSPICIOUS':
+      return 'Review the email and verify the sender before interacting with links or attachments.';
+    case 'HIGH':
+      return 'Quarantine recommended. Investigate the sender and associated indicators.';
+    case 'CRITICAL':
+      return 'Quarantine immediately and investigate associated indicators.';
+    default:
+      return 'Review the email and verify the sender before interacting with links or attachments.';
+  }
+};
+
 export const ForensicReportModal: React.FC<ForensicReportModalProps> = ({
   isOpen,
   onClose,
@@ -20,29 +37,32 @@ export const ForensicReportModal: React.FC<ForensicReportModalProps> = ({
   };
 
   const handleCopy = () => {
-    const text = `EMAIL FORENSIC REPORT
+    const text = `EMAIL FORENSIC ASSESSMENT REPORT
+Case ID: #${data.id}
+Date: ${data.receivedDate}
 
-Verdict:        ${data.threatLevel}
-Threat Score:   ${data.threatScore}/100
-Threat Type:    ${data.threatType}
+SUMMARY
+Threat Score: ${data.threatScore}/100 [${data.threatLevel}]
+Classification: ${data.threatType}
+Auth Status: ${data.authStatus}
 
 ────────────────────────────
 
 KEY FINDINGS
 
-✓ Header anomalies detected
-✓ SPF/DKIM/DMARC failures
-✓ Suspicious URL identified
-✓ Malicious IP identified
-✓ Phishing intent detected by NLP
+✓ Header anomalies: ${data.breakdown.headerAnomalies}%
+✓ Authentication: ${data.breakdown.authentication}%
+✓ URL Risk: ${data.breakdown.urlRisk}%
+✓ Content / NLP Risk: ${data.breakdown.contentNlp}%
+✓ Sender Reputation: ${data.breakdown.senderReputation}%
 
 ────────────────────────────
 
 ORIGIN INTELLIGENCE
 
-Origin IP:       ${data.headerHops[1]?.ip || '185.220.101.5'}
-Country:         ${data.headerHops[1]?.country || 'Singapore'}
-ASN:             ${data.headerHops[1]?.asn || 'AS49505'}
+Origin IP:       ${data.headerHops[0]?.ip || 'UNKNOWN'}
+Country:         ${data.headerHops[0]?.country || 'UNKNOWN'}
+ASN:             ${data.headerHops[0]?.asn || 'UNKNOWN'}
 
 ────────────────────────────
 
@@ -57,9 +77,7 @@ ${data.iocs.hashes.length} Hash
 
 RECOMMENDATION
 
-Block identified domains/IPs.
-Quarantine the email.
-Investigate related messages.`;
+${getRecommendation(data.threatLevel)}`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -118,9 +136,9 @@ Investigate related messages.`;
           <div className="report-section">
             <div className="section-heading">ORIGIN INTELLIGENCE</div>
             <div className="report-kv-grid">
-              <div>Origin IP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[1]?.ip || '185.220.101.5'}</div>
-              <div>Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[1]?.country || 'Singapore'}</div>
-              <div>ASN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[1]?.asn || 'AS49505'}</div>
+              <div>Origin IP:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[0]?.ip || 'UNKNOWN'}</div>
+              <div>Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[0]?.country || 'UNKNOWN'}</div>
+              <div>ASN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{data.headerHops[0]?.asn || 'UNKNOWN'}</div>
             </div>
           </div>
 
@@ -141,9 +159,7 @@ Investigate related messages.`;
           <div className="report-section">
             <div className="section-heading">RECOMMENDATION</div>
             <div className="report-recommendation-box text-white">
-              Block identified domains/IPs.<br />
-              Quarantine the email.<br />
-              Investigate related messages.
+              {getRecommendation(data.threatLevel)}
             </div>
           </div>
         </div>

@@ -44,8 +44,8 @@ export const OriginAttackGraphTab: React.FC<OriginAttackGraphTabProps> = ({ data
 
           <div className="graph-node">
             <span className="node-label">ORIGIN IP</span>
-            <span className="node-sublabel text-red font-bold">{data.headerHops[1]?.ip || '185.220.101.5'}</span>
-            <span className="node-meta">{data.headerHops[1]?.country || 'Singapore (Tor Relay)'}</span>
+            <span className="node-sublabel text-red font-bold">{data.headerHops[0]?.ip || 'UNKNOWN'}</span>
+            <span className="node-meta">{data.headerHops[0]?.country || 'UNKNOWN'}</span>
           </div>
         </div>
 
@@ -59,8 +59,8 @@ export const OriginAttackGraphTab: React.FC<OriginAttackGraphTabProps> = ({ data
         <div className="graph-tier">
           <div className="graph-node">
             <span className="node-label">HARVESTER LOGIN PAGE</span>
-            <span className="node-sublabel text-white">{data.urls[0]?.domain || 'paypal-secure-login.xyz'}</span>
-            <span className="node-meta">Cloned Credentials Form</span>
+            <span className="node-sublabel text-white">{data.urls[0]?.domain || 'None Detected'}</span>
+            <span className="node-meta">{data.urls.length > 0 ? 'Suspicious URL Form' : 'No URLs Flagged'}</span>
           </div>
 
           <div className="graph-edge-horizontal font-mono">
