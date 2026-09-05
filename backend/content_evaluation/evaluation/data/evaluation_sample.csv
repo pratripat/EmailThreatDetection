@@ -1,0 +1,1326 @@
+id,subject,body,true_label
+1,Re: [Python-3000] binascii.crc32 vs zlib.crc32,"Hm.  zlib is an odd place to find this API (unless you know way more
+about gzip than healthy :-).  Though binascii isn't much better.  I'd
+rather expect this in the vicinity of md5 and sha... Is it possible to
+tweak that C code to use the zlib version if present and the old C
+code otherwise?
+
+On Tue, Mar 18, 2008 at 3:21 PM, Gregory P. Smith  wrote:
+ Both modules have a crc32 function.  The zlib version is faster when zlib
+ has been compiled optimally or about the same when zlib is old or uses its C
+ code.
+
+ Should we ditch the binascii.crc32 version in py3k?
+
+  64bit Linux (CentOS 5.1):
+
+ $ python2.4 -m timeit",legitimate
+2,"Wekalist Digest, Vol 60, Issue 35","Send Wekalist mailing list submissions to 	iuxxdkqk@list.scms.waikato.ac.nz To subscribe or unsubscribe via the World Wide Web, visit 	https://list.scms.waikato.ac.nz/mailman/listinfo/wekalist or, via email, send a message with subject or body 'help' to 	ohwwlejs-pbfotbp@list.scms.waikato.ac.nz You can reach the person managing the list at 	pobypuhs-hvhzj@list.scms.waikato.ac.nz When replying, please edit your Subject line so it is more specific than ""Re: Contents of Wekalist digest..."" Today's Topics:    1. Re: Preserving order in split leads to Inferior results	-       Why?",legitimate
+3,Re: [opensuse] Intel 3945 Wireless Problem opensuse 10.3 - RESOLVED!,"James Knott wrote:
+... In order to get WPA2 in XP,
+ I have to download an update from MS, but getting that update requires
+ installing ""Windows Genuine Advantage"" spyware.  
+
+What are you afraid of?",legitimate
+4,The aim of this  message is to help you to achieve better health.,"P kp har mis ma vp cy On ny line
+
+Over 2 Million Pre zg script daj ions Fil zb led
+Lowest Pri am ce Guaran kjw tee. Bu um y On xj line! 
+
+http://continuemine.com",fraudulent
+5,"Dude, it really works!","Our product will help you regain control about your masculinity!
+Start positive changes in your life!
+http://dearcan.com/
+
+
+Parti Qubcois leader slams radio host on homophobiaRahai, the Guardian reports.shorthanded goal came 76 seconds into the final period,",fraudulent
+6,123,"I got something to tell you! Fist-rate experience in bed! Guaranteed results, can cause no harm. Forget about drugstore! you  now don’t have to pay extra fee because of  expenses drugstores simply have to undertake. When buying Viagra from our on-line pharmacy you accruecomfort and harmony for for fantastic price!get up to 12 Viagra pills for free!!! with every order!!!Ciwerlis - $1.99
+Acomplicia - $0.79
+Ciwerlis professional - $4.17http://surfacegenerosity.com",fraudulent
+7,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. PARIS HILTON TAKES ON MCCAIN http://www.cnn.com/video/partners/email/index.html?url/video/politics/2008/08/06/wynter.paris.hilton.ad.cnn Paris Hilton swings back at Republican presidential candidate John McCain. Kareen Wynter reports. 2. BIKINI BARISTA STAND CLOSED http://www.cnn.com/video/partners/email/index.html?url/video/living/2008/08/06/pkg.bikini.baristas.barred.kiro 3. TOT GRANDMA REACTS TO CHARGES http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/08/06",fraudulent
+8,[soaplite] Digest Number 1746,"SOAP::Lite for Perl (soaplite.com)       SOAP::Lite for Perl (soaplite.com)     Messages In This Digest      (1                Message)            1.   hibye demo - not well-formed (invalid token)  error   From:        jwalsh999   View All Topics | Create New Topic            Message        1.            hibye demo - not well-formed (invalid token)  error       Posted by:      ""jwalsh999""             fmgiqn691@yahoo.com                                          jwalsh999                 Fri Feb 8, 2008 11:18 pm        (PST)                 Brand new SOAP::Lite user here. I am trying to get the hibye demo working locally on my laptop running Ubuntu Ultimate 7.10. The hibye.pl script works when connecting to www.soaplite.com but fails when I attempt to connect to",legitimate
+9,Your profile has been looked trough More than 50 tomes since today`s morning!,"*{font-family:verdana,sans,arial,tahoma;font-size:11pt;}Good morning!A nice girl wants to get acquainted with youRita R., San Francisco",fraudulent
+10,Spicy your bedroom life. T,"Find your love stick gain here
+        CLICK HERE URl!!!!
+        oZ8z062Jp",fraudulent
+11,Satisfy your woman?s craving easily,"You won't have to apologize for her staying dissatisfied anymore!
+Gain the dimension you have long wished for!
+http://dearbright.com/
+
+
+which is Polo Ralph Lauren Watch and Jewelry Company,40m wide at the bottom a week ago.Service) soldiers who will protect him.",fraudulent
+12,50 ways to meet your lover_Suppeko,"-------------------------------------------------
+greeneyedblo...
+27 years 0ld
+I  l0oking for Man,  30 - 49
+Lake Wales, Florida USA
+0nline t0day! 
+Become a member to see more results.
+http://ekojonyjynie.narod.ru
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Delite your email :
+orateorix[@]gmail[dot]com
+
+
+
+
+
+
+he was horrible. The cardboard lady97",fraudulent
+13,Re: [Python-Dev] [Distutils] how to easily consume just the parts	of eggs that	are good for you,"On Wed, Apr 09, 2008 at 12:41:32AM -0400, Phillip J. Eby wrote:
+ The way to achieve a database for Python would be to provide tools for
+ conversion of eggs to rpms and debs,
+
+ Such tools already exist, although the conversion takes place from 
+ source distributions rather than egg distributions.
+
+What is the status of the deb backend? The only one I know is unofficial
+maintained by Andrew Straw, but my information my be lagging behind.
+
+By the way, if these tools work well, they are priceless!
+
+Cheers,
+
+Gaël
+_______________________________________________
+Python-Dev mailing list
+zvllln-eum@python.org
+http://mail.python.org/mailman/listinfo/python-dev
+Unsubscribe:",legitimate
+14,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Turn back time and go back to the good days with this
+
+Wed, 2 Jan 2002 02:39:47 0800
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+15,Re: [opensuse] Wireless: Manually Remove Connection From NetworkManager,"John Andersen wrote:
+ On Wed, Feb 13, 2008 at 7:50 AM, d4v1dv00  wrote:
+ Hi there,
+
+  How to manually remove wireless connection in NetworkManager because
+  there is one redundant item where when selected the ""Delete"" button has
+  been disabled.
+
+  This is quite urgent, please help.
+ 
+ 
+ I don't know about urgent, but I too have ancient, once used
+ routers listed in my KNetworkManager listing.  I'd like
+ to get rid of them to reduce the clutter.
+ 
+ I can't find where these are stored nor any facility to kill them off.
+ 
+ 
+ 
+
+Right click on the icon and select configure.  There's an option in 
+there, to remove networks.
+
+
+-- 
+Use OpenOffice.org",legitimate
+16,Your new way to greater satisfaction,"If you cannot boast of having a long and thick one, we will help you improve it!
+Begin a campaign against your imperfection today!
+http://wearplaces.com/
+
+
+before anyone else does.and dumped billions of dollars of short- and longer-term Treasurywrites in one newspaper, not to squander the progress weve made.",fraudulent
+17,Re: [Python-Dev] New project : Spyke python-to-C compiler,"""Rahul Garg""  wrote in message 
+news:20080406184850.xiqr9t0hwgco004s@webmail.ualberta.ca...
+| Note this message has been posted to numpy-discussion and python-dev.
+| Sorry for the multiple posting but I thought both python devs and
+| numpy users will be interested. If you believe your list should not
+| receive this email, let me know. Also I just wanted to introduce
+| myself since I may ask doubts about Python and Numpy internals from
+| time to time :)
+
+Pydev is for discussion about development of  future versions of Python 
+(ie, 2.6 and some of 3.0).  I think this would have been better posted on 
+comp.lang.python (or gmane.comp.python.general or the corresponding mailing 
+list).  You can get",legitimate
+18,RE: 5.10 code freeze and dual-life modules,"On Mon, 12 Nov 2007, Rafael Garcia-Suarez wrote:
+ Here's a list of dual-lived modules in the core that have patches that
+ aren't yet integrated in the CPAN version. It would be nice to release
+ versions on CPAN with those changes in, in order to distribute perl
+ 5.10 with ""authorized"" versions of core modules.
+
+[...]
+ 
+ Win32 0.32_01
+
+I've released Win32-0.33 to CPAN, which is identical to the bleadperl
+version, except for the $VERSION, and a simple CPAN Testers patch
+for Makefile.PL, which isn't relevant to core Perl, but should be
+applied anyways. :)
+
+Cheers,
+-Jan
+
+
+--- ext/Win32/Makefile.PL.orig  2007-11-12",legitimate
+19,Special internet prices for  medications!,Rel xfp iab uzf le Dru ewi gs zt tore For High Qua ax lity Me ge di rdw cineC qpm LI ii CK HE my RE!!!,fraudulent
+20,Replica watches from Officine Panerai closest to original,"Looking for qualitative watches? Go to Replica Classics
+
+Offer variety replica watches
+
+Startling Brietling watches at Replica Classics   
+
+http://dryadsnedsjaw.com/",fraudulent
+21,Re: [opensuse] Corrupted partition. parted no help,"tskfjdim@indo.net.id wrote:
+ On my Laptop the partition is corrupted and parted and/or
+ partition managerfrom Yast are not able to repair the problem. I am running 10.3
+ now without aproblem but anything else on this machine does not want to work.
+ It complaints from an overlap from partition 2.
+ I have looked into the partition overview and it gives me
+ following info withthe warning that it not able to change anything.
+                                                 size           
+                                                 start          
+                                                 endSda                                             37.2 GB 0      
+         4863sda1            /windows xp             9.7   GB        1      
+         1275sda2                                            0.0   GB       
+ 1276    1276sda3            /drdos                  1.9   GB        1277   
+ 1532sda",legitimate
+22,Re: perldoc using fancy quotes,"Moin,
+
+On Monday 19 November 2007 01:32:44 Michael G Schwern wrote:
+ Lately perldoc has been doing EVIL things like replacing single
+ quotes with fancy Unicode quotes when displaying the documentation. 
+ I don't know what part of the formatting chain is introducing this
+ hateful behavior, but it royally screws up pasting code from perldoc.
+  I'm not sure when this behavior started, I've been dealing with it
+ for a while.
+
+ Anyone else experiencing this?  I assume it's because I have an
+ LC_CTYPE of 'en_US.UTF-8' (which appears to be the OS X default) but
+ it should not cause this sort of ""smart"" text mangling.
+
+ perldoc -t does not have this damage.
+
+ This appears with 5.8.8 and 5.10.
+
+I think I reported that issue",legitimate
+23,Best way to cure yourself,"Cheap m fkh ed bnk ic dg ati yv ons
+The cheapest On-li bp ne st do ore offers you:
+Specially for Man's He qb al qld th:An yq ti-De in pr to essa rg nts:C cyi ia fm lisCe im le xiq xaPr qzk oz gj acC nv ia lgs li cn s So psq ft T kfz ab ew sEff wzw ex vjd orRe mp mer jp onL sw ev tv it kxa raFl dkg uo wtm xet ur ineSa awe ra uzp femPr hgi op uq ec ox iaLe gt xa itd proTra jsb zod xw oneV om ia nu gr gy aNa it rd hth ilWe jt llb lga ut bve rinVi zkg a cq gr kbi a S fyu o fa ft T ad",fraudulent
+24,Qualitative replica watches for most exacting people,"These original watches sell in stores for thousands of dollars. We sell them for much less. 
+
+save 90% on watches! visit replica store
+
+rolex cartier omega LV CD chanel gucci...  
+
+http://fetessteersit.com/",fraudulent
+25,Re: [FoRK] Open service analysis,"It has, indeed, seemed to be the case over the decades that the
+realities of the hardiness of data in an environment that we have has
+perplexed and confounded the desires of many different forces of will
+such that their machinations to force  their will has given us a
+baroque and broke system of laws, enforcements and expectations.
+
+Data itself does not want to be free anymore than a car wants to be
+driven or a gun wants to be fired. It has proven to be the case though
+that data gets used for many different purposes under many different
+sets of ethical  guidelines such that supposing one universal set of
+guidelines to its use, propigation and disposal make little sense.
+
+In being used the data gains intent, gains vectors, gains agendas and
+very often gains escape velocity from many of the constraints some
+would put on it.
+
+Yes I do",legitimate
+26,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MOM PARTIES AT A CLUB http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/08/05/ng.mom.pics.cnn Nancy Grace has new photos of Casey Anthony partying at a nightclub after her daughter Caylee vanished. 2. WOMAN'S COMPUTER SPIES ON HER http://www.cnn.com/video/partners/email/index.html?url/video/tech/2008/08/05/pkg.webcam.spying.wcjb 3. TIGERS ATTACK TEEN AT ZOO http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/08/05/wuellner.tiger.attacks.teen.kytv 4. MISTRESS TEST",fraudulent
+27,Re:,"Why do you say you love me, if you are only going to leave me? http://lsbxv.motivationball.com",fraudulent
+28,Re: (perl-current of 5.9.5) patch for ext/Sys/Syslog/Makefile.PL for EBCDIC platform,"Rafael Garcia-Suarez wrote:
+
+ Sébastien Aperghis-Tramoni  wrote:
+ AFAICT, this is already in Sys::Syslog
+
+ Yes, it's in blead.
+
+Ok. Then I'll make a new release to add the other part of he patch  
+and resolve the copyright issue Debian had, and will send you the  
+corresponding diff. (Must remind to implement LOG_PERROR first).
+
+Chun Bing Ge, could you confirm me that Sys::Syslog works on you  
+system with just the modified test in Makefile.PL? I'm asking  
+because _PATH_LOG is also tested in the module as well. I had tried  
+and failed to",legitimate
+29,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MONTAUK 'MONSTER' http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/07/31/moos.montauk.monster.cnn Is it a devil dog? Is it a turtle? Is it the Montauk Monster? CNN's Jeanne Moos asks, ""what is this thing?"" 2. RACY PHOTOS OF TODDLER'S MOM http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/07/31/ng.racy.photos.cnn 3. NEWS OF THE ABSURD EPISODE 54 http://www.cnn.com/video/partners/email/index.html?url/video/podcasts/abs",fraudulent
+30,[FoRK] awesome firefox extension,"Might be old news to some of you, but when I found that I can block
+Google from building my personal profile, I had to try it.
+
+It also blocks Google ads, and Google analytics.  Get it before Google
+legal shuts them down.
+
+www.customizegoogle.com
+
+Wonder if this is developed using greasemonkey.",legitimate
+31,Dreams can cost less Replica watches from Rolex here,"Best replica watches from IWC at Replica Classics 
+
+Qualitative replica watches for most exacting people   
+
+Find the best replica rolex, Jewelry etc. 
+
+http://dryadsnedsjaw.com/",fraudulent
+32,Hiring Announcement,"Dear
+Mr. or Mrs.
+If you are looking for well-paid part time job and you have communicative skills good enough to manage a Customer Care for software making company – Aschsoft Inc has an opening position of Regional Manager in various country. 
+Want to know more about the company and position offered please provide information listed below and send it to Michle.Gans@gmail.com
+First Name:
+Last Name:
+Country:
+E-Mail:
+Contact Number:
+Time available to talk to us:
+* Attached resume is preferable
+We offer: 
+-     Flexible schedule 
+-     Good salary
+-     We pay-off all taxes for you
+-     Insurance
+
+Call Managers will contact and provide with all information you need
+
+Best Regards HRM of Aschsoft Inc",fraudulent
+33,Re: [opensuse] Defragging: possible?  necessary?,"On Sat, 2008-02-16 at 22:30 0100, Herbert Graeber wrote:
+ Am Samstag, 16. Februar 2008 22:19:11 schrieb Jerry Houston:
+  For years, defragging hard drives has been part of my routine system
+  maintenance on Windows systems.  It occurred to me that I've now had
+  Linux systems up and running long enough that it might be a good idea to
+  defragment their drives, to make sure everything is running as smoothly
+  as possible.
+ 
+ For the most common linux file systems it is not neccessary to defragment, if 
+ they are filled up to 90 to 95%. So you care to have always some free disk 
+ space.
+ 
+  I haven't been able to find any information about drive defragmentation
+  for Linux",legitimate
+34,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MONTAUK 'MONSTER' http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/07/31/moos.montauk.monster.cnn Is it a devil dog? Is it a turtle? Is it the Montauk Monster? CNN's Jeanne Moos asks, ""what is this thing?"" 2. RACY PHOTOS OF TODDLER'S MOM http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/07/31/ng.racy.photos.cnn 3. NEWS OF THE ABSURD EPISODE 54 http://www.cnn.com/video/partners/email/index.html?url/video/podcasts",fraudulent
+35,Re: [opensuse] Kaddressbook,"Stan Goodman wrote:
+ dset.
+ -
+   
+ Use OpenOffice.org 
+     
+
+ Oooooh? I never thought of that. I'll look into that tomorrow.
+
+   
+There's no address book there.  That line is something that appears at 
+the bottom of all my email.
+
+
+-- 
+Use OpenOffice.org",legitimate
+36,AddtoCartGenericsYourHealth,"SoftTabsAllProductsSafeSecure
+http://h9vjfg.bay.livefilestore.com/y1pAqoH21jZsMeRPkkCrk1GXF5xxfct-htnFDFbjequh5KKNHUb5EnKBw9LuX8Ofe88m1fE8IzfvCqfQy3r3j_xyQ/index.html",fraudulent
+37,google running an open relay?,"Based on googles standard 'we don't have any clients who would email  from google' ignore bot, then what? if google doesn't have any direct  clients, then does this indicate they are running an open relay? (email  purports to come from Argentina (and 201.231.43.135 does.), RDNS for first untrusted looks like google. whois on netblock shows  google in US. What types of emails (besides 'gmail.com' ) email is supposed to come  from google? are we going to start getting postini clients relayed  through google now? If they don't even have a web site to report'spam' or open relays to,  then how would you even contact them? (this is the first untrusted received line).  maybe make a meta? __",legitimate
+38,[Bug 5845] Hadoopify large-scale mass-check infrastructure,"https://issues.apache.org/SpamAssassin/show_bug.cgi?id5845
+
+
+
+
+
+------- Additional Comments From wlbpaliggfad@dostech.ca  2008-03-04 10:49 -------
+Be sure to use mbox rather than individual files for the corpus.  Using HDFS
+with individual files you'd be lucky to get 1/3 the current message throughput.
+
+That is, don't try using the message paths as the input and having the mappers
+open the individual files from HDFS.  As expected, it doesn't work so well. ;)
+
+
+
+------- You are receiving this mail because: -------
+You are the assignee for the bug, or are watching the assignee.",legitimate
+39,Penis Enlargement - Truth,"Try it today - you have nothing to lose, just a lot to gain!
+
+""I couldn't believe that my Paul gained an incredible 3 inches in just 2 short months. Now that he's longer and also thicker, making love is so much more pleasurable, and I come a lot more easily"" Lindsay, California, USA
+
+http://zoomhigh.com/",fraudulent
+40,More meat is never excessive,"In a few weeks you'll start noticing admiring glances shot at your groin
+Improvement of your life is a step away!
+http://dearcan.com/
+
+
+Gholam Hossein Elham, a spokesman for the Iranianhistorical ensign displayed over the Canadian Nationaldeath of Pat Tillman.",fraudulent
+41,What They Don't Want You to Know What it Does to Your Body!,"Increase both your thickness and length within a few short weeks - women simply love it when you have a large manhood. 
+
+""Ever since I started on your herbal supplement, Sharon says sex is so much more pleasurable for her, and she comes much more easily"". David, Florida, USA 
+
+http://willpaid.com/",fraudulent
+42,Awesome rep1!c@ted watches,We are proud to offer you exclusive grade copies of designers watches that are 99.9% exact as originals! http://dearplay.com/,fraudulent
+43,ShippingHealthyLifeNewProducts,"WelcomeThankYouOnlineDrugstore
+http://qmrkdg.bay.livefilestore.com/y1pttgeLgO3P75hh-t2rJFjEjDNV66po4e9mw1gKzOFxzZ7BKQmuhaIZ1zdHKpKS9UsMQxJd3O1AIxDeRgUnHU2SA/index.html",fraudulent
+44,Re: PathTools beta for testing,"On Sun, 14 Oct 2007 09:02:23 -0500, Andy Lester  wrote:
+
+ 
+ On Oct 14, 2007, at 6:45 AM, Dave Mitchell wrote:
+ 
+  -    return ""$node$path"";
+      return $node. $path;
+ 
+  both these compile to the same opcode sequence, so it has no  
+  performance benefits.
+ 
+ Not according to my running through Benchmark.
+
+Still, don't `optimize' that to.
+
+I remember that in earlier times ""$x$y"" was faster then $x.$b on
+HP-UX and vice-versa on AIX.
+
+Personally I prefer ""$x$y""
+
+HP-UX 11.00
+-----------
+ perl5.8.5 -MBenchmark:all -e'($x,$y)(""a"",""b"");cmpthese(-5,{interpq{$z",legitimate
+45,These nurses are flaming hot,"Bang her with all your might, renew your mighty morphing power pecker.
+http://www.fiftywin.com/
+
+--
+Using Opera's revolutionary e-mail client: http://www.opera.com/mail/",fraudulent
+46,Re:,Never say goodbye when you still want to try. Never give up when you still feel you can take it. http://haxfs.shallstraight.com,fraudulent
+47,Re: [R] Greek characters in plots,"Hi, you could try to do: text(x,y, expression(paste(""A) "",Delta,""stbA::cat""));   # uppercase 'D'elta text(x,y, expression(paste(""A) "",delta,""stbA::cat""));	#lowercase 'd'elta or yet text(x,y, ""A) *DstbA::cat"", vfontc(""serif"", ""plain"")) # here there are too many examples... demo(plotmath)    'Alpha' - 'Omega'               uppercase Greek symbols, i.e.: ""Alpha"", ""Beta"",...""Gamma"",....""Omega"". I hope that help you! EToktar  -----Original Message-----  From: r-help-bounces@r-project.org   [mailto:r-help-b",legitimate
+48,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MONTAUK 'MONSTER' http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/07/31/moos.montauk.monster.cnn Is it a devil dog? Is it a turtle? Is it the Montauk Monster? CNN's Jeanne Moos asks, ""what is this thing?"" 2. RACY PHOTOS OF TODDLER'S MOM http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/07/31/ng.racy.photos.cnn 3. NEWS OF THE ABSURD EPISODE 54 http://www.cnn.com/video/partners/email/index.html?url/video/podcasts/",fraudulent
+49,Service alert: spamassassin.zones.apache.org/BBMASS is CRITICAL,"*** ASF Nagios ***
+
+Notification Type: PROBLEM
+Host: spamassassin.zones.apache.org
+Address: 140.211.11.80
+Service: BBMASS
+State: CRITICAL
+Info: $
+
+Date/Time: Tue Feb 12 12:16:26 GMT 2008",legitimate
+50,123,"There’s something in store for you! Striking performance in bed! Guaranteed results, in toto safe. Why buy  in drug stores? you  now don’t have pay twice because of  license cost and other expenses drugstores have to cover when operating normally. When purchasing Viagra from our on-line pharmacy you gaincomfort and harmony for the price twice as cheap!The prices we have to offer you are the most astounding! Just have a look at some of our pricelist samples!Vyigra Super Active - $2.82
+VPRNXL - $31.8
+Ciwerlis professional - $4.17http://surfacegenerosity.com",fraudulent
+51,First-class replica watches at Replica Classics,"- Guaranteed triple-wrapped gold on all-gold models 
+
+Replica Rolex Swiss Watches   
+
+fashionable replica watches   
+
+http://blockvatreb.com/",fraudulent
+52,To Men Who Want To Buy Rolex Watches At A Fraction Of The Price,"Qualitative watches at Replica Classics 
+
+Replica for you
+
+Replica watches, pens, bags and more... Cheap luxury gifts...   
+
+http://fetessteersit.com/",fraudulent
+53,Top stories about male health,"At our pharmacies, we have been supplying top-quality, medications to satisfied customers for close to 2 years now
+
+Find health information on a variety of health topics including skin care, osteoporosis, and, arthritis, heart health and free consultations with medical graduates
+
+
+
+Come here for big discounts",fraudulent
+54,For men with low libidos,"Men who ignore this report will regret http://www.fiftyscore.com/
+
+
+P.S.
+
+http://retrooffice.com
+
+http://arrisconsultants
+
+P.S.",fraudulent
+55,From Rebecca Drummond,"P oni har dey ma tld cy On tzv line
+
+Over 2 Million Pre oyk script fub ions Fil lgz led
+Lowest Pri ww ce Guaran njv tee. Bu idm y On av line! 
+
+http://sawspring.com",fraudulent
+56,svn commit: r584819 - /spamassassin/trunk/lib/Mail/SpamAssassin/Plugin/DNSEval.pm,"Author: jm
+Date: Mon Oct 15 09:51:31 2007
+New Revision: 584819
+
+URL: http://svn.apache.org/viewvc?rev584819&viewrev
+Log:
+bug 5681: look up IP addresses found in 'X-Yahoo-Post-IP' and 'X-SenderIP' headers, too, thanks to Martin Blapp
+
+Modified:
+    spamassassin/trunk/lib/Mail/SpamAssassin/Plugin/DNSEval.pm
+
+Modified: spamassassin/trunk/lib/Mail/SpamAssassin/Plugin/DNSEval.pm
+URL: http://svn.apache.org/viewvc/spamassassin/trunk/lib/Mail/SpamAssassin/Plugin/DNSEval.pm?rev584819&r1584818&r2584819&viewdiff
+
+--- spamassassin/trunk/lib/Mail/",legitimate
+57,Gain 3+ Inches In Length.,"Now, thanks to an incredible breakthrough, there is a herbal supplement available on the market that is absolutely GUARANTEED to add inches to your manhood, as well as increase thickness, pleasure, and allow you to maintain a rock hard, solid erect1on through intercourse. 
+
+Be the stud in 2008, and achieve all your dreams of super size!
+
+http://zoomjump.com/",fraudulent
+58,[opensuse] Cloning openSUSE 11.0,"Greetings,
+
+If somebody could point me to a document on how to clone openSUSE 10.3
+with Yast or XML, etc.? As a matter of fact, we need to reinstall our
+boxes/laptops after each event. Last one was Solutions Linux 2008 and
+we are getting ready for an OpenSuse Day in April.
+
+Having said that, does/will openSUSE 11.0 offer this functionality or
+something more elaborate?
+
+Best wishes,
+Jimmy
+NUI.fr",legitimate
+59,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. PARIS HILTON TAKES ON MCCAIN http://www.cnn.com/video/partners/email/index.html?url/video/politics/2008/08/06/wynter.paris.hilton.ad.cnn Paris Hilton swings back at Republican presidential candidate John McCain. Kareen Wynter reports. 2. BIKINI BARISTA STAND CLOSED http://www.cnn.com/video/partners/email/index.html?url/video/living/2008/08/06/pkg.bikini.baristas.barred.kiro 3. TOT GRANDMA REACTS TO CHARGES http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/08/06",fraudulent
+60,Re: Postfix fails to stop on server reboot,"Dan Farrell wrote:
+ On Sun, 10 Feb 2008 19:21:33 -0700
+ ""Joseph L. Casale""  wrote:
+
+   
+ it sounds like postfix is being stopped after the network devices are
+ going down.
+       
+ I checked that and Postfix is #30 where network is #90. smptd only
+ listens on the loopback, is that a factor? Thanks!
+ jlc
+
+     
+
+... and it shouldn't be the reverse?  I really don't know -- I am used
+ to 'init.d' init scripts I guess, the ones gentoo uses -- but it almost
+ seems as if these services would be in boot order, not shutdown order.  
+   
+
+the RH chkconfig lines contain both startup and shutdown priorities. OP 
+has probably posted the shutdown priorities, which are ok.",legitimate
+61,Technology Review Research Panel: Server Appliance Survey,"Dear Ted,
+
+We're inviting you to participate in a new survey about server appliances.
+
+As our way of saying Thank You, those who qualify and complete the entire survey will receive $3, which will be immediately credited to your reward account.  If you do not qualify to participate in the entire survey, just for trying, you will still be entered into our monthly drawing to win $100.
+
+The survey is easy to complete and should take no more than 10 minutes of your time. 
+
+To begin the survey, simply click on the link below or copy and paste the URL into the address bar of a new browser window.
+
+http://survey.sotech.com/666001/start.asp?m21969
+
+Thank you for your participation!
+
+Sincerely,
+
+Helen  Jenkins
+Technology Review Research Panel
+http://www.technologyreviewresearchpanel.com
+
+
+PRIVACY AND CONFIDENTIALITY
+
+You are receiving this email",legitimate
+62,Quiz: What the heck are these people talking about?,"ID: 624688
+ 
+CREATE DATE: 02/08/08 12:57
+ 
+LAST MODIFY USER: mrouse
+ 
+LAST MODIFIED DATE: 02/08/08 13:26
+ 
+MIME TYPE: html
+ 
+SUBJECT:  Quiz: What the heck are these people talking about? 
+TEXT EMAILS NOTE: Section divider lines for most text emails should now be the correct length by default. Please do not edit in TargetMail without verifying.  
+   
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+  Email Source:
+  
+
+
+WhatIs.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+February 08, 2008
+
+Published by 
+
+WhatIs.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THIS ISSUE:
+   Quiz: 
+ Overheard in the tech blogosphere
+   In case you missed IT: 
+ Because we know you're busy
+
+
+
+
+
+
+
+
+
+
+
+QUIZ
+
+
+
+
+DIRECTIONS: These are real statements from real people discussing real technology in the blogosphere. I've",legitimate
+63,3 Day Weekend Sale - Low Prices This Weekend Only!,"J&R Weekend Sale
+http://jr.chtah.com/a/tBHvs$WAJMkGtBzS6ozAFqBnPks/weeksale-3
+
+
+Canon PowerShot SD40 7 Megapixel Digital Camera
+Orig. $319.99
+THIS WEEKEND ONLY  $139.99
+Save 56%
+Noble Blue
+http://jr.chtah.com/a/tBHvs$WAJMkGtBzS6ozAFqBnPks/jr20-3 
+Olive Gray
+http://jr.chtah.com/a/tBHvs$WAJMkGtBzS6ozAFqBnPks/jr17-3 
+
+Panasonic RP-SDR01GU1A 1GB SD Card
+Orig. $39.99
+THIS WEEKEND ONLY  $7.99
+Save 80%
+http://jr.ch",legitimate
+64,fashionable replica watches,"Genuine Swiss made Rolex replicas are as close to the real thing 
+
+fashionable replica watches
+
+View Our Wholesale Rolex Replica Watches Today
+
+http://fundspampasau.com/",fraudulent
+65,Re: [opensuse] Cooling Problems,"Philippe Landau wrote:
+ Basil Chupin wrote:
+   
+ Per Jessen wrote:
+     
+ Also, I would have thought the heatsink supplied by AMD for the Phenom
+ would be sufficient for 4 cores - but maybe not.   
+       
+ Nope. They provide the minimum required but it is really up to you to
+ ensure that the correct heatsink is installed to suit your local
+ conditions.
+
+ Cooling/ heatsinks/thermal pastes is a science of its own. Go to
+ Overclockers.com (and similar) to find out all about
+ heatsinks/temperatures, lapping the heatsink, using the right compound,
+ and so on :-). It's a new world! :-).
+     
+ Are you saying standard thermal paste can cause problems?
+   
+
+Depends on what you mean by ""standard paste"". There is that white gunk 
+which was used many moons ago when the cpus generated very little heat",legitimate
+66,Astrology.com: GreenScopes,"Daily GreenScope
+
+
+
+
+
+
+Difficulties reading this email? 
+You can also check your Daily GreenScope by clicking here.
+Please add greenscopes@rp.astrology.com to your address book to ensure that your newsletters are delivered correctly. 
+
+
+
+
+
+Horoscopes | 
+Love | 
+
+Psychic Readings | 
+Predictions | 
+Numerology | 
+Chinese | 
+Tarot | 
+Astrology Readings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dear Gordon,
+Here is your Daily Scorpio
+GreenScope for
+Thursday, August 7:
+
+
+
+You have the ability to understand and grasp long-term consequences and the tenacity to follow through. That's why this eco-friendly thing comes so easy to you, so take it a step further: Modify your consumer habits. Cut down on your use of VOCs (volatile organic compounds -- they are found in everything from paints to cleaning products. And do away with cling wrap",legitimate
+67,WelcomePharmForCustomers,"ViagraInternationalPharmacyNewProducts
+http://bltgna.bay.livefilestore.com/y1p_KUH4laKaEwrS9yUp3mApyxP2MnRpCqROfu-XcX_GqTOGXiseOkfYR0H9gkxmM9P9skhyoik2sjthKzY2QfBZw/index.html",fraudulent
+68,"Re: [opensuse] Nvidia compiz ""freeze""","Daniel Bauer wrote:
+ Hi everybody
+ 
+ Since I installed compiz-fusion the screen freezes after the screensaver 
+ starts or when I go to a text-console (ctrl-alt-F2) and come back again. 
+ (mouse can be moved, but no action on click, cannot switch to text-console, 
+ have to shutdown and restart).
+ 
+In the short term choosing ""Blank"" screen as your screen saver may help. 
+I have had this issue as well on an ATI card, so it isn't just nVidia 
+specific.
+
+-- 
+David C. Rankin, J.D., P.E.
+Rankin Law Firm, PLLC
+510 Ochiltree Street
+Nacogdoches, Texas 75961
+Telephone: (936) 715-9333
+Facsimile: (936) 715-9339
+www.rank",legitimate
+69,Re: Variable subject line spam.,"Hi,
+Yes, I have whitelist myself. I see it as that score without the whitelist.
+
+Regards,
+Frank
+
+On 26/02/2008 3:21 PM, fchan wrote:
+  Hi,
+  Thank you Loren Wilton. I think this is best solution for me.
+  These are not from Kohl's or any other legitimate  company. The subject
+  changes from month to month and the percentages change but the format
+  remains the same for the subject line. The body uses legitimate text
+  taken from various webpages and have phishing link which also varies.
+  The sender is  ""me"" but the Return-Path is the same name at different
+  domain.
+  I tried to attach the message but apache.org rejected it.
+
+Which brings up the question, why are you having problems catching it?
+Have you whitelisted youreself with whitelist_from.  Most of these I see
+score",legitimate
+70,[UAI] NIPS 2005 Call for Papers,"__________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+http://mail.yahoo.com",legitimate
+71,"[UAI] RA at Imperial College, London","Dear all,
+We are looking for a Research Assistant/Associate to work in the Body 
+Sensors Networks group focusing on pervasive computing. Experience in 
+any of the following areas will be preferred:
+• Multi-sensor fusion, pattern recognition, data mining and knowledge 
+discovery
+• Machine learning and decision support
+• Embedded systems, wireless sensor networks and automatic systems
+• Large-scale real-time databases
+The posts are for a fixed term of 36 months. Research Assistant 
+applicants should have a distinction-level Masters degree (or 
+equivalent) in computer science, electrical engineering or medical 
+physics. Research Associate applicants should have a PhD (or equivalent) 
+in computer science, electrical engineering or medical physics. 
+Preference will be given to applicants with a proven research record in 
+relevant areas.
+Applications should include a College application form, which can be 
+obtained from: http://www.imperial.ac.uk/employment",legitimate
+72,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MOM PARTIES AT A CLUB http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/08/05/ng.mom.pics.cnn Nancy Grace has new photos of Casey Anthony partying at a nightclub after her daughter Caylee vanished. 2. WOMAN'S COMPUTER SPIES ON HER http://www.cnn.com/video/partners/email/index.html?url/video/tech/2008/08/05/pkg.webcam.spying.wcjb 3. TIGERS ATTACK TEEN AT ZOO http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/08/05/wuellner.tiger.attacks.teen.kytv 4",fraudulent
+73,Re: [ILUG] Jobs question,"Hi guys,
+ It's a long time since I was on this list, so I have a question.
+
+ I know there used to be a lot of discussion over whether people should be
+ allowed to advertise jobs on the list, so before I do, I would
+ like to know whether this is allowed now. The job in question is linux
+ based, so it is sort of relevant to the list.
+
+ If it is allowed, I'll post a description of the job, and people can reply
+ to me off-list.
+
+ Thanks guys,
+
+ eamo
+ --
+ Irish Linux Users' Group mailing list
+ About this list : http://mail.linux.ie/mailman/listinfo/ilug
+ Who we are : http://www.linux.ie/
+ Where we are : http://www.linux.ie/map/
+
+
+I hope they are that is a big reason why i joined this list, if this isn't
+the place for job postings in.ie, any one got any recommendations",legitimate
+74,Your AdWords Google Account is stoped.,"----------------------------------
+-----------------------------
+------------------------------
+Dear Advertiser,
+
+We were unable to process your payment.
+
+Your ads will be suspended soon unless we can process your payment.
+
+To prevent your ads from being suspended, please update your payment information.
+
+Please sign into your account and update your payment information.
+
+We look forward to providing you with the most effective advertising available.
+
+Thank you for advertising with Google AdWords. 
+
+
+----------------------------------------------------
+---------------
+-------------------------",fraudulent
+75,Re: perl5.005_05-MAINT20070902,"""Alexandr Ciornii""  writes:
+
+ Hello.
+ 
+ 2007/10/2, Leon Brocard :
+  Hi there porters,
+ 
+  Perl 5.005 is a great version of Perl and still used by many people.
+  There have been a few distribution updates and tool changes which mean
+  that it no longer compiles cleanly everywhere, so I believe it's time
+  for a second maintenance release of perl5.005, which will lead to
+  perl5.005_05.
+ 
+ On Redhat 9 I had problems with following modules:
+ 
+ fail:
+ Data::Dumper
+
+I see failures in the compilation, but maybe the pure perl version
+would work?
+
+ Storable
+ Time::HiRes
+
+Patch already on RT.
+
+ File::Temp (depends on Carp::Heavy, which is core only)
+
+Patch already on RT",legitimate
+76,"Re: [perl #46987] OO-call failures, autoviv-functions & testing their existence","On Monday 29 October 2007 19:37:10 Linda W wrote:
+
+ I claim method calls look for
+ methods.  You are stuck in Perl's internals talking about 'entries'.
+
+Objection: Perl 5 makes no distinction in storage between methods and subs.  
+Method calls in Perl 5 do not look for methods.  If you're lucky (or 
+disciplined), Perl 5 will find methods.  If you're unlucky (or 
+undisciplined), Perl 5 will find subs.
+
+Having subs into packages which you expect to contain only 
+subs-acting-as-methods will lead to surprising behavior now and then, as in 
+this case.
+
+I suppose that this could be a bug if you look at it a certain way, but 
+distinguishing between methods and subs would be a very big change for",legitimate
+77,[ILUG] [OT] Job Opportunity - Web Applications Developer (Python),"Hi all,
+
+Glandore Systems, in Cork, is currently hiring a Python programmer with
+experience in developing web applications.  Experience with the Django
+framework would be a plus.  If you are interested, or know anyone who might
+be interested, please send me a mail or give me a call at the number below.
+
+Thanks,
+James
+
+-- 
+Glandore Systems
+http://www.glandoresystems.com/
+Phone: 353 (0) 21 4250622
+Mobile: 353 (0) 86 0714991",legitimate
+78,"You Can Enlarge Your Penis By 3"" Compare Top 5 Penis Enlargers","Just 2 pills a day, for incredible and quick gains in length and thickness. All gains are permanent, and all results are guaranteed - or your money back! 
+
+Increase both your thickness and length within a few short weeks - women simply love it when you have a large manhood. 
+
+http://jumpwill.com/",fraudulent
+79,Re: [ILUG] Shell script question...,"Braun Brelin wrote:
+ Hello all,
+ 
+ I've got a small bash script that looks like this:
+ 
+ #!/bin/sh
+ 
+ a5
+ b2
+ op'*'
+ 
+ c`expr $a $op $b`    # This line gives me an error
+ c`expr $a * $b`       # This line works
+ echo ""c  $c""
+ 
+ Can anyone tell me why the first line using $op fails and why the second
+ line hardcoding the value of $op works?
+
+Ah the joys of shell quoting.
+
+with this command: c`expr $a $op $b`
+expr will get two characters * as the second parameter,
+as the shell has not ""evaluated"" * to *
+
+You can explicitly get the shell to evaluate
+a command as if typed on the command line like:
+
+echo `eval expr $a $op $b`
+
+You could also",legitimate
+80,Re: queue file write error for my milter,"Mani Jassar:
+ Mar  1 18:16:30 mjassar-cent postfix/cleanup[23840]: warning: cannot receive milters via service cleanup socket socket
+ Mar  1 18:16:31 mjassar-cent postfix/master[23824]: warning: process /usr/libexec/postfix/cleanup pid 23840 killed by signal 11
+
+You need to find out why your cleanup server dies.
+
+	Wietse",legitimate
+81,Re: [Python-3000] range() issues,"On Tue, Apr 29, 2008 at 4:09 PM, Mark Dickinson  wrote:
+ Put another way:  range(n) currently works, in Py3k, for n  sys.maxsize.
+ What's the rationale for breaking that?
+
+So we can support other sequence methods. (I think.)
+
+Personally, I think that range should be just an easy to iterate over
+a sequence (set, series, or whatever the term is) of integers (even if
+they're huge). I don't think we need to turn it into a sequence. That
+fits in your brain. If you need to do something more advanced than
+counting, there are other things out there! Where are the use cases
+for range slicing, anyway?
+
+
+
+-- 
+Cheers,
+Benjamin Peterson
+_______________________________________________
+Python-3000 mailing list
+smsbmo-9552@python",legitimate
+82,Prix Ars Electronica 2008 - Extended Deadline,"Dear friends and participants of Prix Ars Electronica!
+
+Prix Ars Electronica 2008 is considering several requests of artists and submitters and has extended the deadline for the online registration until March 19, 2008.
+
+NEW Submission Deadline: March 19, 2008
+Details about entering are available online only at http://prixars.aec.at/ 
+
+Categories:
+Computer Animation / Film / VFX, Digital Musics, Interactive Art, Hybrid Art, 
+Digital Communities, u19 - freestyle competition, Media.Art.Research Award
+
+Contact:
+Ingrid Fischer / Romana Leopoldseder: bnqnfkpgqyy@prixars.aec.at
+
+Your Prix Ars Electronica 2008 Team
+
+
+----------------------------------------------------------------------
+If you don't want to receive the AEC Newsletter any more, you can
+unsubscribe by sending a mail to 68404506-fqsrhtxismc@",legitimate
+83,Luxurious costume replica watches at lowest prices,"There's no battery in these replicas just like the real ones since they charge themselves as you move. 
+
+replica Watches! rolex, patek philippe, vacheron... 
+
+rolex cartier omega LV CD chanel gucci...  
+
+http://fundspampasau.com/",fraudulent
+84,;) Look sexy songs Gallery!!!,"#jGJmiXKate Moss New presentation.
+
+#GJmiXB
+Look it now!",fraudulent
+85,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Church gay issue tears cledgy apart
+
+Fri, 8 Aug 2008 02:43:15 -0500
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+86,Minister Doing Coke,Which one is it?,legitimate
+87,Rolex is not for all. Is it for you?,"Therefore it is very important to chose the right replica retailer. 
+
+0ver 3OO $tyles of Replica //atches
+
+Best Frank Muller replica watches at Replica Classics 
+
+http://fundspampasau.com/",fraudulent
+88,ProductListAddtoCartProducts,"InternationalPharmacyWorldwideTakeALook
+http://tqikpa.blu.livefilestore.com/y1po-cWXQ8BGCwJVgpY3XDCWNfzTBJurQ_ahNYMVLWV3_HyGFiE0sHM7Ql1hga7VeLQVrn1cdIl47mHJssg20DSzA/index.html",fraudulent
+89,Your sweetheart will like it!,"Hear your gf scream as she gets stuck deep with your immeasurable love wand!
+Start acting now to get satisfactory results in a few weeks!
+http://placefall.com/
+
+
+claiming to be police officers signalled him to stop.A complete list of the products recalled can be foundJonathan Woodgate brought Ronaldo down in the box, and",fraudulent
+90,Re: [opensuse] Problem with make,"Dave Plater schrieb:
+ � wrote:
+ hi there,
+
+ i have a problem with make or my kernel sources here:
+
+ i want to compile a unionfs kernel module. make leads to the 
+ following response:
+
+ make -C /lib/modules/2.6.22.13-0.3-default/build 
+ SUBDIRS/opt/unionfs/unionfs-1.4 
+ FISTDEVMK/opt/unionfs/unionfs-1.4/fistdev.mk modules
+ make[1]: Entering directory 
+ `/usr/src/linux-2.6.22.13-0.3-obj/i386/default'
+ make[1]: *** No rule to make target `modules'.  Stop.
+ make[1]: Leaving directory 
+ `/usr/src/linux-2.6.22.13-0.3-obj/i386/default'
+ make: *** [unionfs.ko] Error",legitimate
+91,Re: [Python-Dev] [Python-3000] Python 2.6 and 3.0,"My problem is still getting my head
+ around various MSI issues at any level (eg, bdist_msi needs some tweaking to
+ allow for different releases of the same ""package"" to be recognized as such,
+ but I'm not sure what MSI concept I'm dealing with yet...)
+
+Don't hesitate to ask here. Not sure what problem you are talking to 
+specifically, but I guess you are asking for ""upgrade codes""; there is
+also upgrade codes and package codes.
+
+Each package file should have its own unique *packageÜ code, mere 
+rebuilding should generate a new one. msilib does that correctly.
+A package code code can be installed at most once on a system.
+
+Related packages for the same software should share a *product* code.
+Rebuilding should not change the package code (",legitimate
+92,Re: [Python-3000] Displaying strings containing unicode escapes,"On Thu, May 1, 2008 at 2:34 AM, Guido van Rossum  wrote:
+  This should be done with a new function, not added to print. Once you
+  specify an encoding, you have to write to sys.stdout.buffer, which is
+  the underlying binary stream; but you'd have to flush the
+  TextIOWrapper and deal with incomplete codec state, and in general I
+  don't think it's a good idea.
+
+Thank you for your comment. I'll reconsider this part in the PEP.
+_______________________________________________
+Python-3000 mailing list
+smsbmo-9552@python.org
+http://mail.python.org/mailman/listinfo/python-3000
+Unsubscribe: http://mail.python.org/mailman/options/python-3000/python-3000%40tangomu.com",legitimate
+93,"New White Paper Roundup: Exchange 2007 deployment strategies for SMBs, OCS performance testing, and more","Dear SearchExchange.com member,
+
+Visit the SearchExchange.com White Paper Library today and read our
+free white papers.
+
+1. Guide to Migration and Security on Exchange 2007 for SMBs
+   http://go.techtarget.com/r/3051976/2079970
+
+2. Performance Report for MS Office Communications Server 
+   Consolidated Configuration on HP BladeSystem
+   http://go.techtarget.com/r/3051977/2079970
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Guide to Migration and Security on Exchange 2007 for SMBs
+Sponsored by: Sunbelt Software
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deploying Exchange Server can be especially tough on small and
+medium-sized businesses (SMBs). Outside of the normal challenges that
+come with deployment, SMBs also have to deal with smaller budgets and
+a",legitimate
+94,Sports Briefing: Richards leans on her family in chase for gold in 400 meters,"Newsletter - USATODAY.com
+
+
+
+
+
+
+
+
+
+
+
+To view the latest USA TODAY 
+  Sports headlines on your mobile device,  
+  click here.
+  If you have trouble reading this e-mail newsletter click here.
+To make changes to your e-mail subscriptions, click here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Richards leans on her family in chase for gold in 400 meters
+By Dick Patrick, USA TODAY
+GOLD STANDARD:  A closer look at Team USA's top athletes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Essentials: 
+      	    Scores 
+      	   Game 
+      	On! blog    Sheridan's 
+      	odds    Game 
+      	matchups    TV 
+      	listings    Transactions 
+      	   Fantasy
+
+
+
+
+
+
+
+
+
+
+
+
+ 20 
+      years later
+      Gretzky trade to L.A. remembered for'seismic impact.'
+
+
+
+ 
+Way 
+      up north
+      Ex-NFLers",legitimate
+95,Take out your secret weapon,"To reach the desired proportion you should  take this remedy for just a few months
+Start training your soldier of love now!
+http://milddear.com/
+
+
+boy would learn how to overcome great odds, how to handle tumultuousmoney could bring him only so much. He wanted to turn hisQuantum Fund, and reinvested all dividends, he or she would have",fraudulent
+96,[Pownce] New event invitation from Leo Laporte!,"Leo Laporte has invited you to an event!
+
+Some of the world's top photographers will sell their prints of Tasmania photos to benefit the Save The Tasmanian Devil fund. I'll be there and I hope you will, too!
+
+What: Lightroom Adventure: Tasmania Reception
+Where: Henry Jones Art Hotel, Hobart, Tasmania, Australia
+When: Sun, April 13 2008 at 5 p.m.
+
+View the event and RSVPs:
+http://pownce.com/leolaporte/notes/1764051/
+
+
+---
+Want to control which emails you receive from Pownce?
+http://pownce.com/settings/notifications/",legitimate
+97,Re: [Python-Dev] [Distutils] how to easily consume just the parts	of eggs that are good for you,"Phillip J. Eby wrote:
+ It would be, if.eggs were a packaging format, rather than a binary 
+ distribution/runtime format.
+
+ Remember ""eggs are to Python as jars are to Java"" -- a Java.jar 
+ doesn't contain documentation either, unless it's needed at 
+ runtime.  Same for configuration files.
+   
+But there's generally no need to easily have a look into a.class file 
+with a tool the user
+is used to whereas for python, we're often interested in knowing the 
+details. And having
+a zip file in my way to the source has left me frustrated often enough.
+
+If you want to be consequent and consistent leave out the.py files from 
+eggs, a jar file
+normally doesn't contain.java sources files either.
+
+ They're not",legitimate
+98,CNN.com Daily Top 10,"THE DAILY TOP 10 from CNN.com Top videos and stories as of: Aug  1, 2008  3:58 PM EDT  TOP 10 VIDEOS 1. MONTAUK 'MONSTER' http://www.cnn.com/video/partners/email/index.html?url/video/us/2008/07/31/moos.montauk.monster.cnn Is it a devil dog? Is it a turtle? Is it the Montauk Monster? CNN's Jeanne Moos asks, ""what is this thing?"" 2. RACY PHOTOS OF TODDLER'S MOM http://www.cnn.com/video/partners/email/index.html?url/video/crime/2008/07/31/ng.racy.photos.cnn 3. NEWS OF THE ABSURD EPISODE 54 http://www.cnn.com/video/partners/email/index.html?url/video/podcasts",fraudulent
+99,[UAI] Preliminary CFP: MLG-2008: 6th International Workshop on Mining and Learning with Graphs,"Preliminary Announcement
+
+MLG-2008: 6th International Workshop on Mining and Learning with Graphs
+
+Helsinki, Finland
+July 4 and 5, 2008
+
+Co-located with ICML 2008, COLT 2008
+ and UAI 2008
+
+
+Driven by application areas ranging from biology to the World Wide Web,
+research in Data Mining and Machine Learning is nowadays increasingly
+focusing on the analysis of structured data. Of particular interest  
+is data
+that consists of interrelated parts or is characterized by  
+collections of
+objects that are interrelated and linked together into complex graphs  
+and
+structures. Following in the",legitimate
+100,Re: postfix making too many queries to LDAP,"Mike Kenny:
+  While others here might be able to speak to the query mechanism, my own
+  suggestion is to stop doing remote queries to LDAP. Just because it's
+  possible, doesn't mean you should. I take dumps of the Windows AD (only
+  the required attributes) on a two-hourly basis (during the day), and use
+  that to generate hashed map files for the actual address resolution on
+  each of the Postfix servers. Your own dump interval should probably
+  represent the KPIs you might have in relation to account/mail account
+  creation.
+ 
+   Other than speeding up the query time by looking at the local maps,
+  you're not annoying your LDAP administrators by constantly thrashing it
+  (and the internal network) with lookups, spurious or not. Of course,
+  there are probably performance trade-offs if your hash (or whatever)
+  maps get too large",legitimate

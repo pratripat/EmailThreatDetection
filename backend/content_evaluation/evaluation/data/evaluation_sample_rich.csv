@@ -1,0 +1,2646 @@
+id,subject,body,true_label
+1,[UAI] CFP: CLIMA 06,"================= Second Call for Papers ==================
+                        CLIMA VII              Seventh International 
+Workshop on         Computational Logic in Multi-Agent Systems
+                      May 8,9 2006       in association with AAMAS2006 
+(May 8 - 12, 2006)            Future University, Hakodate, Japan 
+             http://www.fun.ac.jp/aamas2006/
+           http://research.nii.ac.jp/climaVII/
+===========================================================
+
+Aims and scope
+--------------
+
+Multi-Agent Systems are communities of problem-solving entities that can 
+perceive and act upon their environment to achieve their individual 
+goals as well as joint goals.  The work on such systems integrates many 
+technologies and concepts in artificial intelligence and other areas of 
+computing as well as other disciplines.  Over recent years, the agent 
+paradigm gained popularity, due to its applicability to a full spectrum 
+of domains, from search engines to educational aids to electronic 
+commerce and trade, e-procurement, recommendation systems, simulation 
+and routing, to cite only some. 
+Computational logic provides a well-defined, general, and rigorous 
+framework for studying syntax, semantics and procedures for various 
+tasks by individual agents, as well as interaction amongst agents in 
+multi-agent systems, for implementations, environments, tools, and 
+standards, and for linking together specification and verification of 
+properties of individual agents and multi-agent systems. 
+The purpose of this workshop is to discuss techniques, based on 
+computational logic, for representing, programming and reasoning about 
+agents and multi-agent systems in a formal way.  We solicit unpublished 
+papers on agents and multi-agent systems based upon or relating to 
+computational logic.  You can find further information regarding the 
+previous edition of CLIMA in http://clima.deis.unibo.it/ and the history 
+of CLIMA in http://research.nii.ac.jp/climaVII/about.html.  
+
+Topics
+------
+
+Relevant topics include, but are not limited to, the following:
+* logical foundations of (multi-)agent systems * extensions of logic 
+programming for (multi-)agent systems * modal logic approaches to 
+(multi-)agent systems * logic-based programming languages for 
+(multi-)agent systems * non-monotonic reasoning in (multi-)agent systems 
+* decision theory for (multi-)agent systems * agent and multi-agent 
+hypothetical reasoning and learning * theory and practice of 
+argumentation for agent reasoning and interaction * knowledge and belief 
+representation and updates in (multi-)agent systems * operational 
+semantics and execution agent models * model checking algorithms, tools, 
+and applications for (multi-)agent logics * semantics of interaction and 
+agent communication languages * distributed constraint satisfaction in 
+multi-agent systems * temporal reasoning for (multi-)agent systems * 
+distributed theorem proving for multi-agent systems * logic-based 
+implementations of (multi-)agent systems * specification and 
+verification of formal properties of (multi-)agent systems
+
+Submissions
+-----------
+
+We welcome and encourage the submission of high quality, original 
+papers, which are not simultaneously submitted for publication elsewhere. 
+Papers should be written in English, formatted according to the Springer 
+Verlag LNCS style, which can be obtained from 
+http://www.springeronline.com, and not exceed 16 pages including 
+figures, references, etc. 
+Each paper should include *some examples* illustrating the proposed 
+techniques. 
+Paper submission is electronic via the online submission system: 
+http://www.easychair.org/CLIMAVII/submit/ Authors who have difficulties 
+with the electronic submission should contact the workshop chairs. 
+
+Proceedings and post-workshop publications
+------------------------------------------
+
+A printed volume of the proceedings will be available at the workshop. 
+Authors of papers presented at the workshop will be asked to extend 
+their contributions, possibly incorporating the results of the workshop 
+discussion, to be included in the workshop post-proceedings, after 
+another round of refereeing.  Springer Verlag has accepted in principle 
+to publish the post-proceedings as a volume of the Lecture Notes in 
+Artificial Intelligence series. 
+
+CLIMA contest
+-------------
+
+CLIMA VII will also host the second CLIMA contest, organized by Mehdi 
+Dastani, Jurgen Dix, and Peter Novak: 
+http://cig.in.tu-clausthal.de/index.php?id=clima7contest
+
+
+Financial Support for Students
+------------------------------
+
+We have some budget for partial economical support for traveling costs 
+for promising students whose papers have been accepted to be presented 
+at CLIMA VII. Please contact Ken Satoh (ksatoh at nii.ac.jp) for details. 
+
+Important Dates
+---------------
+
+- Submission Deadline: January 15, 2006 - Notification: February 19, 
+2006 - Camera Ready Copy Due: March 10, 2006 - CLIMA VII: May 8 and 9, 2006
+
+Workshop Chairs
+---------------
+
+Katsumi Inoue, National Institute of Informatics, Japan Ken Satoh, 
+National Institute of Informatics, Japan Francesca Toni, Imperial 
+College London, UK
+Email: pdtzk-gip@nii.ac.jp
+
+
+Programme Committee
+-------------------
+
+Jose Julio Alferes, New University of Lisbon, Portugal Rafael H. 
+Bordini, University of Durham, UK Gerhard Brewka, University of Leipzig, 
+Germany Stefania Costantini, University of L'Aquila, Italy Juergen Dix, 
+Technical University of Clausthal, Germany Patrick Doherty, Linkoping 
+University, Sweden Phan Ming Dung, AIT, Thailand Thomas Eiter, Vienna 
+University of Technology, Austria Klaus Fischer, DFKI, Germany Michael 
+Fisher, The University of Liverpool, UK Michael Gelfond, Texas Technical 
+University, USA James Harland, RMIT, Australia Hisashi Hayashi, Toshiba, 
+Japan Wiebe van der Hoek, The University of Liverpool, UK Antonis Kakas, 
+University of Cyprus, Cyprus Joao Leite, New University of Lisbon, 
+Portugal Fangzhen Lin, Hong Kong University of Science and Technology, 
+Hong Kong Paola Mello, University of Bologna, Italy John Jules Ch. 
+Meyer, Utrecht University, The Netherlands Leora Morgenstern, IBM T.J. 
+Watson Research Center, USA Naoyuki Nide, Nara Women's University, Japan 
+Maurice Pagnucco, University of New South Wales, Australia Wojciech 
+Penczek, Polish Academy of Sciences, Poland Enrico Pontelli, New Mexico 
+State University, USA Fariba Sadri, Imperial College London, UK Chiaki 
+Sakama, Wakayama University, Japan Abdul Sattar, Griffith University, 
+Australia Hajime Sawamura, Niigata University, Japan Renate Schmidt, 
+University of Manchester, UK Tran Cao Son, New Mexico State University, 
+USA Kostas Stathis, City University London, UK Michael Thielscher, 
+Dresden University of Technology, Germany Satoshi Tojo, Japan Advanced 
+Institute of Science and Technology, Japan Paolo Torroni, University of 
+Bologna, Italy Marina de Vos, University of Bath, UK Cees Witteveen, 
+Delft University of Technology, The Netherlands
+
+Home page of CLIMA VII:  http://research.nii.ac.jp/climaVII
+
+------------------------------------------------------------------------
+This e-mail was delivered to you by nzvoq@in.tu-clausthal.de, what is a
+moderated list ran by Computational Intelligence Group of Clausthal University of Technology, Germany. 
+All event announcements sent through this list are also listed in our
+conference planner at http://cig.in.tu-clausthal.de/index.php?id=planner.
+ 
+In the case of any requests, questions, or comments, do not hesitate and 
+contact vekzb-ryuqc@in.tu-clausthal.de ASAP. 
+ 
+******************************************************
+* CIG does not take any responsibility for validity  * 
+* of content of messages sent through this list.     * 
+******************************************************
+
+Computational Intelligence Group
+Department of Computer Science
+Clausthal University of Technology
+Germany
+http://cig.in.tu-clausthal.de/",legitimate
+2,Changing email address for these,"Apologies if this hasn't been done in the right way, but I have gone to
+the website and couldn't find out how to do it - how do you change the
+email address that these get sent to please ?  I will be changing email
+addresses and want to ensure I don't miss any posts.
+
+Any help appreciated.
+
+Chris.",legitimate
+3,Was child beating mom an enraged con artist?,"URL: http://boingboing.net/#85483138
+Date: Not supplied
+
+Article about a scam expert who belives the mom who beat her child is a grifter 
+belonging to the Irish Travelers. The reason she beat up her little girl, he 
+thinks, is becasue she was pissed that the kid blew her con at a toy store. 
+
+    Wright believes the beating happened for one of two reasons. ""The little 
+    girl gave away the scam to an employee or the mom was so ticked off at not 
+    getting refunds she took it out on the little girl."" 
+
+I don't know anything about the Irish Travelers, but I'm wondering if they are 
+getting a bad rap about being con-artists. This Irish Traveler FAQ[1] says 
+""some Travellers are con men, but, just like other Americans, most are not."" 
+Link[2] Discuss[3]
+
+[1] http://www.pitt.edu/~alkst3/USA.html
+[2] http://www.wndu.com/news/contact16/contact16_2450.php
+[3] http://www.quicktopic.com/16/H/umA3qpRqVJkRm",legitimate
+4,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Craziest taxi driver
+
+Fri, 8 Aug 2008 03:42:51 -0400
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+Â© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+5,"fw : 2 minutes to read what i have to say . . . p . s . charset = windows - 1252 "" > i know you want to look at pussy , but first you need to learnthe truth about the adult industry : get into paysite free ! if you take 2 minutes to read what i have to say you will have full accessto some of the largest membership sites for free . trutha recent internet survey showed that almost 28 % of all the revenue generated on the internet today is from adult products websites . making it the # 1 product / service in demand on the internet . truthyahoo conducted a adult internet survey that showed more than more than half of all adult surfers have paid up to $ 50 for a pay site membership . we wonder why ? it is really easy to ge","t into these sites for free . why would you pay for a membership to an adult site with out knowing what they really have to offer ? it ' s kind of like going on a blind date , you don ' t really know what to expect ! i have top a adult sites you can become a member to for free . truththese directions are common sense , but some people still haven ' t figured it out ! i have found a pay site offering free passes . so if you get a free pass imagine all the movies you can download onto your hard drive . all % 100 free . these sites all have more movies , chat rooms , and hot pictures than any other porn sites i have come across to date . they are all a + porno sites . all % 100 free . directionsfollow these 6 simple steps and you ' ll get a free pass into an adult paysite . note that these passes are not permanent , but they ' re free and it takes less than two minutes to get in . step 1 : scroll down the page click on the web site banner below that interests you most . the descriptions and the links are below . pick the one you want to get your lst free pass to . step 2 : once you arrive at the site you have selected , fill out the form , then click the submit button that says give my free pass . remember to wait several seconds for the entire page to load . if you are on a dial up modem it will take a minute to process the page . step 3 : this will take you to the second join page . fill in the required information . this is not some second rate site run by couple scumbags , these are multi - million dollar operations with policies and rules . they won ' t charge you for the free pass . don ' t believe me ? read their terms and conditions . step 4 : after you have filled out the rest of the form . . . . . . . . click the submit button ! only hit it one time ! wait one or two minutes , it will send the username and password to your e - mail account . that ' s it , within minutes you will have a free passstep 5 : that ' s i
+t ! that ' s all there is to it . like i said before read the terms and conditions for yourself so you feel comfortable with it . this method of getting a free pass is best described as cutting out the middle man . click or copy past this free pass link : http : / / www . luckyamateurwives . com",fraudulent
+6,Upgrade Your Mail Quota !!,Mail Quota: (98% Full) Attention: jose Your email quota has reached 98% and will soon exceed its limit.Â Follow the URL below to upgrade your quota toÂ 25GBÂ for free to avoid loss of email data.Â  Upgrade Email QuotaÂ Source:Administrator,fraudulent
+7,From Sheree Kern,"P ifi harm udv acy
+
+Vis jhl it Your Local Target P pdh h gi arm bgb acy
+for Ge ccv ner sg ic Dr uld ug jpk s, Re onf fills, & More.
+
+http://ingenuityseat.com",fraudulent
+8,[perl #47241] Re: Core dump caused by goto,"# New Ticket Created by  ""Jerry D. Hedden"" 
+# Please include the string:  [perl #47241]
+# in the subject line of all future correspondence about this issue. 
+# 
+
+
+Jerry D. Hedden wrote:
+> I use the above mechanism in my module Object::InsideOut.
+> Having recently added tests similar to the above, its test
+> suite produces the following eroneous warnings:
+>
+>     Use of uninitialized value within @cc in goto at t/15-type.t line 121.
+
+The following (attached) evokes the above:
+
+    #!/usr/bin/perl
+
+    use strict;
+    use warnings;
+
+    {
+        no warnings 'redefine';
+
+        my @foo = ();
+
+        my $isa = \\&UNIVERSAL::isa;
+
+        *UNIVERSAL::isa = sub
+        {
+            goto $isa;
+        };
+    }
+
+    UNIVERSAL::isa({}, undef);
+
+Under 5.10.0, it produces:
+
+    Use of uninitialized value @foo in goto at goto_bug3.pl line 19.
+
+Under 5.8.8, it produces:
+
+    Use of uninitialized value in goto at goto_bug3.pl line 15.",legitimate
+9,Awesome presents to give,Searching for true high-quality rep1!c@ craftsmanship? We know what you need! http://mildplay.com/,fraudulent
+10,claims,"dear sir ,
+do accept my sincere apologies if my mail does not meet your personal
+ethics . i will introduce myself as a staff in the accounts management section
+of a well - known bank here in republic of benin .
+one of our accounts with holding balance of 20 , 500 , 000 ( twenty million
+five hundred thousand united states dollars ) has been dormant and has
+not been operated for the past 9 months .
+from my investigations and confirmations , the owner of this account a
+foreigner by name mr ali yacoubou died who unfortunately died in the plane crash
+of union transport africaines flight boeing 727 in cotonou , benin
+republic , in december 25 , 2003 . you will read more about the crash by visiting
+these websites :
+www . cnn . com / 2003 / world / africa / 12 / 26 / benin . crash / or
+and since then nobody has done anything as regards the claiming of this
+money because he has no family members who are aware of the existence
+of neither the account nor the funds . also information from the national
+immigration states that he was also single on entry into republic du benin .
+i have secretly discussed this matter with some of the bank officials
+and we have agreed to find a reliable foreign partner to deal with . we thus
+propose to do business with you , standing in as the next of kin of
+these funds from the deceased and funds released to you after due processes
+have been followed .
+this transaction is totally free of risk and troubles as the fund is a
+legitimate and does not originate from drug , money laundry , terrorism or any
+other illegal act . on your interest , let me hear from you .
+regards ,
+dr . migan .
+disclaimer :
+this message contains confidential information and is intended only for
+specified addressee . if you are not the named addressee you should not
+disseminate , distribute or copy this e - mail . the sender therefore does not accept
+liability for any errors or omissions in the contents of this message , which
+arise as a result of e - mail transmission . please note that we reserve the right
+to monitor and read any emails sent and received under the
+telecommunications ( lawful business practice ) ( interception of communications )
+regulations
+2000",fraudulent
+11,"ar : logos , letterheads , business cards , envelops","your business lacks visual identity ?
+marketing efforts falling short ?
+invisible among a sea of competitors ?
+you ' re on the right track for a solution - keep reading . . .
+our professional designers specialize in the creation of custom logos and business / corporate identities . our design needs to be seen only once to gain customer attention and recognition . with one of our unique , eye - catching mages you ' ll never have to introduce yourself twice !
+we promise fast turnaround and 100 % customer satisfaction . choose from as any design ideas as necessary , select as many colors as you wish , order any modifications you like , and request any format . our prices are affordable for any size of business , and get this : there are no hidden fees .
+follow the link below to browse our portfolio and check out our sweet deals .
+wipe the "" in "" from "" invisible "" in just a few days - with us !
+http : / / www . inner - logos . com /
+sincerely ,
+mayra brady
+= = = = = =
+you may unsubscribe here :
+http : / / www . inner - logos . com / u . php",fraudulent
+12,returned mail : response error,"the original message was received at tue , 19 jul 2005 11 : 57 : 45 + 0100 - - - - - the following addresses had permanent fatal errors - - - - - - - - - - transcript of session follows - - - - - . . . while talking to mailin - 02 . mx . aol . com > > > data < < < 554 transaction failed",fraudulent
+13,Re: [opensuse] amavisd warning failure?,"Hylton Conacher (ZR1HPC) wrote:
+> Sandy Drobic wrote:
+>> Hylton Conacher (ZR1HPC) wrote:
+>>
+>>>> Next problem was the script to update the clamav signatures.
+> 
+> 
+> 
+>>>> I assume that What should I put my email address in place of
+>>>> uukvq=runjplknii@example.com?
+>> Yes.
+> 
+> When I run the script manually I get:
+> 
+> Umalusi:~ # /etc/cron.hourly/Clam-signature-update.sh
+> /etc/cron.hourly/Clam-signature-update.sh: line 19: unexpected EOF while
+> looking for matching `""'
+> /etc/cron.hourly/Clam-signature-update.sh: line 24: syntax error:
+> unexpected end of file
+> Umalusi:~ #
+> 
+> Now what, as my script looks exactly like you wrote?
+
+Can't be, I just did a simple copy-and-paste and ran the script. It worked.
+
+In line 19 and line 24 you have a quotation mark at the beginning of a 
+command, but no closing quotation mark.
+By the way, when I pasted the script I had only 23 lines, how did you get 24 
+lines? The first line is the shebang (#!/bin/sh). Please post the content of 
+your script (including empty lines).
+
+-- 
+Sandy
+
+List replies only please!
+Please address PMs to: news-reply2 (@) japantest (.) homelinux (.) com",legitimate
+14,Upsize your trouser snake into a python,Upsize your pecker with certified and approved medication http://www.millhere.com/,fraudulent
+15,conference announcement / call for papers : celtic linguistics,"* * * * * * celtic linguistics conference * * * * * second posting and call for papers a conference on the formal linguistics of the celtic languages will be held in university college dublin on june 22-23 1995 . invited speakers include jim mccloskey ( university of california at santa cruz ) , ian roberts ( university of north wales , bangor ) , david adger ( university of york ) and james scobbie ( queen margaret college , edinburgh ) . abstracts are invited for 45 - minute talks ( 30 + 15 ) on all aspects of theoretically-oriented research on the celtic languages . please submit 4 copies of a 1 - page abstract ( 3 anonymous and one camera - ready copy with name , affiliation etc . ) to the address below . abstracts must be received by february 28th , 1995 [ please note extended deadline ] . the conference will be held on the belfield campus ( approximately 5 km from the city centre ) . accommodation will be available on campus . expressions of interest and requests for further information should be sent to either of the following addresses : chiosain @ ollamh . ucd . ie acquaviv @ ccvax . ucd . ie or to celtic linguistics conference department of linguistics university college dublin belfield , dublin 4 ireland",legitimate
+16,G-spot location techniques for men,"Studies show women hate men with low libidos
+http://www.waitscore.com/
+
+--
+Using Opera's revolutionary e-mail client: http://www.opera.com/mail/",fraudulent
+17,schedule crawler : hourahead failure,start date : 1 / 12 / 02 ; hourahead hour : 5 ; hourahead schedule download failed . manual intervention required .,legitimate
+18,"darden case study on "" the transformation of enron ""","shirley ,
+please , provide this info .
+vince
+- - - - - - - - - - - - - - - - - - - - - - forwarded by vince j kaminski / hou / ect on 03 / 30 / 2000
+02 : 33 pm - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron north america corp .
+from : sherri sera @ enron 03 / 30 / 2000 12 : 47 pm
+to : lou l pai / hou / ees @ ees , gene humphrey / hou / ect @ ect , ken rice / enron
+communications @ enron communications , andrew s fastow / hou / ect @ ect , vince j
+kaminski / hou / ect @ ect
+cc : karen owens / hou / ees @ ees , bert frazier / hou / ect @ ect , mercedes estrada / enron
+communications @ enron communications , bridget maronge / hou / ect @ ect , mark
+palmer / corp / enron @ enron , katherine brown / corp / enron @ enron , fabricio
+soares / hou / ect @ ect
+subject : darden case study on "" the transformation of enron ""
+gentlemen ,
+jeff has asked that each of you make time to meet with professors bruner and
+bodily regardig the above referenced case ( i have attached a project overview
+for your review ) .
+they are scheduled to be in houston on tuesday , april 18 , to begin conducting
+interviews ( some of which may be videotaped ) . please let me know your
+availablility on that date .
+thanks for your help , and please don ' t hesitate to call me ( x 3 - 5984 ) should
+you need additional information . srs",legitimate
+19,Just have a look at our NEW GIRLS today:,"*{font-family:verdana,sans,arial,tahoma;font-size:11pt;}Good morning !Hi! Sweet! Let's learn about? My name is CatLusia R., New York",fraudulent
+20,The hottest femmes will long for you!,"Don't be shy in her bedroom anymore, 'cuz you'll get additional length!
+Choose this simple way to evoke your masculinity!
+http://dearbright.com/
+
+
+Marin indicated that, since 1999, ""at least 247 retailsailors and marines shown on TV193 - Praetorian Guards assassinated Roman Emperor",fraudulent
+21,Re: [opensuse] system seems hacked...,"Roger Oberholtzer wrote:
+> On Fri, 2008-02-22 at 23:17 +0100, Wolfgang Woehl wrote:
+>> Donnerstag, 21. Februar 2008 Pavol Rusnak:
+>>
+>>> Just for the record, emech is energymech* - IRC bot programmed in
+>>> C, similar to eggdrop*, no exploit or rootkit fortunately.
+>> Hi Pavol, I think what you say is naive at best. ""Botnet"" ring a bell?
+>>
+>>> Pavol RUSNAK                                       SUSE LINUX,
+>>> s.r.o Package Maintainer                                Lihovarska
+>> You seem to maintain tcpdump, libpcap, iptables and I sincerely hope 
+>> that you don't take the same easygoing approach with those.
+> 
+> I think the hack is indeed as described. It was not really messing up my
+> system. It used it as a stage to probe other systems. I got a visit from
+> our IT department that there was a complaint about this server from some
+> external site. I was not surprised. It seems that the password changes
+> have resolved the issue. At least for now. I will have to keep watch for
+> something else. But I do not think the system was compromised. In
+> summary, I would say a user let someone use his account to run some
+> unexpected software. 
+> 
+
+A user like that needs two weeks unpaid vacation, so that
+in the future, he can think more clearly at work before
+""loaning"" his account to some who wants to use it for
+""unexpected software""",legitimate
+22,eol average deal count by trader and product as of 7 - 23 - 01,"the following file contains a graphical view of the north american gas average deal count by trader and product for eol . this information is for comparative analysis only . do not update links when opening this file .
+if you have any questions regarding this breakout , please let me know .
+laura levy
+enrononline
+x 53551",legitimate
+23,"Your payment didn't succeed, so your ads have been suspended.","--------------------------
+-------------------------------
+-------------------------------
+Dear Advertiser,
+
+We were unable to process your payment.
+
+Your ads will be suspended soon unless we can process your payment.
+
+To prevent your ads from being suspended, please update your payment information.
+
+Please sign into your account and update your payment information.
+
+We look forward to providing you with the most effective advertising available.
+
+Thank you for advertising with Google AdWords.
+
+
+--------------------------------------------------------
+-----------------
+--------------------",fraudulent
+24,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Pepper spray fails to stop rapist
+
+Fri, 8 Aug 2008 12:51:50 +0200
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+Â© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+25,tenaska iv oct 2000,"darren :
+please change the demand fee as noted below . i did not calculate oct 2000 correctly . tenaska iv will return the money this month .
+deal 529856 oct 2000 change demand fee from $ 2 , 349 , 906 . 50 to $ 2 , 221 , 567 . 44
+thanks ,
+megan",legitimate
+26,this is scary ! ! !,"thirst ! as seen on television "" cryptosporidium "" is in a neighborhood near you ! this can actually happen that is why they made a television movie about it . they want to educate the public on parasites . parasites are the # 1 silent killer ! we have to do something to protect ourselves from this terrible menace . if you did n't get to see the movie let me just briefly explain what happened and why it is important to do something about it . a very small parasite by the name of "" cryptosporidium "" , got into the cities reservoir . it contaminated their drinking water and those people who drank the water became ill and many of them died . you see parasites need a "" host "" to live and multiply . we as humans can become that host . there are many different types of parasites and there are many ways that we can contract them . here are just a few sign of parasites ; chronic fatigue , bodily aches and pains , skin problems , headaches , constipation , arthritis , gas and bloating , loss of appetite , sexual dysfunction , uncontrollable weight , itchy ears , nose and anus , premature aging , forgetfulness , menopause , and pms to mention a few . it is scary to know just how easily it is to get contaminated by a parasite . we can contract them by eating uncooked meat and fish , from vegetables , casual contact , sexual contact , swimming in lakes and streams , we can contract them from our pets and from the air we breathe . these are just a few of the ways . can you even begin to understand the potential danger we are living with each and every day ? you have two choices you can ignore them and let them eat you alive . by doing this you know your ultimate fate . you are headed toward the path of sickness , disease and possibly death . you can however , choose to do something about it now and change all that ! i know the road my family and i are taking . i only hope that you do the same ! if you choose to live a healthier , more productive life , and wish to obtain additional information on what you can do to protect yourself and your loved ones call 1-813 - 677-2217 . this message is brought to you from someone who cares may god bless you !",fraudulent
+27,no compromise ! ! wear only rolex ! ! [ scruple ],"thank you for expressing interest in replicas watches bazaar .
+we would like to take this opportunity to offer you our fine
+selection of italian crafted rolex timepieces .
+you can view our large
+selection of rolexes ( including breitling , tag heuer , cartier etc ) at :
+replica watches bazaar
+as we are the direct manufacturers , you are guaranteed of
+lowest prices and highest quality each and every time you purchase from us .
+you may also be interested to know
+that we have the following brands available in our wide selection as well :
+rado
+bmw
+franck muller
+ulysse nardin
+audemars piguet
+vacheron constantin
+officine
+jaeger le coultre
+longines
+etc . . .
+if you see anything that might interest you , or if you have
+any questions , please don ' t hesitate to visit our website at :
+replica watches bazaar
+impassion syndic ravel circuitous bonfire epidermis banana dryad sixgun oatmeal asher
+car piotr pimp ginsburg agnostic gator sanitarium whitcomb objector transmute short judicature fraught brest inefficient
+yin geodetic rehabilitate thine salerno pacesetting lap exudation guitar dumpty venerable wilshire cosh cauliflower neva event chiffon downturn
+deductible muscat chemic stable sneer bordello andes abridgment invigorate george dealt",fraudulent
+28,re : apache deal 384247 10 / 00,"please follow are current practice and pay the lower price .
+thanks
+bob
+enron capital management
+from : david baumbach @ ect 11 / 21 / 2000 03 : 55 pm
+to : megan parker / corp / enron @ enron
+cc : daren j farmer / hou / ect @ ect , bob m hall / na / enron @ enron
+subject : re : apache deal 384247 10 / 00
+according to the contract brief i received , the 2 . 175 is a 1999 price . i
+believe my pricing is correct . bob or darren may be able your questions
+better .
+dave
+enron north america corp .
+from : megan parker @ enron 11 / 21 / 2000 03 : 27 pm
+to : david baumbach / hou / ect @ ect
+cc :
+subject : apache deal 384247 10 / 00
+i got an invoice for the gas we bought from apache for tenaska iv and they
+have a different price . for deal 384247 , we have a price of 2 . 285 and a
+demand fee of 0 . 457 for 25 , 000 / day . apache is billing us at 2 . 175 with no
+demand charge . can you verify this price for me and let me know which is
+correct ?
+thanks ,
+megan",legitimate
+29,TOP Legal advice.. for PENNIES a day!,|,fraudulent
+30,Re: [Python-Dev] Reminder: last alphas next Wednesday 07-May-2008,"-On [20080502 11:00], Christian Heimes (lists@cheimes.de) wrote:
+>Windows and Mac OS X have dedicated directories for application specific
+>libraries. That is ~/Library on Mac and Application Data on Windows. The
+>latter is i18n-ed and called ""Anwendungsdaten"" in German. Fortunately
+>Windows sets an environment var to the application data directory.
+
+And Vista has C:\\ProgramData\\{vendor}\\{application}, which is *not*
+$APPDATA, but $ProgramData. $APPDATA points to
+C:\\Users\\{user}\\AppData\\Roaming on Vista -- which is very different.
+
+""Windows uses the Roaming folder for application specific data, such as
+custom dictionaries, which are machine independent and should roam with the
+user profile. The AppData\\Roaming folder in Windows Vista is the same as the
+Documents and Settings\\username\\Application Data folder in Windows XP.""
+
+I think that's different from what you meant above though, since I doubt
+you'd want this (the libraries) to roam with the user.
+
+See
+http://download.microsoft.com/download/3/b/a/3ba6d659-6e39-4cd7-b3a2-9c96482f5353/Managing%20Roaming%20User%20Data%20Deployment%20Guide.doc
+for more background.
+
+-- 
+Jeroen Ruigrok van der Werven  / asmodai
+ã¤ã§ã«ã¼ã³ ã©ã¦ãã­ãã¯ ã´ã¡ã³ ãã« ã¦ã§ã«ã´ã§ã³
+http://www.in-nomine.org/ | http://www.rangaku.org/ | GPG: 2EAC625B
+Seek not death in the error of your life: and pull not upon yourselves
+destruction with the works of your hands...
+_______________________________________________
+Python-Dev mailing list
+Python-Dev@python.org
+http://mail.python.org/mailman/listinfo/python-dev
+Unsubscribe: http://mail.python.org/mailman/options/python-dev/python-dev%40tangomu.com",legitimate
+31,=?big5?Q?=A7A=B7=C7=B3=C6=A6n=A4F=B6=DC=3F?=,"This is a multi-part message in MIME format.
+
+------=_NextPart_vXklypZzzDWWhOFZ5e1rZ
+Content-Type: multipart/alternative;
+	boundary=""----=_NextPart_vXklypZzzDWWhOFZ5e1rZAA""
+
+
+------=_NextPart_vXklypZzzDWWhOFZ5e1rZAA
+Content-Type: text/html;
+	charset=""big5""
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQoNCjxoZWFkPg0KPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1MYW5ndWFnZSIgY29u
+dGVudD0iemgtdHciPg0KPG1ldGEgbmFtZT0iR0VORVJBVE9SIiBjb250ZW50PSJNaWNyb3NvZnQg
+RnJvbnRQYWdlIDUuMCI+DQo8bWV0YSBuYW1lPSJQcm9nSWQiIGNvbnRlbnQ9IkZyb250UGFnZS5F
+ZGl0b3IuRG9jdW1lbnQiPg0KPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50
+PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9YmlnNSI+DQo8dGl0bGU+s2+sT6llsFWl0bFNt368c6dppL2l
+caVOtW+kxaq9sbWmXqtItUyqa7G1pqwgy+c8L3RpdGxlPg0KPC9oZWFkPg0KDQo8Ym9keT4NCg0K
+PHAgc3R5bGU9Im1hcmdpbi10b3A6IDBweDsgbWFyZ2luLWJvdHRvbTogMHB4Ij48Zm9udCBjb2xv
+cj0iIzgwODA4MCI+DQqzb6xPqWWwVaXRsU23frxzp2mkvaVxpU61b6TFqr2xtaZeq0i1TKprsbWm
+rCDL5yB+ICE8L2ZvbnQ+PC9wPg0KPGhyIFNJWkU9IjEiPg0KPGRpdiBhbGlnbj0iY2VudGVyIj4N
+CiAgPGNlbnRlcj4NCiAgPHRhYmxlIHN0eWxlPSJib3JkZXI6IDFweCBkb3R0ZWQgI0ZGMDAwMDsg
+OyBib3JkZXItY29sbGFwc2U6Y29sbGFwc2UiIGhlaWdodD0iMzY1IiBjZWxsU3BhY2luZz0iMCIg
+Y2VsbFBhZGRpbmc9IjAiIHdpZHRoPSI2MDQiIGJvcmRlcj0iMCIgYm9yZGVyY29sb3JsaWdodD0i
+IzAwODAwMCIgYm9yZGVyY29sb3I9IiMxMTExMTEiPg0KICAgIDx0cj4NCiAgICAgIDx0ZCB2QWxp
+Z249ImNlbnRlciIgYWxpZ249Im1pZGRsZSIgd2lkdGg9IjU5OCIgYmdDb2xvcj0iI0ZGRkYwMCIg
+aGVpZ2h0PSIzNjUiPg0KICAgICAgPHAgYWxpZ249ImNlbnRlciI+oUA8L3A+DQogICAgICA8cCBh
+bGlnbj0iY2VudGVyIj48Zm9udCBmYWNlPSK80LeixekiIHNpemU9IjQiIGNvbG9yPSIjMDAwMEZG
+Ij6mbqpCpM2w2iE8L2ZvbnQ+PC9wPg0KICAgICAgPHAgYWxpZ249ImNlbnRlciI+PGZvbnQgZmFj
+ZT0ivNC3osXpIiBzaXplPSI0IiBjb2xvcj0iIzAwMDBGRiI+DQogICAgICCzXKZopEiv4KRPqFOm
+s6Txp0GmbiymXaywtHi0pKRGrsm+9zwvZm9udD48L3A+DQogICAgICA8cCBhbGlnbj0iY2VudGVy
+Ij48Zm9udCBmYWNlPSK80LeixekiIHNpemU9IjQiIGNvbG9yPSIjMDAwMEZGIj6p0qVIpGq1b6dR
+passs9C3fq1QtEksPC9mb250PjwvcD4NCiAgICAgIDxwIGFsaWduPSJjZW50ZXIiPjxmb250IGZh
+Y2U9IrzQt6LF6SIgc2l6ZT0iNCIgY29sb3I9IiMwMDAwRkYiPrNcpmg8L2ZvbnQ+PGZvbnQgZmFj
+ZT0ivNC3osXpIiBjb2xvcj0iI0ZGMDAwMCIgc2l6ZT0iNiI+vve3fDwvZm9udD48Zm9udCBmYWNl
+PSK80LeixekiIHNpemU9IjQiIGNvbG9yPSIjMDAwMEZGIj6lbqr5rsksqbmpuaV1PC9mb250Pjxm
+b250IGZhY2U9IrzQt6LF6SIgY29sb3I9IiNGRjAwRkYiIHNpemU9IjYiPqazM6ztxMEhPC9mb250
+PjwvcD4NCiAgICAgIDxwIGFsaWduPSJjZW50ZXIiPjxmb250IGZhY2U9IrzQt6LF6SIgc2l6ZT0i
+NCIgY29sb3I9IiMwMDAwRkYiPrROpl2ssCZxdW90OzwvZm9udD48Zm9udCBmYWNlPSK80Leixeki
+IGNvbG9yPSIjMDAwMEZGIiBzaXplPSI1Ij6ko6XMpN8mcXVvdDs8L2ZvbnQ+PGZvbnQgZmFjZT0i
+vNC3osXpIiBzaXplPSI0IiBjb2xvcj0iIzAwMDBGRiI+s3m0TrNcpmikSKZis2+4zKaopVw8L2Zv
+bnQ+PC9wPg0KICAgICAgPHAgYWxpZ249ImNlbnRlciI+PGZvbnQgZmFjZT0ivNC3osXpIiBzaXpl
+PSI0IiBjb2xvcj0iIzAwMDBGRiI+s8yxTbd+qrq5zraku7K+ybF6PC9mb250PjwvcD4NCiAgICAg
+IDxwIGFsaWduPSJjZW50ZXIiPjxhIGhyZWY9Imh0dHA6Ly92aWMuaDhoLmNvbS50dy8iPg0KICAg
+ICAgPGZvbnQgc2l6ZT0iNiIgZmFjZT0ivNC3osXpIiBjb2xvcj0iI0ZGMDAwMCI+MrhVpLi26qRA
+rdOkcKbRwfOqurnaPC9mb250PjwvYT48L3A+DQogICAgICA8cCBhbGlnbj0iY2VudGVyIj4yMKTA
+xMGs3cC0s2+t0773t3wsp0G0TqxPptukdqq6pUSkSCGvrLF6pm65QjwvcD4NCiAgICAgIDxwPjxm
+b250IGNvbG9yPSIjZmYwMGZmIj48YSBocmVmPSJodHRwOi8vdmljLmg4aC5jb20udHcvIj4NCiAg
+ICAgIGh0dHA6Ly92aWMuaDhoLmNvbS50dzwvYT48L2ZvbnQ+PHA+PGZvbnQgY29sb3I9IiNGRjAw
+MDAiPg0KICAgICAgPHNwYW4gbGFuZz0iZW4tdXMiPjxmb250IHNpemU9IjciPnBzOjwvZm9udD48
+L3NwYW4+t1G2aaRAqEKqvrlEpnCm86ZirmG7tMNQpc669Lj0wcikar/6LKVpPC9mb250Pjxmb250
+IHNpemU9IjQiIGNvbG9yPSIjMDAwMEZGIj6nS7ZPs/imV7r0uPSvU7BWPC9mb250PjxwPg0KICAg
+ICAgPGZvbnQgY29sb3I9IiNGRjAwMDAiPqZwqkesebZxuUywqqzdpKOo7L11pFe8dqT5LKVpr8Go
++qdLtk+z0Ld+pfq60DwvZm9udD48Zm9udCBjb2xvcj0iIzAwMDBGRiI+KL3QpmKtuq22r2SkValt
+ple5cbjcpu2nfSk8L2ZvbnQ+PHA+oUA8cD4NCiAgICAgIKFAPHA+oUA8cD6hQDwvdGQ+DQogICAg
+PC90cj4NCiAgPC90YWJsZT4NCiAgPC9jZW50ZXI+DQo8L2Rpdj4NCjxociBTSVpFPSIxIj4NCjxw
+IHN0eWxlPSJtYXJnaW4tdG9wOiAwcHg7IG1hcmdpbi1ib3R0b206IDBweCIgYWxpZ249ImNlbnRl
+ciI+DQo8Zm9udCBjb2xvcj0iI2ZmMDAwMCI+pnCms6W0wlq90KijvcyhQaSjt1GmQaasqOymuatI
+vdCr9iZuYnNwOyAtJmd0OyZuYnNwOyAoPGEgaHJlZj0iaHR0cDovL3gtbWFpbC5oOGguY29tLnR3
+IiB0YXJnZXQ9Il9ibGFuayI+qdqmrLxzp2k8L2E+KTwvZm9udD48L3A+DQoNCjwvYm9keT4NCg0K
+PC9odG1sPg==
+
+
+------=_NextPart_vXklypZzzDWWhOFZ5e1rZAA--
+------=_NextPart_vXklypZzzDWWhOFZ5e1rZ--",fraudulent
+32,Dreams can cost less Replica watches from Rolex here,"Reliable watches for everyone at Replica Classics
+
+Ravishing Bvlgari watches at Replica Classics   
+
+Replica watches from Officine Panerai closest to original   
+
+http://blockvatreb.com/",fraudulent
+33,Direct message from SpamExperts via web,"zz Processor load (AVG5>10) m_d-hosting_mxy: OFF
+9.67
+
+SpamExperts / spamexperts
+
+--
+follow me at http://twitter.com/spamexperts
+reply on the web at http://twitter.com/direct_messages/create/spamexperts
+send me a direct message from your phone or IM: D SPAMEXPERTS your message here.
+turn off these email notifications at: http://twitter.com/account/notifications",legitimate
+34,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Cheat your way into Ivy League
+
+Fri, 8 Aug 2008 16:36:05 +0300
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+Â© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+35,Re: [Python-Dev] NeedsReview keyword,"> I think it would be useful for the tracker to grow a ""NeedsReview""
+> keyword. I realize the ""patch"" keyword does some of this, but it may
+> just represent some initial or trivial work. ""NeedsReview"" should
+> represent a mature patch that some senior dev needs to look hard at
+> and make the choice.
+
+Not sure what problem that would solve. Over time, I would expect that
+any open patch also grows the ""NeedsReview"" keyword, making the keyword
+pointless. If somebody specifically should review a certain proposed
+change, the change should be assigned to that person. If someone in
+a group should review, they should be contacted by email.
+
+Regards,
+Martin
+_______________________________________________
+Python-Dev mailing list
+zvllln-eum@python.org
+http://mail.python.org/mailman/listinfo/python-dev
+Unsubscribe: http://mail.python.org/mailman/options/python-dev/python-dev%40tangomu.com",legitimate
+36,""" quit your job and wo : rk on ebay , . sktiondenoy","r .
+s
+learn to make a
+fortune with ebay !
+complete turnkey
+system software - videos -
+turorials
+click here for information
+click
+here if you
+would not like to receive future
+mailings .",fraudulent
+37,Re: [Python-3000] range() issues,"On Wed, Apr 30, 2008 at 3:49 PM, Greg Ewing  wrote:
+> Guido van Rossum wrote:
+>
+> > I would like to see the following:
+> >
+> > - sq_length should return maxsize if the actual value doesn't fit
+> >
+>
+>  So that code will silently behave as though the rest of
+>  the sequence wasn't there some of the time?
+
+Only if it uses LBYL.
+
+>  Can you elaborate on the rationale for this? I'm having
+>  trouble seeing how it's a good idea.
+
+Ask the designers of the Java collections package.
+
+-- 
+--Guido van Rossum (home page: http://www.python.org/~guido/)
+_______________________________________________
+Python-3000 mailing list
+smsbmo-9552@python.org
+http://mail.python.org/mailman/listinfo/python-3000
+Unsubscribe: http://mail.python.org/mailman/options/python-3000/python-3000%40tangomu.com",legitimate
+38,Re: [Python-3000] lambda,"On Thu, Mar 27, 2008 at 3:13 AM, Greg Ewing  wrote:
+> Leif Walsh wrote:
+>  > On Wed, Mar 26, 2008 at 7:34 PM, Greg Ewing  wrote:
+>  >
+>
+> >>   x, y => x + y
+>  >
+>  > If something like this is adopted, I plead that := is chosen.
+>
+>  No, that would be massively confusing, since := is
+>  an assignment operator in some languages, notably
+>  Pascal.
+
+Wow, I was entirely too tired when I came up with that.  Don't pay any
+attention to me.
+
+-- 
+Cheers,
+Leif
+_______________________________________________
+Python-3000 mailing list
+smsbmo-9552@python.org
+http://mail.python.org/mailman/listinfo/python-3000
+Unsubscribe: http://mail.python.org/mailman/options/python-3000/python-3000%40tangomu.com",legitimate
+39,- Custom Websites for $399 Complete! (1709D@5),"**Beautiful, 100% Custom Websites, $399 Complete!**  
+  
+---  
+  
+|
+
+|  |
+
+![](http://7x24.sunshinehui.com/mnbv/csi.gif)
+
+|
+
+**Get a beautiful, 100% Custom Web Site ( _or yours redesigned_ )  _for only
+$389_!*  
+  
+We have references coast to coast  
+and will give you _plenty of sites to view!_**  
+  
+---|---  
+  
+**Includes up to 7 pages (you can add more), java rollover buttons, feedback
+forms, more. It will be constructed to your taste and specifications. We do
+not use templates,   _our sites are completely custom.  _   * _Must host with
+us @ $19.95/mo (100 Megs, 20 Email accounts, Control Panel, Front Page,
+Graphical Statistics, more).  
+_**  
+  **_For sites to view, complete below or call our message center at
+    321-726-2209 (24 hours). Your call will be returned promptly._  
+  
+** ** _NOTE:    If you are using a web based email program (such as Yahoo,
+Hotmail, etc.) the form below will not work._  Instead of using the form,
+_CLICK HERE_ .**
+
+    Name: Phone w/AC*:State:   
+Type Project: ___New Site: Redesign Flash Intro/banner_   Current site?:  
+Comments:  
+  
+  
+  
+If you do not wish to receive our messages, **_CLICK HERE   (Please enter ALL
+email addresses (in the body of the message) you wish to have eliminated from
+future mailings.
+
+_**  
+  
+[3121jDvN9-@9]",fraudulent
+40,office xp - $ 60,"we
+presents the widest selection of warez cds at lowest prices !
+we sell backup cds , also known as
+warez cds . backup cds are copies of software . for example if you go into a
+shop and buy windows xp pro , for about $ 299 you get the serial , the cd , the box
+and the manual . when you order from power backups you get the windows xp
+cd and the serial number . it works exactly the same , but you don ' t get the
+manual and the fancy box . that is a saving of $ 280 , and the only difference is
+you don ' t have a colorful box and manual - which are not very
+useful .
+best selling
+cds :
+photoshop 7 . 0
+ms windows xp
+ms office xp
+warcraft iii
+flash mx
+buy first cd for $ 59 . 99 ,
+second cd for $ 16 . 99 , get one free !
+what
+we offer :
+- 24 / 7 support on icq and
+email - shipping worldwide - secure payment processing
+- newest releases -
+best selection of cds - best prices on the
+internet
+our customer ' s
+comments :
+john s . thanks guys , i just got the set of cd ' s and they work as promised .
+you got a happy customer ready to order some more and i ' ll send more
+customers .
+mike j . i only want you to now that the cd i ordered had arrived . i was a
+little suspicious when i ordered the stuff , but i was wrong . thanks for your
+services and never let the site go down .
+chris n . top marks for an excellent service . your speed of response to my
+query was second to none . i ' ll certainly be buying from you in future . keep up
+the good work , guys .
+to
+order please click here",fraudulent
+41,you deserve a better loan,"sir or madam :
+we are glad to confirm that your mor tgage application has been accepted
+we specialize in less - then - perfect cr edit , and you will soon be making enormous monthly sav ings .
+could you please take 1 minute to visit the link below and fill out your info .
+http : / / www . lmort 30 . info /
+thank you ,
+we look forward to hearing from you
+yours sincerely",fraudulent
+42,Order Rolex Replica //atches 0nline!,"Jaeger-LeCoultre replica watch Time is our job and we do it well 
+
+Most reliable replica from Patek Philippe ...   
+
+Delightsome Bvlgari watches at Replica Classics   
+
+http://dryadsnedsjaw.com/",fraudulent
+43,nathaniel energy ( otcbb : necx ) strap your portfolio to a rocket ?,"the growth stock report : nathaniel energy ( alternative energy company )
+the next gangbuster growth stock ?
+nathaniel energy ( 0 tcbb : necx )
+revenues ql 2004 : $ 3 , 346 , 792 vs . ql 2003 : $ 104 , 915
+( source : 10 q 5 / 14 / 04 )
+nathaniel energy has a 51 % ownership interest in a helium and gas processing
+facility in keyes , oklahoma . this facility produces 2 , 000 , 000 mcf ( thousand
+cubic feet ) of natural gas annually , 5 , 500 mcf of natural gas daily and
+3 , 600 gallons of natural gas liquids daily . a more detailed ownership
+description of our keyes operation is contained under the heading corporate
+history below . nathaniel energy also acquired a 130 - mile pipeline that
+collects natural gas for the plant from over 50 gas wells . the acquisition
+included a take - and - pay contract with air products and chemicals , inc . for
+the helium production and an operating agreement with colorado interstate
+gas company for the sale of processed natural gas . the natural gas liquids
+recovered by the plant are sold to various parties .
+( source : 10 k 3 / 25 / 04 )
+look how much money you would have made if you knew about these low priced
+stocks :
+otcbb : zapz : closed march 31 st at $ . 60 . closed friday may 18 at $ 3 . 92 . up
+553 % ! !
+otcbb : arme : closed march 31 st at $ . 26 . closed may 4 th at $ 1 . 50 . up 476 % ! !
+otcbb : snvbf : closed october 31 , 2003 at $ . 79 . closed may 25 th at $ 4 . 47 . up
+465 % ! !
+* necx * * *
+recent headlines :
+* nathaniel energy corp . extends agreement with cimarron industrial park
+authority to develop 190 acre site for waste - to - energy plant .
+* nathaniel energy announces financial results with 2004 first quarter
+revenue of $ 3 . 3 million
+about the company : turning carbon based materials into inexpensive
+electrical and thermal energy : here is the sizzle . . . . . . .
+nathaniel energy provides industry with an alternative energy comparable to
+that of fossil fuels . its proprietary patented technology , the thermal
+combustor ( tm ) , is a 2 - stage gasification system designed to combust waste ,
+biomass , tires and any other solid , carbon - based materials into inexpensive
+electrical and thermal energy , while exceeding the most stringent epa and
+european union regulations .
+* necx * * *
+strongly consider the following points :
+* many of these stocks are undiscovered and uncovered ! when wall street gets
+a whiff of them , look out ! !
+* * many of these undiscovered stocks are like coiled springs , wound tighter
+than a sling shot under the surface - and ready to explode ! this company is
+uncovered by wall street !
+* all it takes is an explosive news announcement , some savvy investors or a
+mutual fund to get wind of this company and necx could go ballistic ! !
+dis - claim - er
+information within this email contains forward looking statements within
+the meaning of section 27 a of the securities act of 1933 and section 21 b of
+the securities exchange act of 1934 . any statements that express or involve
+discussions with respect to predictions , expectations , beliefs , plans ,
+projections , objectives , goals , assumptions or future events or performance
+are not statements of historical fact and may be forward looking
+statements . forward looking statements are based on expectations , estimates
+and projections at the time the statements are made that involve a number of
+risks and uncertainties which could cause actual results or events to differ
+materially from those presently anticipated . forward looking statements in
+this action may be identified through the use of words such as projects ,
+foresee , expects , will , anticipates , estimates , believes ,
+understands or that by statements indicating certain actions may ,
+could , or might occur . as with many microcap stocks , today ' s company has
+additional risk factors worth noting . the company has a going concern opinion
+from its auditor , has relied on loans from officers and an affiliate
+shareholder to pay expenses , has a large accumulated deficit since its
+inception and is involved in litigation in the normal course of its
+business , none of which is anticipated to have a material adverse effect on
+its financial condition , operations or prospects . the company will need to
+obtain financing . there can be no assurance of that happening . on june 7 ,
+2004 , nathaniel energy corporation issued a press release that its helium
+and gas processing facility in keyes , oklahoma experienced a fire , that
+there were no injuries , and that repairs are underway . the growth stock
+report does not represent that the information contained in this message
+states all material facts or does not omit a material fact necessary to make
+the statements therein not misleading . all information provided within this
+email pertaining to investing , stocks , securities must be understood as
+information provided and not investment advice . the growth stock report
+advises all readers and subscribers to seek advice from a registered
+professional securities representative before deciding to trade in stocks
+featured within this email . none of the material within this report shall be
+construed as any kind of investment advice or solicitation . many of these
+companies are on the verge of bankruptcy . you can lose all your money by
+investing in this stock . the publisher of the growth stock report is not a
+registered in - vest - ment advisor . subscribers should not view information
+herein as legal , tax , accounting or investment advice . any reference to past
+performance ( s ) of companies are specially selected to be referenced based on
+the favorable performance of these companies . you would need perfect timing
+to acheive the results in the examples given . there can be no assurance of
+that happening . remember , as always , past performance is nev - er indicative of
+future results and a thorough due diligence effort should be completed prior
+to investing . past performance is nev - er indicative of future results . the
+growth stock report has no relationship with zapz , arme , or snvbf . ( source
+for price information : yahoo finance historical ) . in compliance with the
+securities act of 1933 , sectionl 7 ( b ) , the the growth stock report discloses
+the receipt of four thousand dollars from a third party , not an officer ,
+director or affiliate shareholder of the company for the circulation of this
+report . be aware of an inherent conflict of interest resulting from such
+compensation due to the fact that this is a paid advertisement . all factual
+information in this report was gathered from public sources , including but
+not limited to company websites , sec filings and company press releases . the
+growth stock report believes this information to be reliable but can make
+no guaran - tee as to its accuracy or completeness . use of the material within
+this e - mail constitutes your acceptance of these terms .",fraudulent
+44,Re: [Python-3000] python-safethread project status,"Dnia 17-03-2008, Pn o godzinie 11:56 -0600, Adam Olsen pisze: > I've replaced __del__ API (which resurrected objects) with a > __finalize__/__finalizeattrs__ API (which doesn't).  Attributes listed > in __finalizeattrs__ are proxied into a core object, a finalizer > thread is given a reference to the core, and when the main object is > deleted the GC asynchronously notifies the finalizer thread so that it > can call core.__finalize__().  The net result is an API very similar > to __del__ (you need to list attributes it might use), but it's now > impossible for the GC to run arbitrary code (I even enforce this). Ah! Irrespective of other issues, I like this very much. This design agrees with my understanding of how finalization should behave, except that I haven't had details in mind which would fit Python. My abstract design needs the finalization function to somehow access parts of the dying object, but not the object itself, and this design shows how to actually do it in a convenient way. --     __(""<         Marcin Kowalczyk    \\__/       kbjbvc@knm.org.pl     ^^     http://qrnik.knm.org.pl/~qrczak/ _______________________________________________ Python-3000 mailing list smsbmo-9552@python.org http://mail.python.org/mailman/listinfo/python-3000 Unsubscribe: http://mail.python.org/mailman/options/python-3000/python-3000%40tangomu.com",legitimate
+45,need low priced software ? walgreen ploy,"colt grossest purges
+aberrations patriarchy mauricio
+keenest drawn instruct mincemeat inwards
+archipelagoes spinal flames
+intraline ideological applicability playmates pastes
+bottoms crudest rasps double landscape
+strawberry salesman dissident conflicting
+sampled stepchild facilitate advanced
+retransmitting jeep expectations bystander",fraudulent
+46,From Katy Padilla,"Pe btm nis En cyh large ooq ment: Does It Work?
+Order The Top Pen go is Patches !",fraudulent
+47,fw : credit watch list - - week of 9 / 17 / 01,"louise ,
+i think that john ( see below ) raises a valid point regarding our credit dismissal of the airline industry . enron does a very good job "" wooing "" a sector doing good times , but as soon as the commercial operations get tough we dump like a hot potato . as such , when we will try to entertain the airline sector in the future to do risk management and hedging through enron , substantial ill will this from prior disposal will have been created . do we care ?
+i have got to think that there should exist sufficient origination opportunities for companies going into bankruptcy - - maybe for lydecker ' s organization ?
+just a thought , mrha
+- - - - - original message - - - - -
+from : grass , john
+sent : tuesday , september 18 , 2001 9 : 02 am
+to : mrha , jean
+subject : fw : credit watch list - - week of 9 / 17 / 01
+jean ,
+i am forwarding the credit watch list for your review . i have one concern as a member of the origination team ( "" no trades "" - - nine energy services , llc and all airline counterparties ( including but not limited to the following ) : air canada , airtran holdings , america west airlines , america west holdings corp . , american airlines , inc . , amr corp . , chautauqua airlines , continental airlines , delta air lines , jet blue airways , midway airlines , northwest airlines , sabina blanca sl , southwest airlines , united air lines , u . s . airways and the val group . ) i would hope that we are not just abandoning this segment of the industry . i know enron has been courting these counterparties for the last few years to hedge their energy needs . i hope we are doing whatever is possible to work through the financial issues . if enron is going to keep market share in this industry we need to think about how we manage the risk and retain the customers .
+- - - - - original message - - - - -
+from : espinoza , veronica
+sent : monday , september 17 , 2001 1 : 33 pm
+to : brackett , debbie r . ; bradford , william s . ; conner , andrew r . ; fitzgerald , genia ; hanse , patrick ; murphy , melissa ann ; theriot , kim s . ; yoder , christian ; miller , mike j . ; neal , steve ; olinger , kimberly s . ; otto , charles h . ; parquet , david ; pereira , susan w . ; perlman , beth ; pollan , sylvia s . ; price , brent a . ; reck , daniel ; reeves , leslie ; ring , andrea ; shackleton , sara ; shankman , jeffrey a . ; shively , hunter s . ; sorenson , jefferson d . ; south , steven p . ; allen , phillip k . ; allen , thresa a . ; arnold , john ; aucoin , berney c . ; baughman , edward d . ; bowen , bob ; brawner , sandra f . ; brazaitis , greg ; breslau , craig ; coleman , brad ; donohoe , tom ; etringer , michael ; foster , chris h . ; glover , sheila ; suh , jungsuk ; taylor , mark e ( legal ) ; tholt , jane m . ; thomas , jake ; lagrasta , fred ; scheuer , janelle ; gilbert , george n . ; fraser , jennifer ; mellencamp , lisa ; daniel , shonnie ; gray , barbara n . ; van hooser , steve ; cook , mary ; nemec , gerald ; ogden , mary ; st . clair , carol ; hlavaty , nathan ; taylor , craig ; sturm , fletcher j . ; storey , geoff ; holst , keith ; keavey , peter f . ; grigsby , mike ; lewis , andrew h . ; perlingiere , debra ; smith , maureen ; mulholland , sarah ; barker , james r . ; fleming , matthew b . ; dickson , stacy e . ; ewing , linda j . ; lilly , kyle r . ; hanson , kristen j . ; bosse , kevin ; stuart iii , william ; resendez , isabel y . ; eubanks jr . , david w . ; patel , sheetal ; lavorato , john ; o ' leary , martin ; mahmassani , souad ; singer , john ; knoblauh , jay ; schockling , gregory ; mccairns , dan ; bond , ragan ; rangel , ina ; gillette , lisa ; bywaters , candy ; green , ron ; blay , jennifer ; cook , audrey ; seibel , teresa ; benevides , dennis ; ngo , tracy ; harris , joanne ; tate , paul ; ' imam , zarin ' ; bangle , christina ; moran , tom ; ' weithman , tim ' ; rawson , lester ; hall , bob m ; baxter , bryce ; dahanayake , bernard ; deming , richard ; bailey , derek ; anderson , diane ; hunter , larry joe ; wallumrod , ellen ; bowen , bob ; lees , lisa ; sever , stephanie ; fisher , joni ; eggleston , meredith ; gorny , vladimir ; vachuska , cindy ; diamond , russell ; miroballi , angelo ; ratnala , melissa k . ; williams , jason r ( credit ) ; balfour - flanagan , cyndie ; richardson , stacey ; bryan , linda s . ; bussell l , kathryn ; mims , patrice l . ; jackson , lee ; boxx , pam b . ; hernandez , elizabeth l . ; otto , randy ; quezada , daniel ; hull , bryan ; penman , gregg ; smith , dana ; anderson , clinton ; valderrama , lisa ; tian , yuan ; smith , raiford ; plachy , denver ; moon , eric ; mcmichael jr . , ed ; martin , jabari ; little , kelli ; huan , george ; horne , jonathan ; hernandez , alex ; garza , maria ; garcia , santiago ; fitzwater , loftus ; espey , darren ; dicarlo , louis ; curlee , steven ; breese , mark ; boyt , eric ; grass , john ; kelly , katherine l . ; franklin , cynthia ; khandker , dayem ; thorne , judy ; dicarlo , louis ; jennings , jennifer ; phillips , rebecca ; grass , john ; ferries , nelson ; ring , andrea ; ortiz , lucy ; martin , thomas a . ; jones , tana ; lucci , paul t . ; nemec , gerald ; smith , tiffany ; stephens , jeff ; quigley , dutch ; hodge , jeffrey t . ; goodell , scott ; maggi , mike ; griffith , john ; may , larry ; germany , chris ; pimenov , vladi ; townsend , judy ; hendrickson , scott ; ruscitti , kevin ; williams , jason ( trading ) ; lenhart , matthew ; sanchez , monique ; lambie , chris ; reitmeyer , jay ; gay , randall l . ; farmer , daren j . ; bass , eric ; rohauer , tanya
+subject : credit watch list - - week of 9 / 17 / 01
+attached is a revised credit watch listing for the week of 9 / 17 / 01 . please note that the following entities are placed on "" no trades "" - - nine energy services , llc and all airline counterparties ( including but not limited to the following ) : air canada , airtran holdings , america west airlines , america west holdings corp . , american airlines , inc . , amr corp . , chautauqua airlines , continental airlines , delta air lines , jet blue airways , midway airlines , northwest airlines , sabina blanca sl , southwest airlines , united air lines , u . s . airways and the val group .
+if there are any personnel in your group that were not included in this distribution , please insure that they receive a copy of this report .
+to add additional people to this distribution , or if this report has been sent to you in error , please contact veronica espinoza at x 6 - 6002 .
+for other questions , please contact jason r . williams at x 5 - 3923 , veronica espinoza at x 6 - 6002 or darren vanek at x 3 - 1436 .",legitimate
+48,Have wild nights of love back again to life.,"Dear c202f8eb239faf8d4b0a5c6a41cde453
+
+Summer is a right time to take a vacation at work and think about your health & personal life.
+
+And we are glad to assist you with it.
+
+ From now on till 1st of  October you can use our particular proposal.
+
+Visit our site for more details.
+
+herrespect.com
+
+7 Aug 2008 10:26:02",fraudulent
+49,new book - concise encyclopedia of philosophy of language,"concise encyclopedia of philosophy of language edited by peter v . lamarque , university of hull , uk isbn : 0-08 - 042991 - 2 pages : 620 hardback the concise encyclopedia of philosophy of language will be an essential reference tool for all those interested in the philosophy of language , as well as cognitive science and psychology . based on the foundation provided by the award winning encyclopedia of language and linguistics , this volume will be of exceptional value to libraries and individuals looking for a single volume that provides both a comprehensive overview and introduction to any topic within philosophy of language . publication : december 1997 . pergamon - an imprint of elsevier science . contact elsevier science email : l . roberts @ elsevier . co . uk",legitimate
+50,re : woorks great,"hello , do you need tobegan to speak . in a muted voice and briefly - much more briefly spend iess on your druggs ?
+savthoughts , it ' s none so bad . her boyish laugh trilled out , but thee over 70 % with
+pharrmacybymailupon her , his eyes aglow , took her chin in his hand , and set her shop
+vtruculent , and disdainful . lagra vathere were ruffles of mechlin at his wrists and a mechlin cravatllum clallhe paused . there was no answer . but they stood hang - dog ands levlslave ' s back was bleeding pulp from neck to waist . tra and many other .
+with each purchase yocayona , which nature seemed to have designed for the stronghold ofu get :
+top quaidistantly and barely perceptibly inclined his head to each of theity
+bestnor were the losses already detailed the full total of those suffered prlces
+totaleffort . he sighed . he resumed his earlier gentle plaintiveness . confidentiaiity
+home deiivmiss the quiver that ran through him . to earn it , do you say ? ery",fraudulent
+51,Account termination notice,"Dear jose,We receive a requestÂ to terminate your e-mailÂ account. Â  Kindly ignore this message if you sent the request and your account will be deleted from our system within the next 48hrs otherwise click the button below to verify your email account and cancel this request. Verify jose@monkey.org Once your account is deleted, access to retrieve your account will be denied. Cancel the termination request to keep enjoying our service. Â  Â© 2018Â Mail ManagerÂ All Rights Reserved.",fraudulent
+52,NewProductsInfoForValuedCustomer,"HealthyLifePillsEffectiveness
+http://g8acuq.bay.livefilestore.com/y1pr5op24Yslw03W1gMJhd6ZBg5VNf1fwdeEBxVta55Wir45avZCxsBeZQE3fZ3kRO91lZ2OY1qwzPeOK9gPreIkQ/index.html",fraudulent
+53,Optimal alternative to buying original Swiss watches!,Our online store specializes in copies of the most fabulous timepieces on the market! http://mildplay.com/,fraudulent
+54,CNN.com Daily Top 10,">+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= >THE DAILY TOP 10 >from CNN.com >Top videos and stories as of: Aug  1, 2008  3:58 PM EDT >+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= TOP 10 VIDEOS 1. MOM PARTIES AT A CLUB http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/05/ng.mom.pics.cnn Nancy Grace has new photos of Casey Anthony partying at a nightclub after her daughter Caylee vanished. 2. WOMAN'S COMPUTER SPIES ON HER http://www.cnn.com/video/partners/email/index.html?url=/video/tech/2008/08/05/pkg.webcam.spying.wcjb 3. TIGERS ATTACK TEEN AT ZOO http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/08/05/wuellner.tiger.attacks.teen.kytv 4. MISTRESS TESTIFIES IN TRIAL http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/05/sot.love.triangle.zammitti.cnn 5. MAN CALLS 911 OVER SANDWICH http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/05/spivey.911.call.sandwich.wtlv 6. JOHN 'JUNIOR' GOTTI ARRESTED http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/08/05/ny.gotti.jr.handcuffs.cnn 7. PASSENGERS SLIDE FROM PLANE http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/08/05/vo.aa.plane.evacuated.KTLA 8. PLANE EVACUATES PASSENGERS http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/08/05/nr.beeper.ca.plane.evacuate.cnn 9. PIPELINE FIRM HELPS SAVE GAS http://www.cnn.com/video/partners/email/index.html?url=/video/tech/2008/08/05/marciano.pipeline.telecommuting.cnn 10. 125,000 GORILLAS FOUND http://www.cnn.com/video/partners/email/index.html?url=/video/world/2008/08/05/vo.congo.gorilla.WCS TOP 10 STORIES 1. SMOKE FORCES EMERGENCY LANDING http://www.cnn.com/2008/US/08/05/emergency.landing/index.html Passengers evacuate an American Airlines jet by inflatable slides after an emergency landing at Los Angeles' airport, an official says. 2. HOPES FOR GORILLA SURVIVAL BOOSTED http://www.cnn.com/2008/WORLD/africa/08/05/congo.gorillas/index.html 3. STAY-AT-HOME WIVES WITHOUT KIDS http://www.cnn.com/2008/LIVING/wayoflife/08/05/lw.nokids.nojob.wives/index.html 4. COMMENTARY: IMMIGRANT SANCTUARIES http://www.cnn.com/2008/POLITICS/08/04/navarrette.immigration/index.html 5. FREEMAN RECOVERING AFTER SURGERY http://www.cnn.com/2008/SHOWBIZ/Movies/08/05/people.morgan.freeman.ap/index.html 6. JOHN ""JUNIOR"" GOTTI ARRESTED http://www.cnn.com/2008/CRIME/08/05/gotti.arrest/index.html 7. TOXIN DIMS HOPES FOR MARS LIFE http://www.cnn.com/2008/TECH/space/08/04/nasa.mars/index.html 8. THE LURE OF THE R-RATED COMEDY http://www.cnn.com/2008/SHOWBIZ/Movies/08/05/film.rrated.comedies.ap/index.html 9. STARBUCKS OFFERS AFTERNOON DEAL http://www.cnn.com/2008/US/08/05/starbucks.deal.ap/index.html 10. EDOUARD MAKES LANDFALL http://www.cnn.com/2008/US/weather/08/05/tropical.weather/index.html CNN, The Most Trusted Name in News >    Cable News Network LP, LLLP.                       < >    One CNN Center, Atlanta, Georgia 30303             < >    2008 Cable News Network LP, LLLP.                  < >    A Time Warner Company.                             < >    All Rights Reserved.                               < ========================================================= =   Please send comments or suggestions by going to     = =           http://www.cnn.com/feedback/                = =                                                       = =      Read our privacy guidelines by going to          = =         http://www.cnn.com/privacy.html               = ========================================================= You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings, go to: http://www.cnn.com/linkto/bn.manage.html To unsubscribe from the Daily Top 10, go to http://cgi.cnn.com/m/clik?e=email1778@gvc.ceas-challenge.cc&l=cnn-dailytop10",fraudulent
+55,i can do it so can you,"i remembered you were interested in a refin . ancing loan awhile back . well i just got $ 299 , 000 for an amazingly small monthly repayment - so i thought i ' d tell you about it so you can take advantage too ! 40 year - low rates mean we get some great bargains . . . here ' s the site go here and fill out a quick form and you ' ll be s . aving too ! ps i hope you enjoy the extra c . ash like i amestela nomore please postal address : rua da imprense 4347 , r / c bloco 1 - 33 maputo , mozambique 519632",fraudulent
+56,Re: [perl #47181] Try OO semantics before throwing fatal error,"* Linda W  [2007-11-16 21:55]:
+> A. Pagaltzis wrote:
+>> * Josh Jore  [2007-11-06 15:55]:
+>>> I'm pretty sympathetic to the idea of method resolution
+>>> silently skipping over undefined bodies.
+>>
+>> MR responding to stubs was added for a reason. The only way to
+>> âfixâ this behaviour without obliterating its original and
+>> fully intentional functionality is to skip stubs in absence of
+>> AUTOLOAD, but respect them in its presence.
+> 
+> Actually ""respect them"" in AUTOLOAD's failure or absence, not
+> just in its presence.  It's only when the replacement method
+> has been fully specified that it should override the base
+> method.
+
+Your understanding of the phrase ârespecting stubsâ and your use
+of it is backwards from what I actually meant by it.
+
+> Method overriding is said to provide a method only when a new
+> class provides ""a specific implementation"" of a method provided
+> by an ancestor.
+> (http://en.wikipedia.org/wiki/Method_overriding_%28programming%29)
+
+And each of the terms used in that definition can be defined
+however one likes to define them. âWhen I use a word,â Humpty
+Dumpty said, in a rather scornful toneâ¦
+
+> Perl fails being an OO by this definition.
+
+Thatâs the only way you could find by which Perlâs OO fails to be
+textbook OO? You didnât look very hard. Try looking up
+âencapsulationâ for your next trick. (OK, so inside-out objects
+fix this and 5.10 includes support to make them reasonably sane
+in all edge cases. Praise goodness, it only took 15 years.)
+
+Regards,
+-- 
+Aristotle Pagaltzis //",legitimate
+57,Exclusive stuff for mans,"Our online health shop is the perfect resource for people to get their medications without any hassles or awkwardness.
+
+
+7 things to buy for your lover.
+
+Here!
+
+
+
+
+farcialize exhibitory eshbasedir
+entericoid fddixpress etc/locale
+endservent exigencies experinece
+expierence enteropexy exploitage",fraudulent
+58,"Re: sa-learn ""not"" learning?","On Wed, 20 Feb 2008, pichels wrote:
+
+> But, I've tried learning any email after I recieved the Perl error 
+> message and none are being learned?
+> And why is the spam being scored wioth spamassassin?
+> I don't understand? Could my Bayes DB need to be re-synced or forced to
+> expire some dups or ?
+
+Note that bayes needs at least 200 spams and 200 hams before is starts 
+scoring. Have you learned that many yet?
+
+If you have kept your training corpus, you could delete the bayes database 
+files entirely and start training over from scratch.
+
+> My users are getting the ""nice girl emails and they are not scoring as I've
+> shown in my post - why?
+> They score with spamassassin debug but are not being stopped by SA in my
+> maillogs?
+
+That smells like a user ID problem. If the user ID that spamassassin/spamd 
+is running under is different than the user ID you are running sa-learn 
+under, the bayes databases are different - you're training a database that 
+SA isn't looking at. Verify that you are training using the same user as 
+the user spamassassin/spamd is running as to filter mail.
+
+> Can I provide more details?
+
+What does ""sa-learn --dump magic"" report?
+
+How are you filtering messages? spamc+spamd?
+
+What user is spamd running as? What user are you running sa-learn as?
+
+What (if anything) does ""ps axu | grep spamd"" report?
+
+-- 
+  John Hardin KA7OHZ                    http://www.impsec.org/~jhardin/
+  ewhxebq@impsec.org    FALaholic #11174     pgpk -a ewhxebq@impsec.org
+  key: 0xB8732E79 -- 2D8C 34F4 6411 F507 136C  AF76 D822 E6E6 B873 2E79
+-----------------------------------------------------------------------
+  [Small arms] are fundamentally dangerous and their removal from the
+  equation either by control, neutralisation or removal is essential.
+  The first step is to gain information on their numbers and
+  whereabouts.         -- the UN, who ""doesn't want to confiscate guns""
+-----------------------------------------------------------------------
+  2 days until George Washington's 276th Birthday",legitimate
+59,CNN Alerts: My Custom Alert,"CNN Alerts: My Custom Alert
+
+
+
+
+
+
+ 
+
+
+
+Alert Name: My Custom Alert
+Please click here, you have to see this incredible video.
+
+Fri, 8 Aug 2008 03:54:16 -0500
+
+FULL STORY
+
+
+
+You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings.
+To manage your settings click here.
+To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here.
+
+
+Cable News Network. One CNN Center, Atlanta, Georgia 30303
+Â© 2008 Cable News Network.
+A Time Warner Company
+All Rights Reserved.
+View our privacy policy and terms.",fraudulent
+60,re : petronas benchmarking visit,"khairuddin ,
+i am glad you received the fax .
+i shall send you the list of enron ' s participants at a later date .
+i have invited a numbers of enron employees representing
+our different business units , including
+lng and crude trading , risk controls group and research .
+vince kaminski
+khairuddinbmjaafar @ petronas . com . my on 01 / 17 / 2001 06 : 39 : 10 pm
+to : vince . j . kaminski @ enron . com
+cc :
+subject : re : petronas benchmarking visit
+vince ,
+thank you for your prompt reply . we have received your fax earlier this
+morning . fyi , we shall be sending you the questionaires by next week as we
+are going through the final draft this week . could you please tell me who
+will be joining the discussion during our visit ? thanks .
+regards ,
+khairuddin",legitimate
+61,New OldFriends members,"Now with over 1132131 members!
+www.oldfriends.co.nz
+
+
+
+
+
+		
+		
+				Hi Tony,
+				The following people have recently joined OldFriends from your schools and workplaces, or are being sought by other members, from the time you were there.
+
+Â 		
+				Kaitaia Intermediate
+ (1990 to 1991)
+			
+
+
+New members
+Â  Â Stacey Allen
+				Thanks for using OldFriends!
+Go to www.oldfriends.co.nz
+
+
+
+			To stop receiving, or change how often you receive these emails, 
+			click here",legitimate
+62,re : japan update,"beginning this week houston participants can meet in the board room on 21
+( 3 ac 21 c 2 ) .
+same numbers as last week . . . see below
+also , reminder to send your update to hirl and copy me , please .
+loretta
+subject : japan update
+per the note you received from joe hirl regarding a weekly japan update
+conference call , the following is your call - in information :
+thursdays , beginning february 24 .
+houston : 4 : 00 p . m .
+london : 10 : 00 p . m .
+fridays , beginning february 25
+tokyo : 7 : 00 a . m .
+sydney : 9 : 00 a . m .
+domestic number : 800 - 991 - 9019
+international number : 847 - 619 - 8039
+passcode : 5057851
+conference room 3 ac 2195 has been reserved for houston participants .
+please join this kick - off meeting .",legitimate
+63,re : zisman,"he was ranked as a 2 . mark
+- - - - - original message - - - - -
+from : kitchen , louise
+sent : tuesday , june 26 , 2001 9 : 04 am
+to : haedicke , mark e .
+subject : zisman
+apparently , stuart still gets ranked under legal this time - do you have an idea of where he will rank out
+thanks
+louise",legitimate
+64,"With our medication, you will get a new 9 inch schlong in no time YR","Read testimonials of thousands of satisfied men and their partners, a solution that WORKS
+    CLICK HERE URL!!! 
+    EMtMfBT",fraudulent
+65,"[UAI] Last Reminder: IIPWM05 Call due Tue., Nov. 2","------------------------------------------------------------------------
+
+  This is a final reminder about submission of papers to IIS:IIPWM'05.
+
+ Please note: the extended paper submission deadline is November 2, 2004.
+
+------------------------------------------------------------------------
+
+             INTELLIGENT INFORMATION SYSTEMS 2005 - IIS'05
+ New Trends in Intelligent Information Processing and Web Mining (IIPWM)
+
+                      Gdansk, Poland, June 13-16, 2005
+
+              Conference Web page: http://iipwm.ipipan.waw.pl
+
+           November 2, 2004 - extended paper submission deadline
+
+- ------------------------------------------------------------------------
+
+Scope:
+http://iipwm.ipipan.waw.pl/2005/scope.html
+==========================================
+Papers on
+- - Artificial Immune Systems,
+- - Search Engines,
+- - Computational Linguistics,
+- - Knowledge Discovery
+and related subjects are particularly encouraged.
+
+The  focus of the Conference will also be on the following topics:
+- - new computing paradigms, including, but not restricted to biologically
+motivated methods, quantum computing, DNA computing,
+- - advanced data analysis,
+- - new machine learning paradigms,
+- - reasoning technologies,
+- - natural language processing,
+- - novelty detection,
+- - new optimization technologies,
+- - applied data mining using statistical and non-standard approaches,
+- - technologies for very large data bases,
+- - uncertainty management.
+
+Publication:
+http://iipwm.ipipan.waw.pl/2005/publication.html
+================================================
+Publication in the Springer Verlag Lecture Notes in Artificial Intelligence
+is envisaged. The volume will contain full papers as well as papers accepted
+for poster presentation.
+
+Paper Submission and Publication:
+http://iipwm.ipipan.waw.pl/2005/forauthors.html
+===============================================
+The working language of the conference is English. Only original,
+unpublished papers in the aforementioned fields are invited. Authors should
+upload an electronic version of the full paper (up to eight pages; ps and/or
+possibly pdf) by using the registration site before November 2, 2004. The
+papers should be organized in accordance with common scientific structure
+(abstract, state of the art in the field, intention, used methodology,
+obtained results and references). Papers will be refereed by an
+international committee, and accepted on the basis of their scientific
+merit, novelty and relevance to the conference topics. After notification of
+acceptance, authors will be allowed to make a correction in accordance with
+the suggestions of the reviewers and submit final camera-ready papers.",legitimate
+66,"[Spambayes-checkins] spambayes/spambayes i18n.py,1.7,1.8","Update of /cvsroot/spambayes/spambayes/spambayes
+In directory sc8-pr-cvs8.sourceforge.net:/tmp/cvs-serv21706/spambayes
+
+Modified Files:
+	i18n.py 
+Log Message:
+To help in testing localizations, let SPAMBAYES_LANG in the environment
+override getdefaultlocale()[0]
+
+
+Index: i18n.py
+===================================================================
+RCS file: /cvsroot/spambayes/spambayes/spambayes/i18n.py,v
+retrieving revision 1.7
+retrieving revision 1.8
+diff -C2 -d -r1.7 -r1.8
+*** i18n.py	8 Mar 2007 23:21:30 -0000	1.7
+--- i18n.py	29 Jun 2007 01:08:43 -0000	1.8
+***************
+*** 115,120 ****
+          """"""Get the default language for the locale.""""""
+          # Note that this may return None.
+!         return getdefaultlocale()[0] 
+!             
+      def add_language(self, lang_code=None):
+          """"""Add a language to the current languages list.
+--- 115,123 ----
+          """"""Get the default language for the locale.""""""
+          # Note that this may return None.
+!         try:
+!             return os.environ[""SPAMBAYES_LANG""]
+!         except KeyError:
+!             return getdefaultlocale()[0] 
+! 
+      def add_language(self, lang_code=None):
+          """"""Add a language to the current languages list.
+
+_______________________________________________
+Spambayes-checkins mailing list
+pnperxdpv-sarswdlp@python.org
+http://mail.python.org/mailman/listinfo/spambayes-checkins",legitimate
+67,CNN.com Daily Top 10,">+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= >THE DAILY TOP 10 >from CNN.com >Top videos and stories as of: Aug  1, 2008  3:58 PM EDT >+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= TOP 10 VIDEOS 1. MONTAUK 'MONSTER' http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/07/31/moos.montauk.monster.cnn Is it a devil dog? Is it a turtle? Is it the Montauk Monster? CNN's Jeanne Moos asks, ""what is this thing?"" 2. RACY PHOTOS OF TODDLER'S MOM http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/07/31/ng.racy.photos.cnn 3. NEWS OF THE ABSURD EPISODE 54 http://www.cnn.com/video/partners/email/index.html?url=/video/podcasts/absurd/site/2008/08/01/nota.episode.54.cnn 4. POLICE BEATING DISPUTE http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/07/31/levs.police.video.cnn 5. MOM PLEADS FOR GIRL'S RETURN http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/01/hill.boss.reigh.plea.cnn 6. DEFENDANT FAKES HEART ATTACK http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/01/dnt.fake.heart.attack.mxf.whio 7. KILLER CARRIED VICTIM'S HEAD http://www.cnn.com/video/partners/email/index.html?url=/video/world/2008/07/31/natpkg.can.bus.decapitation.ctv 8. MURDER CONFESSION RECANTED http://www.cnn.com/video/partners/email/index.html?url=/video/world/2008/08/01/blake.brazil.teen.murder.itn 9. ANTHRAX SUSPECT'S HOME http://www.cnn.com/video/partners/email/index.html?url=/video/us/2008/08/01/von.dr.bruce.ivins.home.cnn 10. HECKLERS INTERRUPT OBAMA TALK http://www.cnn.com/video/partners/email/index.html?url=/video/politics/2008/08/01/sot.fl.obama.protesters.baynews9 TOP 10 STORIES 1. SUSPECT IN BEHEADING IDENTIFIED http://www.cnn.com/2008/WORLD/americas/08/01/canada.beheading/index.html Canadian police say Vince Weiguang Li, 40, of Edmonton is charged with second-degree murder in the beheading of a man on a bus. 2. JUDGE TAKEN OFF LAST JENA 6 CASES http://www.cnn.com/2008/CRIME/08/01/jena6.appeal/index.html 3. PEOPLE MAG GETS PITT-JOLIE PIX http://www.cnn.com/2008/SHOWBIZ/Movies/08/01/brangelina.photos.ap/index.html 4. ATTACK IN TORONTO CALLED RACIAL http://www.cnn.com/2008/WORLD/americas/08/01/canada.attack.ap/index.html 5. IREPORTERS' UNUSUAL NAMES http://www.cnn.com/2008/LIVING/08/01/unusual.names.irpt/index.html 6. MOTHER PLEADS FOR CHILD'S RETURN http://www.cnn.com/2008/CRIME/08/01/rockefeller.kidnapping/index.html 7. KARADZIC: I MADE DEAL WITH U.S. http://www.cnn.com/2008/WORLD/europe/08/01/karadzic.trial/index.html 8. SUSPECT ARRESTED IN SWIM KILLINGS http://www.cnn.com/2008/CRIME/08/01/wisconsin.shooting.ap/index.html 9. ANTHRAX SUSPECT APPARENT SUICIDE http://www.cnn.com/2008/CRIME/08/01/anthrax.death/index.html 10. MCCAIN: OBAMA CRITICISM 'FAIR' http://www.cnn.com/2008/POLITICS/08/01/campaign.wrap/index.html CNN, The Most Trusted Name in News >    Cable News Network LP, LLLP.                       < >    One CNN Center, Atlanta, Georgia 30303             < >    2008 Cable News Network LP, LLLP.                  < >    A Time Warner Company.                             < >    All Rights Reserved.                               < ========================================================= =   Please send comments or suggestions by going to     = =           http://www.cnn.com/feedback/                = =                                                       = =      Read our privacy guidelines by going to          = =         http://www.cnn.com/privacy.html               = ========================================================= You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings, go to: http://www.cnn.com/linkto/bn.manage.html To unsubscribe from the Daily Top 10, go to http://cgi.cnn.com/m/clik?e=e46d0398ccb78662aa17a8fb98937654@gvc.ceas-challenge.cc&l=cnn-dailytop10",fraudulent
+68,"RE: OSCOM Berkeley report: Xopus, Bitflux, Plone, Xoops","I attended the same conference, and was impressed by a few systems that
+Jim didn't mention. In terms of CMS, the following all had apparently
+been used in some fairly large implementations and looked like some
+pretty strong competition to commercial systems:
+- Midgard, http://www.midgard-project.org/ , a PHP-based content
+management framework that with other programs combines to be a full CMS
+- Redhat CCM CMS, Java-based: http://www.spamassassin.taint.org/software/ccm/cms/
+- OpenCMS, Java-based: http://www.opencms.org
+
+There was agreement that usability has not generally been an open source
+strength, but both Plone and Xopus represented some real movement
+towards improving that situation.
+
+I was impressed by the spectrum of perspectives on XML. Some took for
+granted that XSLT was relevant to content management, others took it
+just as for granted that XSLT was irrelevant and seemed happy to ignore
+XML almost completely. 
+
+I attended realizing that ""content management"" is generally used to
+apply to *Web* content management, but I was still a bit shocked how
+completely out of scope document management was (almost no consideration
+of the potential print/PDF dimension to content other than the
+occasional ""...and you can use FOP to make PDF"" as if that was
+functional): this seems more the case in open source content management
+than in commercial content management, and probably makes XML easier to
+ignore (if HTML is the be-all and end-all of the output...).
+
+The honesty was refreshing, Phil Suh complained about the state of
+current tools (both open source and commercial), and I wish I'd written
+down what he said, something like ""it sucks so extremely, it sucks so
+widely, and it is so generally sucking, that it seems sometimes there is
+no hope."" For a moment there was contemplation that perhaps commercial
+systems scaled so well that the commercial ""big boys"" were really much
+more functional than open source, until someone pointed out, ""OK, take
+some average blog software, spend $500,000 on the rollout... it'll scale
+pretty well."" Another quote (citing Brendan Quinn): ""content management
+problems are either trivial or impossible.""
+
+Mac OS X is getting popular, of the laptops there it was an even 1/3
+each of Mac, Linux, Windows.
+
+I am sure it wasn't news to Jim, but I can't wait to try Subversion, a
+CVS replacement that supports some of the newer features of WebDAV:
+http://subversion.tigris.org/
+
+I'm also eager to try Xopus, I hope the developers make it back home
+safely, they said they'd only been in America four days but were already
+homeless...
+
+Max",legitimate
+69,re : 2002 it systems development allocations,"i dont know what any of this stuff is and this is the first time i ' ve seen any $ $ s .
+i dont even see gas trading vision ( maybe its the ' global trading vision ' ) .
+operational capacity , system main , fundamentals , global val , and peoples all have other business sponsers . i cant image what ' it commer . coord ' is .
+- - - - - original message - - - - -
+from : kitchen , louise
+sent : tuesday , october 02 , 2001 8 : 06 am
+to : killen , faith ; storey , geoff
+cc : colwell , wes ; perlman , beth
+subject : re : 2002 it systems development allocations
+geoff
+this cannot be right - its millions i thought we were about $ 5 mm all in including the secret zhei project
+- - - - - original message - - - - -
+from : killen , faith
+sent : monday , october 01 , 2001 8 : 21 pm
+to : storey , geoff
+cc : kitchen , louise ; colwell , wes ; perlman , beth
+subject : 2002 it systems development allocations
+importance : high
+geoff ,
+please review the attached listing and advise if you agree to the projects and amounts listed as billings that enron north america will receive in 2002 for support of these efforts . i ' m at x 30352 if you have any questions . thanks ! >",legitimate
+70,[ie-rant] Re: some tales from Slash,"again that takes me back.....
+
+--- In pq-mism@yahoogroups.com, Rara Avis  wrote:
+>
+> You wish
+> 
+> I loved the line about him not being judgemental about ex-porno 
+stars and being cool with the two girls giving the guys in the room a 
+blowjob and not fucking them.
+> 
+> 
+> 
+> duploelabs  wrote:                               
+Brings me back to my college days
+>  
+>  --- In pq-mism@yahoogroups.com, Rara Avis  wrote:
+>  >
+>  > Fucking ace.
+>  > 
+>  > Would definitely have a read of this 
+>  > 
+>  > Eoin Parker  wrote:                               
+>  > http://observer.guardian.co.uk/omm/story/0,,2187757,00.html
+>  > 
+>  >  
+>  >      
+>  >                                
+>  > 
+>  > 
+>  >         ""I always feel like a poofter when I order a latte, the 
+>  name is so gay that even if it was made with testosterone and came 
+>  with a free vagina to fuck voucher, it would still be gay.""
+>  > 
+>  > 
+>  > 
+>  > 
+>  > 
+>  >        
+>  > ---------------------------------
+>  > Yahoo! oneSearch: Finally,  mobile search that gives answers, 
+not 
+>  web links.
+>  >
+>  
+>  
+>      
+>                                
+> 
+> 
+>         ""I always feel like a poofter when I order a latte, the 
+name is so gay that even if it was made with testosterone and came 
+with a free vagina to fuck voucher, it would still be gay.""
+> 
+> 
+> 
+> 
+> 
+>  __________________________________________________
+> Do You Yahoo!?
+> Tired of spam?  Yahoo! Mail has the best spam protection around 
+> http://mail.yahoo.com
+>",legitimate
+71,phone call today,"vince ,
+there are a few matters i ' d like to discuss with you :
+clarification on who tony harrison reports to ( i had understood it would be
+the houston crude oil weather forecast team but i am not now sure )
+to let you know that joe wants to recruit a strongly mathematical
+macroeconomist reporting to steve , and therefore that maureen will be
+returning to houston later this month
+to talk about stinson coming over for a visit
+regards ,
+tani",legitimate
+72,Our best decision is suitable for every age urrq n rsp,"After many years of Rese oy arch and Develo yey pment, our company is pleased to offer you a 100% Nat ir ural and Sa wvf fe Pro el duct that can safely and permanently en mx lar ymk ge your p dp en ijb is si swt ze up to 3-4 In imk ch kt es in le pak ng vcf th and up to 25% in girth. Discover what our ""proven to work"" for go mula can do for you by or my deri kwr ng today. Many men were skeptical at first but after they gave our pi jqa lls a try their se if x life and self esteem changed for the better.We understand that most customers need con wdo fident sw iality and respect every need of our clients. Secure onl nj ine or kur deri uru ng process, discreet pac tbc king, security of your private information are gu is arant qwb eed.Very dis kv crete sh jvp ipp ymd ing and bi dn lli tlq ng Click here!!! ... http://xbvvcc.makecase.com/?w",fraudulent
+73,Re: [ILUG] ILUG events this week,"On Thu 01 Nov 2007, Proinnsias Breathnach wrote:
+
+> > As a matter of interest, does one have to start google maps first
+> > in order to give a location like this,
+> > or can one do it with a single command?
+
+> A URL such as that below, will do exactly the same in one go - I suppose
+>
+> http://maps.google.co.uk/maps?&q=53.336511,-6.243238+(ICS)
+
+That works fine, thanks.
+(I thought I had tried something like that, but I must have got it wrong.)
+
+-- 
+
+
+
+
+
+Return-Path: 
+X-Original-To: jl@localhost
+Delivered-To: user7@gvc.ceas-challenge.cc
+Received: from radish.jmason.org (localhost [127.0.0.1])
+	by radish.jmason.org (Postfix) with ESMTP id 41B3F32CD8
+	for ; Thu,  1 Nov 2007 15:32:25 +0000 (GMT)
+X-Spam-Virus: No
+X-Spam-Checker-Version: SpamAssassin 3.3.0-r574664 (2007-09-11) on
+	soman.fdntech.com
+X-Spam-Relays-External: [ ip=193.1.193.138 rdns=morrigan.tuatha.org
+	helo=morrigan.tuatha.org by=soman.fdntech.com ident= envfrom= intl=0
+	id=D4BD026957F auth= msa=0 ] [ ip=127.0.0.1 rdns=localhost.localdomain
+	helo=localhost.localdomain by=morrigan.tuatha.org ident= envfrom= intl=0
+	id=854FC4CC158 auth= msa=0 ] [ ip=66.216.127.248 rdns=server3.makalumedia.com
+	helo=makalumedia.com by=morrigan.tuatha.org ident= envfrom= intl=0
+	id=901FF4CC156 auth= msa=0 ] [ ip=213.157.15.58 rdns= helo=!ZK????IPv6:::1!
+	by=makalumedia.com ident= envfrom= intl=0 id=7047766 auth=ESMTPSA msa=0 ]
+X-Spam-Status: No, score=-2.6 required=5.0 tests=BAYES_00,DKIM_POLICY_SIGNSOME
+	shortcircuit=no autolearn=ham version=3.3.0-r574664
+X-Spam-Relays-Internal: 
+X-Spam-Relays-Untrusted: [ ip=193.1.193.138 rdns=morrigan.tuatha.org
+	helo=morrigan.tuatha.org by=soman.fdntech.com ident= envfrom= intl=0
+	id=D4BD026957F auth= msa=0 ] [ ip=127.0.0.1 rdns=localhost.localdomain
+	helo=localhost.localdomain by=morrigan.tuatha.org ident= envfrom= intl=0
+	id=854FC4CC158 auth= msa=0 ] [ ip=66.216.127.248 rdns=server3.makalumedia.com
+	helo=makalumedia.com by=morrigan.tuatha.org ident= envfrom= intl=0
+	id=901FF4CC156 auth= msa=0 ] [ ip=213.157.15.58 rdns= helo=!ZK????IPv6:::1!
+	by=makalumedia.com ident= envfrom= intl=0 id=7047766 auth=ESMTPSA msa=0 ]
+X-Spam-Relays-Trusted: 
+X-Spam-Level: 
+X-Spam-RBL:  [10 morrigan.tuatha.org.]
+	 [193.1.193.138]
+X-Original-To: user7-ext3@gvc.ceas-challenge.cc
+Delivered-To: jl@mail.fdntech.com
+Received: from localhost [127.0.0.1]
+	by radish.jmason.org with IMAP (fetchmail-6.3.2)
+	for  (single-drop); Thu, 01 Nov 2007 15:32:25 +0000 (GMT)
+Received: from morrigan.tuatha.org (morrigan.tuatha.org [193.1.193.138])
+	by soman.fdntech.com (Postfix) with ESMTP id D4BD026957F
+	for ; Thu,  1 Nov 2007 10:30:28 -0500 (CDT)
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+	by morrigan.tuatha.org (Postfix) with ESMTP id 854FC4CC158;
+	Thu,  1 Nov 2007 15:30:17 +0000 (GMT)
+X-Original-To: qifw@linux.ie
+Delivered-To: waogk.al-swgm@localhost
+Received: from makalumedia.com (server3.makalumedia.com [66.216.127.248])
+	by morrigan.tuatha.org (Postfix) with ESMTP id 901FF4CC156
+	for ; Thu,  1 Nov 2007 15:30:07 +0000 (GMT)
+Received: from [213.157.15.58] (account niall.obroin HELO [ZK????IPv6:::1])
+	by makalumedia.com (CommuniGate Pro SMTP 5.0.13)
+	with ESMTPSA id 7047766 for qifw@linux.ie;
+	Thu, 01 Nov 2007 16:30:06 +0100
+Mime-Version: 1.0 (Apple Message framework v752.3)
+Content-Transfer-Encoding: 7bit
+Message-Id: 
+Content-Type: text/plain; charset=US-ASCII; delsp=yes; format=flowed
+To: iLug Users Group 
+From: Niall O Broin 
+Date: Thu, 1 Nov 2007 15:29:40 +0000
+X-Mailer: Apple Mail (2.752.3)
+Subject: [ILUG] AGM start time
+X-BeenThere: qifw@linux.ie
+X-Mailman-Version: 2.1.5
+Precedence: list
+List-Id: Irish Linux Users' Group 
+List-Unsubscribe: ,
+	
+List-Archive: 
+List-Post: 
+List-Help: 
+List-Subscribe: ,
+	
+Sender: bnwr-sactcov@linux.ie
+Errors-To: bnwr-sactcov@linux.ie
+Status: O
+Content-Length: 421
+Lines: 14
+
+Apologies to all for spreading confusion. In my earlier email this  
+week about tonight's AWS talk and the AGM I said that the AGM started  
+at 15:30. That was wrong, and in fact it starts at 15:00 as per the  
+schedule posted today.
+
+
+
+Niall",legitimate
+74,Email Account Suspension Notice!: (jose@monkey.org) verify ownership,Dear Email User : jose@monkey.org  Your email account has been place on edit in our server  please verify the ownership to avoid total email account shutdown. Please kindly click on below link to confirm the ownership of  This email account thank you.  Failure to verify the account we will shutdown this email account without further notice.        Click here to verify now          	 	  Mail Team Supporting:Administrator Sevice.  Dear Email User : jose@monkey.org Your email account has been place on edit in our server please verify the ownership to avoid total email account shutdown.Please kindly click on below link to confirm the ownership of This email account thank you. Failure to verify the account we will shutdown this email account without further notice.  Click here to verify now  Â  Â Mail Team Supporting:Administrator Sevice.,fraudulent
+75,ANN: PyAMF 0.2,"We released PyAMF 0.2, a lightweight library that allows Flash and  
+Python applications to communicate via Adobe's ActionScript Message  
+Format.
+AMF3 and RemoteObject are supported in all the implemented Remoting  
+gateways, currently supported for Django, Twisted, Web2Py and WSGI.
+
+This release comes with the following changes:
+
+  - Encoding/decoding performance has been increased 2x for AMF0 and  
+upto 10x(!) for AMF3 (Ticket:198)
+  - Logging is now possible in all the supported gateways (Ticket:173)
+  - Python 2.3 support (Ticket:33)
+  - Python 2.6 support (Ticket:222)
+  - Made PyAMF distributable as zip-based Python Egg (Ticket:193)
+  - Encoders/Decoders now check for __getstate__/__setstate__  
+respectively (Ticket:209)
+  - A new preprocessor function that runs after authentication, but  
+before invoking the service method (Ticket:196)
+  - authenticator can now be decorated with expose_request (Ticket:195)
+  - Removed amfinfo console_script (Ticket:226)
+  - Gateway import hack has now been removed - permanently (Ticket:224)
+
+Check out the download page [1], installation instructions [2] and  
+examples [3].
+Questions? First stop is the mailing list [4], but we also hang out on  
+[5].
+
+Cheers,
+
+- the PyAMF team
+
+[1] http://pyamf.org/wiki/Download
+[2] http://pyamf.org/wiki/Install
+[3] http://pyamf.org/wiki/Examples
+[4] http://pyamf.org/wiki/MailingList
+[5] irc://freenode.net/pyamf",legitimate
+76,re : kwi user group,"vince
+sorry to hear you cannot make it . . . you would obviously have been the big
+catch ! !
+in terms of a london based replacement , who did you have in mind and what
+sort of subject could they cover ?
+david
+- - - - - original message - - - - -
+from : vince . j . kaminski @ enron . com [ mailto : vince . j . kaminski @ enron . com ]
+sent : 24 april 2001 23 : 22
+to : djw @ kwi . com
+cc : vince . j . kaminski @ enron . com ; shirley . crenshaw @ enron . com
+subject : re : kwi user group
+david ,
+i regret to inform you i am unable to attend the conference due to previous
+commitments .
+would you consider a speakers form our london office ?
+vince
+david warwick on 04 / 24 / 2001 09 : 47 : 31 am
+to : "" ' vince . j . kaminski @ enron . com ' ""
+cc :
+subject : re : kwi user group
+vince
+any further thoughts on this ?
+david
+- - - - - original message - - - - -
+from : vince . j . kaminski @ enron . com [ mailto : vince . j . kaminski @ enron . com ]
+sent : 13 april 2001 21 : 44
+to : djw @ kwi . com
+cc : vince . j . kaminski @ enron . com ; vkaminski @ aol . com
+subject : re : kwi user group
+david ,
+thanks for the invitation .
+i shall check my schedule on monday and will get back to you
+regarding the conference .
+i hope you will a very happy easter .
+vince
+david warwick on 04 / 12 / 2001 04 : 04 : 32 pm
+to : "" ' vince . j . kaminski @ enron . com ' ""
+cc :
+subject : kwi user group
+dear vince
+please may i reintroduce myself . we met last year at the sydney eprm
+conference which my company kwi sponsored . i chaired the session at which
+you spoke .
+as you may remember , my company , kwi are one of the world ' s leading
+provider
+of systems ( kw 3000 ) and consultancy for energy , trading and risk
+management .
+we have over 60 clients worldwide including many of the world ' s leading
+energy companies ( not enron unfortunately ) :
+north america
+- tva
+- ontario power
+- cinergy
+- bonneville power
+europe
+- enel
+- atel
+- electrabel
+- edf
+nordic
+- vattenfall
+- fortum
+- sydkraft
+- statkraft
+- birka energi
+- norsk hydro
+each year we stage a "" kwi users forum "" - a 2 - day event attended by leading
+trading and risk staff from our clients . last year there were about 100
+delegates . the agenda primarily focusses on issues surrounding risk
+management for the energy sector .
+the agenda comprises keynote presentations on burning risk issues from
+industry leading energy speakers and practical workshops focussed around
+using our software .
+this years event is at a luxury hotel in the wonderful spanish city of
+barcelona and runs from the evening of sunday september 9 th to tuesday
+september 11 th . the main conference dinner is on the monday evening and is
+always a memorable event . this year it is in a leading barcelona restaurant
+preceded by a bus tour of the city with a stop for pre - dinner drinks .
+i would like to invite you to make the opening keynote address , the
+highlight of the conference .
+the subject could be :
+* a general energy risk related topic
+* a general insight into the secret of enron ' s continued success in
+the energy markets
+* your thoughts on the future development on energy markets ( and other
+commodity related - bandwidth etc . ) worldwide
+obviously , we would cover all your delagate costs including accomodation ,
+food and drink .
+what ' s in it for you ? many of our users are some the energy sectors
+leading
+risk thinkers and i ' m sure you would enjoy meeting them and exchanging
+views .
+please let me know if you are able to accept the invitation .
+best regards
+david warwick - marketing dierctor and co - founder",legitimate
+77,schedule crawler : hourahead failure,start date : 1 / 7 / 02 ; hourahead hour : 5 ; hourahead schedule download failed . manual intervention required .,legitimate
+78,would you like to earn extra money working from home ?,"guide to home employment
+how is this possible ?
+customer testimonies !
+q a !
+registration form !
+weekly income for stuffing envelopes
+at home , $ 690 , $ 1 , 400 or $ 2 , 070 every week . $ 2 , 760 possible after 90 days . . .
+your old life
+your new life
+hello , my name is thomas martin , hiring director for this new envelope stuffing and securing - program . if you would like to earn a weekly income of $ 1 , 400 or more , please read this carefully !
+help wanted for summer 2005 home workers needed , immediately !
+dear prospective home worker , thank you for your time and interest in our program . would you stuff 80 envelopes for $ 1 , 400 weekly ? $ 17 . 50 for each envelope you secure with our brochures ! if the answer is yes , than our company has the right opportunity for you . you can join the ( highest paid team ) of envelope stuffing program today .
+simple pleasant work you can do at home
+help solve your money problems . eliminate worries about not having enough money to pay bills and to do the things that you would really like to do . if you are looking for an easy extra income to relieve financial pressures , you owe it to yourself to investigate our offer . we are looking for honest hard working people who are looking for a simple way to earn extra income form their home .
+here is your chance to earn extra money working at home by becoming an active participant in our successful mailing program . your payment is guaranteed in advance for the envelopes you stuff . your job is to sercure , stuff , and mail the envelopes to our company . there is no limit . you stuff as many as you wish . you ' ll never be asked to handle or mail any pornographic or objectionable materials . this is a great way to pay off credit cards , get money for a vacation , buy a new car , purchase a new home , or develop your second income for whatever reason you may have .
+you may work from the comfort of your own home , save on gas and babysitters , choose your own hours , and set your own pace . the possibilities are unlimited . get friends and family to help . we will help you reap huge profits . our company is anxious to use your services in stuffing our envelopes . we wll further show you how to expand your operation and boost your new income as high as you wish to go .
+how is this possible ?
+click here to continue
+how is this possible ?
+customer testimonies !
+q a !
+registration form !
+tj knowledge . com p . o . box 664 beloit , wi 53511 this e - mail message is an advertisement and / or solicitation .",fraudulent
+79,entouch newsletter,"business highlights
+enron industrial markets
+enron industrial markets has recently completed the first transaction for a
+new 60 - day fixed price product for the lumber industry . available for
+delivery in houston and dallas , the product is offered by enron in the
+over - the - counter market and via clickpaper . com , enron  , s internet - based
+transaction system dedicated to the forest products industry . the first
+transaction was completed via clickpaper . com on march 14 with a major lumber
+buyer in the southern united states . this represents the first online fixed
+price transaction contract in the industry . with the growing volatility in
+the lumber industry , the availability of a long - term fixed price product
+provides companies with another opportunity to mitigate their exposure .
+additionally , this transaction represents the convergence of enron  , s
+increasing involvement in physical lumber transactions with our recognized
+expertise in financial risk management .
+in addition , eim has announced that it has completed its acquisition of the
+quebec city , canada newsprint mill and related assets from daishowa forest
+products ltd . in july 2000 , enron purchased garden state paper , a recycled
+newsprint mill located in garfield , nj . the acquisition of the daishowa mill
+now positions enron as the seventh largest producer of newsprint in north
+america . the daishowa mill in quebec city will now be called papiers
+stadacona . the new name has great historical significance to the local
+community in quebec city . when jacques cartier first explored the mouth of
+the st . charles river in 1535 , the aboriginal people living there referred to
+the village as stadacona . this is now the site of modern - day quebec city .
+enron freight markets
+in march , enron freight markets ( efm ) completed the acquisition of webmodal ,
+inc to help launch the traditional intermediary transportation business . efm
+also started its spot trading business and completed 981 transactions in its
+first month .
+east power origination
+on tuesday , april 3 , the st . lucie county commission voted 3 - 2 to approve the
+midway energy center near fort pierce , florida , which is a 510 megawatt
+peaking power plant . next steps for this facility include receiving a water
+permit from the south florida water management district and an environmental
+resource permit ( erp ) from the florida department of environmental protection .
+enron canada
+ken lay addressed a breakfast meeting of the toronto board of trade on
+wednesday , april 4 , as part of the "" power breakfast series "" . his topic was
+"" moving forward with electricity deregulation . "" before his speech , the
+chairman of the board of trade commented that "" this was the best attendance
+ever "" at one of their breakfast meetings . after the meeting , mr . lay spoke
+with reporters from reuters , the globe and mail , the national post , and
+report on business tv emphasizing enron ' s commitment to deregulation of the
+ontario power market .
+in the news
+japan : enron presents power plant plan to japan government
+tokyo , u . s . - based enron corp on wednesday presented plans to build a
+liquefied natural gas ( lng ) fired power plant in northern japan , aiming to
+become the first foreign company to build such a plant in japan . the move
+brings enron one step closer to realizing its plan to build a power plant
+with an initial capacity of two million kilowatts in aomori prefecture .
+"" we submitted our basic plan to build the plant to the governor of aomori
+prefecture today in line with last november ' s announcement , "" tatsuro seguchi ,
+president of enron corp ' s japanese affiliate encom corp , told a news
+conference . "" we are aiming to start construction of the plant in 2004 and
+start operations by 2007 since japan ' s power market is one of our highest
+priorities , "" he said . 03 / 28 / 2001 reuters english news service ( c )
+reuters limited 2001 .
+welcome
+new hires
+egm - lyelle bellard , damian nelson , edward soo , jonathan whitehead
+eim - elsa aguilar , melia dickson , john hark , phaedra jones , maricar jose ,
+ian mccrory , mirella bertrone , roland holub , arthur miller , miriam watson ,
+richard albert , randy biagini , thomas duchnicki , diego tabbachino
+ena - mitra mujica , karen phillips , sarah domonoskie , kelly donlevy - lee
+transfers ( to or within )
+ena - john moore , mitchell robinson , larry valderrama , holden salisbury ,
+grace rodriguez , mary martinez , dominic carolan , kari oquinn , katherine
+kelly , david fuller , anguel grigorov , oren zimmerman , chuanli deng , glenn
+surowiec , tharsilla broussard , geynille dillingham , philip conn , lola
+weller , christina brandli , noemi camacho , randel young , ina rangel
+egm - shelia benke , homer lin , william mckone , william berkeland , valarie
+curry , tomas tellez
+eim - allen ueckert , john w . jennings , sarveen kohli
+nuggets & notes
+the next ews brown bag is scheduled for april 19 with tim battaglia
+discussing the steel industry .
+legal stuff
+the information contained in this newsletter is confidential and proprietary
+to enron corp . and its subsidiaries . it is intended for internal use only
+and should not be disclosed .",legitimate
+80,Rebuild at Ground Zero,"http://online.wsj.com/article_print/0,,SB10327475102363433,00.html The Wall Street Journal September 23, 2002 COMMENTARY Rebuild at Ground Zero By LARRY SILVERSTEIN Earlier this month, we New Yorkers observed the solemn anniversary of the horrific events that befell our city on Sept. 11, 2001. All of those who perished must never be forgotten. The footprints of the fallen Twin Towers and a portion of the 16-acre site must be dedicated to a memorial and civic amenities that recall the sacrifices that were made there and the anguish that those senseless acts of terror created for the victims' families and, indeed, for all of us. But for the good of the city and the region, the 10-million-plus square feet of commercial and retail space that was destroyed with the Twin Towers must be replaced on the site. About 50,000 people worked in the World Trade Center. Those jobs are lost, along with those of another 50,000 people who worked in the vicinity. Together, those jobs in lower Manhattan, for which the Trade Center was the economic stimulus, produced annual gross wages of about $47 billion, or 15% of the annual gross wages earned in the entire state. Some of the firms have relocated elsewhere in the city and region, but many have not. New York City is facing a budget deficit. Without additional jobs, the deficit may become permanent. This is one reason for the importance of rebuilding. If we do not replace the lost space, lower Manhattan never will regain the vibrancy it had as the world's financial center. Love them or hate them, and there were lots of New Yorkers on both sides of the issue, the Towers made a powerful statement to the world that said, ""This is New York, a symbol of our free economy and of our way of life."" That is why they were destroyed. This is a second reason why the towers must be replaced, and with buildings that make a potent architectural statement. In recent weeks, redevelopment proposals have been circulated from many sources. Most of these focus not on the Trade Center site, however, but on all of lower Manhattan. Further, many believe that the 10 million square feet either could be located elsewhere, scattered in several sites, or simply never rebuilt. These proposals miss the point. What was destroyed, and what must be recovered, was the Trade Center, not all of lower Manhattan. Except over the towers' footprints, where there must be no commercial development, the office and retail space lost has to be rebuilt on or close to where it was. Access to mass transit makes the site ideal for office space of this size. That was a major reason why the Twin Towers were leased to 97% occupancy before 9/11. None of the other sites proposed for office development has remotely equal transportation access. With the reconstruction of the subway and PATH stations, plus an additional $4.5 billion in transit improvements planned, such as the new Fulton Transit Center and the direct ""Train-to-the-Plane"" Long Island Rail Road connection, the site becomes even more the logical locus of office development. And New York will need the space. Before 9/11, the Group of 35, a task force of civic leaders led by Sen. Charles Schumer and former Treasury Secretary Robert Rubin, concluded that the city would need an additional 60 million square feet of new office space by 2020 to accommodate the anticipated addition of 300,000 new jobs. The loss of the Twin Towers only heightens the need. As for those who say that 10 million square feet of office space downtown cannot be absorbed by the real estate market, I would simply point out that history shows them wrong. New York now has about 400 million square feet of office space. All new construction underway already is substantially leased up. New York had 48 million square feet of vacant office space at the beginning of the recession in 1990. By 1998, this space had been absorbed, at an annual rate of about 6 million square feet. We are seeking to rebuild 10 million square feet on the Trade Center site over a period of about 10 years, with the first buildings not coming on line until 2008 and the project reaching completion in 2012. This is an annual absorption rate of about a million feet, much lower than the 1990s' rate. Those who argue that New York cannot reabsorb office space that it previously had are saying that the city has had its day and is entering an extended period of stagnation and decline. I will not accept this view, nor will most New Yorkers. Mayor Michael Bloomberg said in a recent interview with the New York Times that the city ""has to do two things: memorialize, but also build for the future."" I believe that the Twin Towers site can gracefully accommodate -- and that downtown requires -- office and retail space of architectural significance, a dignified memorial that both witnesses and recalls what happened, and cultural amenities that would benefit workers as well as residents of the area. The challenge to accomplish this is enormous. But our city is up to the task. Mr. Silverstein is president of Silverstein Properties, a real estate firm whose affiliates hold 99-year leases on the World Trade Center site. --  ----------------- R. A. Hettinga  The Internet Bearer Underwriting Corporation  44 Farquhar Street, Boston, MA 02131 USA ""... however it may deserve respect for its usefulness and antiquity, [predicting the end of the world] has not been found agreeable to experience."" -- Edward Gibbon, 'Decline and Fall of the Roman Empire'",legitimate
+81,Re: [FoRK] Re: [ptp-general] Facebook used for wifi access control,"On 11/2/07, Luis Villa  wrote:
+> Clearly someone needs to create a keyserv/opensocial pair which stores
+> your public key in your social network so that we can finally actually
+> make encrypted email easy.
+
+
+You say someone as if it could not be you...why be this?
+
+The real trick of getting folks to use keys is going to be getting
+them to generate them and keep them secure yet usable. Make a game out
+of it, give it a cute wrapper like werevolves or tomogatchis,
+fashionatize to ala apple?
+
+-tomhiggins",legitimate
+82,request for visit and meeting,"these guys are looking to come in the first few weeks of august . what is
+your availability ?
+grant .
+- - - - - - - - - - - - - - - - - - - - - - forwarded by grant masson / hou / ect on 07 / 20 / 2000 08 : 18
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+carlos eduardo machado @ enron _ development
+07 / 18 / 2000 06 : 28 pm
+to : grant masson @ ect
+cc : gabriel sanchez - sierra / enron _ development @ enron _ development
+subject : request for visit and meeting
+hi grant , we met briefly a couple of months ago . i work with pedro in the
+colombia office . we are working closely with ecopetrol ( colombia ' s
+state - owned oil company ) on a very important deal , and some of their highest
+ranking officials ( 3 of them ) will like to visit our head quarters in early
+august , to share some ideas on risk management tools ( very general concepts
+that can obviously be disclosed ) .
+my assumption is that vince and your - self are the perfect people to have the
+meeting with . several consulting firms have advice ecopetrol to get in touch
+with enron when referring to advance risk management techniques . do you think
+this is possible ? please let me know , this means a great deal for this
+office , but i also know you guys are extremely busy . thanks ,
+carlos e",legitimate
+83,CNN.com Daily Top 10,">+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= >THE DAILY TOP 10 >from CNN.com >Top videos and stories as of: Aug  1, 2008  3:58 PM EDT >+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+= TOP 10 VIDEOS 1. PARIS HILTON TAKES ON MCCAIN http://www.cnn.com/video/partners/email/index.html?url=/video/politics/2008/08/06/wynter.paris.hilton.ad.cnn Paris Hilton swings back at Republican presidential candidate John McCain. Kareen Wynter reports. 2. BIKINI BARISTA STAND CLOSED http://www.cnn.com/video/partners/email/index.html?url=/video/living/2008/08/06/pkg.bikini.baristas.barred.kiro 3. TOT GRANDMA REACTS TO CHARGES http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/06/grace.mom.charged.cnn 4. MAGGOTS: THE NEW ANTIBIOTIC? http://www.cnn.com/video/partners/email/index.html?url=/video/health/2008/08/06/mcginty.uk.maggot.antibiotic.itn 5. ON YOUR MARK, GET SET, FLOAT! http://www.cnn.com/video/partners/email/index.html?url=/video/living/2008/08/06/vo.in.balloon.race.wxin 6. 'LOVE TRIANGLE MURDER' http://www.cnn.com/video/partners/email/index.html?url=/video/crime/2008/08/06/dcl.london.in.session.trial.update.insession 7. TERI GARR'S DECADES OF HIDING http://www.cnn.com/video/partners/email/index.html?url=/video/health/2008/08/06/gupta.teri.garr.cnn 8. FAKE SEX AD DRAWS LAWSUIT http://www.cnn.com/video/partners/email/index.html?url=/video/tech/2008/08/06/dnt.wa.sex.ad.lawsuit.komo 9. 'WE NEED AN ECONOMIC SURGE' http://www.cnn.com/video/partners/email/index.html?url=/video/politics/2008/08/06/sot.mccain.econo.surge.cnn 10. OBAMA GOT HIT IN THE HEAD? http://www.cnn.com/video/partners/email/index.html?url=/video/politics/2008/08/06/sot.obama.asked.why.running.cnn TOP 10 STORIES 1. N. DAKOTA'S REAL-LIFE JED CLAMPETT http://www.cnn.com/2008/LIVING/wayoflife/08/05/oil.boomtown/index.html In the midst of a N. Dakota oil boom, a man born during the Great Depression is making a fortune after striking oil on his property. 2. OBAMA'S UPHILL POLLING BATTLE http://www.cnn.com/2008/POLITICS/08/06/obama.polls/index.html 3. D.A.: SEX CASE ABOUT 'PURE EVIL' http://www.cnn.com/2008/CRIME/08/06/sex.club.trial.ap/index.html 4. ANOTHER SIDE OF AMY RAY http://www.cnn.com/2008/SHOWBIZ/Music/08/06/amy.ray/index.html 5. COMMENTARY: BILL CLINTON'S UPSET http://www.cnn.com/2008/US/08/06/martin.billclinton/index.html 6. WOMEN DRIVEN TO DONATE EGGS http://www.cnn.com/2008/HEALTH/08/05/selling.eggs/index.html 7. ANTHRAX SUSPECT CALLED MISLEADING http://www.cnn.com/2008/CRIME/08/06/anthrax.case/index.html 8. MOUNTAIN LION IN BEDROOM KILLS DOG http://www.cnn.com/2008/US/08/06/mountain.lion.ap/index.html 9. REPORTS: MISTAKES DOOMED UTAH MINE http://www.cnn.com/2008/US/08/06/utah.mine.anniv.ap/index.html 10. BIN LADEN'S FORMER DRIVER GUILTY http://www.cnn.com/2008/CRIME/08/06/hamdan.trial/index.html CNN, The Most Trusted Name in News >    Cable News Network LP, LLLP.                       < >    One CNN Center, Atlanta, Georgia 30303             < >    2008 Cable News Network LP, LLLP.                  < >    A Time Warner Company.                             < >    All Rights Reserved.                               < ========================================================= =   Please send comments or suggestions by going to     = =           http://www.cnn.com/feedback/                = =                                                       = =      Read our privacy guidelines by going to          = =         http://www.cnn.com/privacy.html               = ========================================================= You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings, go to: http://www.cnn.com/linkto/bn.manage.html To unsubscribe from the Daily Top 10, go to http://cgi.cnn.com/m/clik?e=email2055@gvc.ceas-challenge.cc&l=cnn-dailytop10",fraudulent
+84,re : good news - in ^ ~ cr ~ eas _ ^ ed drive and performance,"security - enhanced . kaxelsonchianfong
+neurotoxicol ranere
+it is not your time to turn your back on losing weight before your trying
+xenical and meridia .
+e , urope . an me ' di ' c ~ ine kelley schoenhard ; foster snook ; michale kitchen ; gil
+skeen
+sent : thursday , november , 2004 11 : 28 am
+subject : good news - in , ' cr - eas _ ^ ed drive and performance
+"" it isn ' t anything , only they all felt kindly and wanted to show it . tell
+the gi ' rl to put it away for your tea . it ' s so simple you can eat it , and
+being soft , it will slip down without hurting your sore throat . what a cozy
+room this is ! "" like most other y , ou - ng matrons , meg began her married life
+with the determination to be a model hou . sekeeper . john should find h . o _ me a
+paradise , he should always see a smiling face , should fare sumptuously every
+day , and never know the loss of a button . she brought so much love , energy ,
+and cheerfulness to the work that she could not but succeed , in spite of
+some obstacles . her paradise was not a tranquil one , for the little w ^ o ' man
+fussed , was over - anxious to please , and b ' ustled about like a true martha ,
+c ' u _ mbered with many cares . she was too tired , sometimes , even to smile ,
+john grew dyspeptic after a course of dainty dishes and ungr ^ a ^ tef - u . lly
+demanded plain fare . as for buttons , she soon lea _ rned to wonder where they
+went , to shake her head over the carelessness of men , and to threaten to
+make him sew them on himself , and see if his work would stand impatient and
+clumsy fingers any better than hers . they were very happy , even after they
+discovered that they couldn ' t li ' ve on love alone . john did not find meg ' s
+beauty diminished , though she beamed at him from behind the familiar coffee
+pot . nor did meg miss any of the romance from the daily parting , when her
+husband follo ' wed up his kiss with the tender inquiry , "" shall i send some
+veal or mutton for dinner , darling ? "" the little h - ou ~ se ceased to be a
+glorified bower , but it became a h ^ o . me , and the y ^ oung couple soon felt
+that it was a change for the better . at first they played keep - h _ ou _ se , and
+frolicked over it like children . then john took steadily to business ,
+feeling the cares of the head of a family upon his shoulders , and meg laid
+by her cambric wrappers , put on a big apron , and fell to work , as before
+said , with more energy than discretion .
+tesc 12 zmarlych 07 zarabiam lotrzbiurokratyzowac",fraudulent
+85,Re: ÐÐÐÐ ÐÐÐ¥-Ð ÐÐ¡ÐÐ ÐÐÐÐÐ!!!,"=EF=CB=CE=C1 =F0=F7=E8. =FA=C1=D7=CF=C4=D3=CB=C9=C5   =
+=C3=C5=CE=D9!
+  =20
+      =9A=F7=CE=C9=CD=C1=CE=C9=C5!=20
+            =F2=C1=D3=D0=D2=CF=C4=C1=D6=C1 =
+=D0=CC=C1=D3=D4=C9=CB=CF=D7=D9=C8 =CF=CB=CF=CE =D0=CF   =
+=DA=C1=D7=CF=C4=D3=CB=C9=CD =C3=C5=CE=C1=CD!
+     =20
+       =20
+=E4=CC=D1   =DA=C1=CB=C1=DA=DE=C9=CB=CF=D7=20
+=C24=FA-=EF6-96
+         =20
+=9A=E4=CC=D1   =DA=C1=CB=C1=DA=DE=C9=CB=CF=D7 79=EF-89-09=9A
+     =20
+=C4=CC=D1   =C4=C9=CC=C5=D2=CF=D7=20
+768-80-11=9A
+      =9A=D5=DA=CE=C1=D4=D8 =D0=CF=C4=D2=CF=C2=CE=C5=C5 =F7=D9 =
+=D3=CD=CF=D6=C5=D4=C5=20
+      =CE=C1 =CE=C1=DB=C5=CD =D3=C1=CA=D4=C5 www.master-spk.ru
+      =20",fraudulent
+86,re : new color printer,"this is the color printer that is being ordered .
+here is the info . that i needed .
+thanks
+kevin moore
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kevin g moore / hou / ect on 12 / 14 / 99 08 : 19
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+enron technology
+from : lyn malina 12 / 14 / 99 08 : 09 am
+to : kevin g moore / hou / ect @ ect
+cc :
+subject : re : new color printer
+kevin :
+the color printer we currently order is the 4500 n for $ 2753 . 00 . please let
+me know if this is the one you would like to order .
+thanks
+lyn
+kevin g moore
+12 / 14 / 99 06 : 29 am
+to : lyn malina / hou / ect @ ect
+cc :
+subject : new color printer
+- - - - - - - - - - - - - - - - - - - - - - forwarded by kevin g moore / hou / ect on 12 / 14 / 99 06 : 29
+am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+kevin g moore
+12 / 14 / 99 06 : 27 am
+to : shirley crenshaw / hou / ect @ ect , vince j kaminski / hou / ect @ ect , mike a
+roberts / hou / ect @ ect
+cc :
+subject : new color printer
+we are in need of a new color printer .
+we are also in the process of moving to the 19 th floor .
+we need the color printer a . s . a . p .
+if you would please , i need information concerning this
+matter whereby , we can get the printer ordered and delivered
+to our new location .
+thanks
+kevin moore",legitimate
+87,looking for a new date,"find a new date today .
+sick and tired of being single ?
+are you annoyed by your girlfriend or wife
+millions of profiles of people local to your area
+looking for fun .
+find a date for the night or search for your next wife .
+many are very naughty and want to hook up for some casual boom boom .
+meet someone new , right now .
+and it doesnt cost a thing to join in the fun .
+the solicit gunky material inactive .
+when she abolition cowherd continuant everthything
+if you went furze amphetamine chinookfoothill bolshoi .
+when she delegable thalia airmail things that bijouterie boil spectroscopy .
+paliourg @ iit . demokritos . gr .",fraudulent
+88,Replica for you,"Jaeger-LeCoultre replica watch Time is our job and we do it well 
+
+First-class replica watches at Replica Classics 
+
+fashionable replica watches
+
+http://thankinnhow.com/",fraudulent
+89,ProductsMoreinfoForValuedCustomer,"AddtoCartVisaAcceptedForOurCustomers
+http://65miya.bay.livefilestore.com/y1pXrrEQ0iBW0bbBQdFtAAbaX8obNLf0j3V8lJ_AdS6bNBSuzqW4cEIxxhTf8_JE3Z2bOUHKNYnVQ95YXMQ99GhdA/index.html",fraudulent
+90,"Spontaneous ""queue file write error""s","Dear Postfix Users,
+
+
+ From now and then our postfix server generates error emails with error 
+messages like the following:
+
+Out: 451 4.3.0 Error: queue file write error
+or
+Out: 451 4.3.0 : Temporary lookup failure
+
+
+We use MySQL for lookup tables. Additionally we are using a pre-queue 
+content-filter:
+
+smtp      inet  n       -       -       -       100       smtpd -o 
+content_filter=filter:dummy
+
+We set the option smtpd_proxy_timeout to 1000s, but the ""queue file 
+write error"" still keeps occurring.
+
+
+Any ideas, what could cause the ""queue file write error""? The logs don't 
+show anything.
+
+
+Best,
+
+
+Eddy",legitimate
+91,revised - bullets 7 / 7,"usgt
+sold 20 , 000 mmbtu / d of daily firm space moving gas for the weekend from pg & e
+topock to socal needles at $ . 10 / mmbtu . this was somewhat of a novel deal in
+that the california price spreads opened up and gas became trapped at pg & e .
+once our station 4 compressor becomes fully operational , this opportunity
+will likely dry up .
+enron n . a .
+representatives contacted us this week to discuss our possible participation
+in a gas storage field using a depleted reservoir on navajo land near
+farmington , nm . third party developers approached ena looking for assistance
+in moving the project forward .
+new tariff services
+marketing consensus was reached to delay any further development of
+transwestern ' s hourly firm service until the potential markets of power plant
+loads become operational . during this interim period , park ' n ride services
+provided on an intra - day basis shall be priced incrementally higher than park
+' n ride services provided on a timely basis . any resulting market response
+will provide indications of market willingness to pay premium transport rates
+for hourly transportation service .
+el paso
+el paso merchant services needs to re - scrub their verbal offer to
+transwestern of a $ 15 million lump sum "" pre - payment "" option of fuel
+monetization for their combined 65 , 000 mmbtu / d of san juan to california
+capacity . el paso did not take into consideration the different termination
+dates of the two contracts ( 25 , 000 mmbtu / d pg & e permanent release contract ,
+and 40 , 000 mmbtu / d gallup expansion contract ) in their analysis . a revised
+proposed lump sum payment offer is expected mid - next week .
+el paso field services
+met with ep representatives to discuss a possible interconnect near wt - 1 .
+the i / c would be sized for 40 , 000 mmbtu / d . ep proposes to pay for and set
+compression to flow this gas into our high pressure line and has agreed to a
+volume commitment of 20 , 000 mmbtu / d for up to 2 years . an added advantage is
+most of the volume would come from the constrained atoka area which would
+allow agave to increase deliveries to tw .
+caithness corp .
+caithness has decided to move forward on their 1000 mw generation project in
+northwest arizona . the 2 - phase project would initially consume 80 , 000
+mmbtu / d of gas . the proposed location is 40 miles south of tw ' s line near
+wickieup , az . we are meeting with caithness reps next week . projected
+in - service date for the plant is early 2002 .
+wt - 2 cooler expansion
+level b cost estimates are being prepared . revenue / cost savings
+assumptions predict $ 500 , 000 annual revenue to support the expenditure . once
+installed , the project would give tw an additional 50 , 000 mmbtu / d capacity on
+the east end . financial evaluations will be done once the cost estimate is
+received .
+ngpl winkler interconnect
+ngpl notified us this week the reactivated point should be operationally
+ready to flow gas on july 17 ( about 2 weeks ahead of schedule ) . this will
+hopefully provide new system supply to tw ' s east end of about 80 -
+90 , 000 / mmbtu / d .",legitimate
+92,re : allan roberts email,"jim ,
+thanks . i shall drop him an e - mail .
+vince
+james . w . petrie . jr @ us . arthurandersen . com on 07 / 27 / 2000 05 : 51 : 31 pm
+to : vkamins @ enron . com
+cc : allan . roberts @ uk . arthurandersen . com
+subject : allan roberts email
+vince - it was a pleasure to meet you this afternoon . as promised , please
+find
+allan ' s email address above . we look forward to working with enron and mit on
+finding better ways to value companies .
+if you have any questions , please feel free to contact me .
+jim
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+james w . petrie , jr .
+knowledge sharing director
+energy industry knowledge services group
+arthur andersen llp - houston office
+voice = = > 713 . 237 . 2357 , fax = = > 713 . 237 . 5673
+james . w . petrie . jr @ us . arthurandersen . com
+- - - - - - - - - -
+* * * * * * * * * * * * * * * * * * * internet email confidentiality footer * * * * * * * * * * * * * * * * * * *
+privileged / confidential information may be contained in this message . if you
+are not the addressee indicated in this message ( or responsible for delivery
+of
+the message to such person ) , you may not copy or deliver this message to
+anyone .
+in such case , you should destroy this message and kindly notify the sender by
+reply email . please advise immediately if you or your employer do not consent
+to
+internet email for messages of this kind . opinions , conclusions and other
+information in this message that do not relate to the official business of my
+firm shall be understood as neither given nor endorsed by it .",legitimate
+93,please pass on to your groups,"- - - - - - - - - - - - - - - - - - - - - - forwarded by laura harder / corp / enron on 11 / 13 / 2000
+08 : 09 am - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ina rangel @ ect
+11 / 10 / 2000 09 : 55 am
+to : airam arteaga / hou / ect @ ect , kimberly brown / hou / ect @ ect , laura
+harder / corp / enron @ enron
+cc :
+subject : please pass on to your groups
+please send this message to your traders that were included in the list you
+gave me for logon id ' s .
+thanks .
+ina
+- - - - - - - - - - - - - - - - - - - - - - forwarded by ina rangel / hou / ect on 11 / 10 / 2000 09 : 53 am
+- - - - - - - - - - - - - - - - - - - - - - - - - - -
+brian hoskins @ enron communications
+11 / 09 / 2000 04 : 47 pm
+to : ina rangel / hou / ect @ ect
+cc : john arnold / hou / ect @ ect
+subject :
+the gas trading messaging system is ready for everyone to use . here is the
+link to the site . please let everyone know so they can start using it .
+http : / / gasmsgboard . dev . corp . enron . com
+brian t . hoskins
+enron broadband services
+713 - 853 - 0380 ( office )
+713 - 412 - 3667 ( mobile )
+713 - 646 - 5745 ( fax )
+brian _ hoskins @ enron . net",legitimate
+94,genie video update,"i have received many inquiries from outside north america about a message i posted a couple of months ago about a video program on genie , entitled the secret of the wild child . the 800 number ( 800-255 - 9424 ) is good only in north america . here is the address , phone number , and the fax number for the distributer : wgbh p . o . box 2284 south burlington , vt 05407 u . s . a . phone : 802 862 8881 ( ask for the ordering department ) fax no . : 804 864 9846 secret of the wild child is produced by pbs ( public broadcasting system ) as part of the nova series .",legitimate
+95,hundreds of hours of teens porn video .,"horny young sluts take rigid cocks into their asses , mouthes and other hot places !
+look at these sexy young girls who get wild while they
+are fucking by huge cocks for the first time !
+take free tour !
+remove your email",fraudulent
+96,Build a Web site without learning HTML,"CNET | Online Courses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+View online |
+Manage newsletters |
+Unsubscribe |
+Send us feedback
+
+
+
+
+February 21, 2008
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Build a Web site without learning HTML 
+
+    You no longer need to know HTML and have a lot of time and money to build a basic Web site or blog.  Surprised? These days, many online services provide low-cost Web hosting and easy to use templates for you to create professional-looking blogs, photo albums, and even small business sites. CNET's Build Your First Web Site online course with Web wizard Brian Fenton walks you through the steps of determining which online services, site construction tools, design elements, and marketing strategies best suit your needs.
+
+
+Show some style when you dial with CNET's Ringtones & Ringbacks: Custom Cell Phones 101 online course! CNET Class Leader and cell phone fashion police Lt. Rick Broida is on hand to show useful and cool cell phone tweaks, mods, and hacks so you how to put the bling back into your favorite ring.
+ Read more 
+
+ Courses starting soon
+Â Build Your First Web SiteStarts February 25
+Â Ringtones & Ringbacks: Custom Cell Phones 101Starts February 25
+Â Fantasy Sports 101Starts March 3
+Â Speed Up VistaStarts March 3
+
+
+
+
+
+
+Jamison Cush
+Associate editor,Â 
+    Online Courses 
+
+
+
+
+
+
+
+
+Starts this week
+Build Your First Web Site
+
+Launch your own Web site with ease. You don't need any programming skills or a lot of money to get started. This course takes you through the steps of determining which type of site you need, comparing online services, site construction tools, design, marketing, and more.
+
+
+
+
+Â Enter classroom
+
+
+
+
+Ringtones & Ringbacks: Custom Cell Phones 101
+
+Give your cell phone mad style! Learn how to mod your mobile with custom cell phone touches that will make it stand out from the crowd. Topics include ringtones, ringbacks, wallpaper, screensavers, logos, skins, faceplates, charms, and much more.
+
+
+
+
+Â Enter classroom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured home entertainment courseÂ 
+
+
+
+
+Fantasy Sports 101
+
+
+
+
+
+
+                Fantasy sport leagues are one of the hottest hobbies on the Web. This free course teaches you basic fantasy sports concepts, where to find leagues for your favorite sport, how to build teams, winning strategies, and much more. 
+                     
+                        
+                            Read more
+
+
+
+
+
+
+
+
+
+Â 
+Â 
+
+
+
+
+
+
+
+
+Featured Windows Vista courseÂ 
+
+
+
+
+Speed Up Vista
+
+
+
+
+
+
+                Windows Vista is the most complex version of Windows to date. Even on a fast PC it can be sluggish, but you can make a few simple tweaks to keep your Vista-based system performing at top speed. Learn how to clean out unwanted files, adjust your graphics settings, disable unnecessary programs, streamline your computer's registry, and more.
+                     
+                        
+                            Read more
+
+
+
+
+
+
+
+
+
+Â 
+Â 
+
+
+
+
+
+
+
+
+Quick PollÂ 
+
+
+
+
+
+
+
+
+Which of the following Billboard.com Top 40 Hot Ringtones is your favorite?
+Grupo Montez De Durango, Adios Amor Te Vas
+The Charlie Daniels Band, The Devil Went Down To Georgia
+Koji Kondo, Super Mario Brothers Theme
+Henry Mancini, Pink Panther
+2Pac, I Ain't Mad At Cha
+
+
+
+
+
+
+Â 
+Â 
+
+
+
+
+
+
+
+
+Â 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Â 
+Â 
+
+
+
+
+
+
+
+
+
+
+Classroom Q&A
+
+
+
+ Regarding the mess of cables behind my home theater, what's the difference between component cables and HDMI?Â  - froggs090954
+
+
+
+
+
+ The major difference between component and HDMI is that mess of cables you're talking about. HDMI replaces the three component cables and two audio cables with a single digital cable...Â  - Brian Fenton, Home Theater Cables and Connections
+
+
+
+
+
+ 
+
+
+
+
+
+
+Â Â Related Newsletters
+
+
+
+
+
+
+
+
+
+
+CNET On-the-Go Weekly
+
+(Delivered every Thursday.)On-the-Go Weekly is the ultimate source for all the gear you need for your mobile lifestyle. Get the scoop on the latest and greatest gadgets you'll use on the go.
+
+View previewÂ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Online course categories
+
+
+
+
+Â Digital photography
+
+
+
+Â Windows Vista
+
+
+
+Â Home audio/video
+
+
+
+
+Â Microsoft Office
+
+
+
+Â Home theater
+
+
+
+Â Mobile
+
+
+
+
+Â PC troubleshooting
+
+
+
+Â Home entertainment
+
+
+
+Â Car Tech
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign up for more free newsletters from CNET! To manage your account settings or to remove yourself from all CNET communications, please visit our Subscription Center. The e-mail address for your subscription isÂ user6@gvc.ceas-challenge.cc  Unsubscribe from this e-mail | FAQ | Advertise | Privacy Policy
+
+
+
+
+
+
+
+Copyright 2008 CNET
+Networks, Inc. All rights reserved.CNET Networks, Inc.235 Second
+Street San Francisco, CA 94105U.S.A.",legitimate
+97,New Titles on Safari Books Online,"Dear Ted,
+
+The following new titles have been added to Safari since we last updated
+you. Click on a book cover for a preview or to start reading that title
+online.
+
+New Titles on Safari
+
+
+A+ Category
+
+  	 CompTIA A+ Exam Prep
+(Exams A+ Essentials, 220-602, 220-603, 220-604)
+ 
+
+
+By Charles J. Brooks	 ISBN: 9780768681444	 
+Publisher: Que	 Pages: 1100	 
+Publication Date: April 18, 2008	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version
+ 	 
+  _____  
+
+
+Strategy Category
+
+  	 Investing in People:
+Financial Impact of Human Resource Initiatives
+ 
+
+
+By Wayne F. Cascio, John W. Boudreau	 ISBN: 9780768681901	 
+Publisher: FT Press	 Pages: 360	 
+Publication Date: February 18, 2008	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version  	
+  _____  
+
+
+Tech Books Category
+
+  	 ScreenOS Cookbook
+ 
+
+
+By Stefan Brunner, Vik Davar, David Delcourt, Ken Draper, Joe Kelly,
+Sunil Wadhwa	 ISBN: 9780596510039	 
+Publisher: O'Reilly	 Pages: 838	 
+Publication Date: February 15, 2008	 Slots: 2	 
+Start Reading Online  	 Buy
+Print Version
+ 	
+  _____  
+
+
+Telephony Category
+
+  	 Fax, Modem, and Text
+for IP Telephony  
+
+
+By David Hanes, Gonzalo Salgueiro	 ISBN: 9781587057618	 
+Publisher: Cisco Press	 Pages: 550	 
+Publication Date: April 18, 2008	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version
+ 	 
+  _____  
+
+
+Visual Studio Category
+
+  	 Microsoft Visual Studio
+2008 Unleashed  
+
+
+By Lars Powers, Mike Snell	 ISBN: 9780768680584	 
+Publisher: Sams	 Pages: 1000	 
+Publication Date: June 02, 2008	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version
+ 	 
+  _____  
+
+
+Web Design Category
+
+  	 Adapting to Web
+Standards: CSS and Ajax for Big Sites
+ 
+
+
+By Christopher Schmitt, Kimberly Blessing, Rob Cherny, Meryl K. Evans,
+Kevin Lawver, Mark Trammell	 ISBN: 9780321549785	 
+Publisher: New Riders	 Pages: 288	 
+Publication Date: December 14, 2007	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version  	
+  _____  
+
+
+Windows XP Category
+
+  	 Microsoft Windows Vista
+(Video LiveLessons): Mastering the Vista User Experience
+ 
+
+
+By  J. Peter Bruzzese 	 ISBN: 9780768682434	 
+Publisher: Que	 Pages: 	
+Publication Date: December 21, 2007	 Slots: 1	 
+Start Reading Online  	 Buy
+Print Version  	
+  _____  
+
+
+Customer Service: 
+North America: 800-775-7330 
+Outside North America: 707-827-4118
+Hours: Monday-Friday, 6 a.m. - 5 p.m. PST 
+E-Mail: emgwivqr-uomzcem@safaribooksonline.com
+
+
+Regards, 
+The Editorial Team 
+Safari Books Online 
+
+
+To unsubscribe from Safari's New Titles email, please click here.
+ 
+Account & User ID Reference: 554053/563913 (Please include with any
+correspondence.).",legitimate
+98,+ cialis online - = + _,"' ' ' ' ' ' ' ' ' ' buy meds from us and save $ $ ' ' ' ' ' ' ' '
+all popular drugs are available , c i a 1 i s , v i @ g r @ , s o m @ and many more drugs
+save up to 80 % compared to normal prices .
+' world wide shipping
+' no doctor visits
+' no prescriptions
+' discreet packaging
+' buy in bulk and save more !
+site here http : / / epv . thoeiuie . com
+said . elaborate carvings covered walls and referred to ramesses ii , whose
+he invaded in 1798 , and a series of expeditions in 19 th and early 20 th continually struggled among themselves for power . as time passed , they its entryway as a place to dump the debris he was hauling out of tut ' s",fraudulent
+99,weekly deal report,"attached is the weekly deal report for 9 / 13 / 01 - 9 / 19 / 01 .
+lex carroll
+enron east power marketing , inc .
+midwest origination
+713 - 853 - 5426",legitimate
+100,accenture presentation in eb 2601,"calendar entry : invitation
+description :
+accenture presentation in eb 2601
+date : 6 / 28 / 2001
+time : 2 : 00 pm - 5 : 00 pm ( central standard time )
+meeting location : eb 2601 @ ect
+chairperson : madhup kumar
+detailed description :
+when : thursday , june 28 , 2001 2 : 00 pm - 5 : 00 pm ( gmt - 06 : 00 ) central time ( us & canada ) .
+where : eb 2601
+* ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ * ~ *
+if you have any questions about this meeting , please contact dan luciano @ x 5 - 3911 .",legitimate
