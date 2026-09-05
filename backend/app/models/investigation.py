@@ -41,7 +41,6 @@ class HeaderHop(BaseModel):
     firstSeen: str = Field(default="UNKNOWN", description="First seen timestamp or UNKNOWN (V3 Threat Intel pending)")
     threatFeeds: HopThreatFeeds = Field(default_factory=HopThreatFeeds, description="External threat feed records")
 
-
 class AuthenticationSummary(BaseModel):
     model_config = ConfigDict(extra="ignore")
 
@@ -52,6 +51,26 @@ class AuthenticationSummary(BaseModel):
     returnPathDomain: str = Field(default="", description="Return-Path domain or empty string if absent")
     alignmentMatched: bool
     notes: List[str] = Field(default_factory=list)
+
+
+class GrokAnalysis(BaseModel):
+    """Grok AI analysis results for a URL"""
+    model_config = ConfigDict(extra="ignore")
+    
+    verdict: Literal["BENIGN", "PHISHING", "MALICIOUS", "SUSPICIOUS", "UNKNOWN"] = Field(
+        default="UNKNOWN",
+        description="Grok's AI verdict on the URL"
+    )
+    confidence: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="Grok's confidence in its verdict (0-1)"
+    )
+    reason: Optional[str] = Field(
+        default=None,
+        description="Grok's reasoning for the verdict"
+    )
 
 
 class AnalyzedUrl(BaseModel):
@@ -67,6 +86,10 @@ class AnalyzedUrl(BaseModel):
     threatScore: int = Field(..., ge=0, le=100)
     flags: List[str] = Field(default_factory=list)
     redirectChain: Optional[List[str]] = Field(default_factory=list)
+    grok_analysis: Optional[GrokAnalysis] = Field(
+        default=None,
+        description="Grok AI analysis results (null if Grok is disabled or failed)"
+    )
 
 
 class SuspiciousPhrase(BaseModel):

@@ -39,6 +39,7 @@ from ..models.investigation import (
     HeaderHop,
     HopThreatFeeds,
     AuthenticationSummary,
+    GrokAnalysis,
     AnalyzedUrl,
     SuspiciousPhrase,
     FeatureContribution,
@@ -229,32 +230,46 @@ class InvestigationService:
                 )
             ))
 
-        # 6. URL Analysis & SSRF-Safe Redirect Inspection
+        # 6. URL Analysis with Grok AI Enhancement & SSRF-Safe Redirect Inspection
+        from ..analyzers.grok_url_analyzer import GrokURLAnalyzer
+
+        grok_url_analyzer = GrokURLAnalyzer()
+
         analyzed_urls: List[AnalyzedUrl] = []
         redirect_results: List[RedirectAnalysisResult] = []
         for u_str in parsed.embedded_urls:
-            u_res = analyze_url(u_str)
+            # Use Grok-enhanced analysis
+            u_res = grok_url_analyzer.analyze_url(u_str)
+
+            # V3 URL reputation lookup & redirect tracing
             u_intel = self.url_intel_service.lookup(u_str)
             red_res = self.redirect_analyzer.trace_redirects(u_str)
             redirect_results.append(red_res)
 
             dom_url = u_res.get("domain", "")
             dom_intel = self.domain_intel_service.lookup(dom_url) if dom_url else None
-            registered_age = dom_intel.registered_age_days if dom_intel else -1
+            registered_age = dom_intel.registered_age_days if dom_intel else u_res.get("registeredAgeDays", -1)
 
-            u_rep = u_intel.reputation if u_intel.provenance == ProvenanceType.VERIFIED else u_res["reputation"]
-            if u_rep not in ("MALICIOUS", "SUSPICIOUS", "SAFE"):
-                u_rep = "UNKNOWN"
+            if u_intel.provenance == ProvenanceType.VERIFIED:
+                u_rep = u_intel.reputation
+            else:
+                u_rep = u_res.get("reputation", "UNKNOWN")
 
-            flags = list(dict.fromkeys(u_res["flags"] + u_intel.categories))
+            if u_rep not in ("MALICIOUS", "SUSPICIOUS", "SAFE", "UNKNOWN"):
+                u_rep = "SAFE" if u_rep == "LOW_RISK" else "UNKNOWN"
+
+            flags = list(dict.fromkeys(u_res.get("flags", []) + u_intel.categories))
             if red_res.is_ssrf_blocked:
                 flags.append("SSRF Attempt Blocked")
             if red_res.is_disguised_domain:
                 flags.append("Disguised Redirect Domain")
 
-            threat_score = max(u_res["threatScore"], u_intel.threat_score)
+            threat_score = max(u_res.get("threatScore", 0), u_intel.threat_score)
             if red_res.is_ssrf_blocked:
                 threat_score = max(threat_score, 90)
+
+            grok_data = u_res.get("grok_analysis")
+            grok_model = GrokAnalysis(**grok_data) if grok_data else None
 
             analyzed_urls.append(AnalyzedUrl(
                 url=u_res["url"],
@@ -263,7 +278,8 @@ class InvestigationService:
                 reputation=u_rep,
                 threatScore=threat_score,
                 flags=flags,
-                redirectChain=red_res.redirect_chain if red_res.redirect_chain else u_res.get("redirectChain", [])
+                redirectChain=red_res.redirect_chain if red_res.redirect_chain else u_res.get("redirectChain", []),
+                grok_analysis=grok_model,
             ))
 
         # 7. Content Analysis & ML Classifier

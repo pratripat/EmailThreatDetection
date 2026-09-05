@@ -11,14 +11,21 @@ from typing import Optional
 from fastapi import APIRouter, File, UploadFile, Form, HTTPException, status, Request
 from fastapi.responses import JSONResponse
 
+from pydantic import BaseModel
 from ..models.investigation import InvestigationData
 from ..services.investigation_service import InvestigationService
+from ..analyzers.grok_url_analyzer import GrokURLAnalyzer
 from ..config import VERSION, PROJECT_NAME
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
 investigation_service = InvestigationService()
+grok_url_analyzer = GrokURLAnalyzer()
+
+
+class CheckUrlRequest(BaseModel):
+    url: str
 
 
 @router.get("/health", tags=["System"])
@@ -123,4 +130,32 @@ async def analyze_email_endpoint(
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="An unexpected internal error occurred while analyzing the email. Details logged server-side."
+        )
+
+
+@router.post(
+    "/check-url",
+    status_code=status.HTTP_200_OK,
+    tags=["Analysis"],
+    summary="Analyze an isolated URL using Grok AI and deterministic heuristics"
+)
+async def check_url_endpoint(payload: CheckUrlRequest):
+    """
+    Direct endpoint to analyze a URL using Grok AI combined with deterministic checks.
+    Takes {"url": "https://..."} and returns the URL analysis result.
+    """
+    raw_url = payload.url.strip() if payload.url else ""
+    if not raw_url:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="The 'url' field cannot be empty."
+        )
+
+    try:
+        return grok_url_analyzer.analyze_url(raw_url)
+    except Exception as e:
+        logger.exception(f"Error checking URL '{raw_url}': {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred while analyzing the URL: {str(e)}"
         )
