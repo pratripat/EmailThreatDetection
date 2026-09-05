@@ -8,7 +8,7 @@ Routes:
 
 import logging
 from typing import Optional
-from fastapi import APIRouter, File, UploadFile, Form, HTTPException, status
+from fastapi import APIRouter, File, UploadFile, Form, HTTPException, status, Request
 from fastapi.responses import JSONResponse
 
 from ..models.investigation import InvestigationData
@@ -40,6 +40,7 @@ async def health_check():
     summary="Analyze an incoming email artifact and return structured investigation telemetry"
 )
 async def analyze_email_endpoint(
+    request: Request,
     file: Optional[UploadFile] = File(default=None, description="Raw .eml email file upload"),
     email: Optional[UploadFile] = File(default=None, description="Alternative field name for .eml file upload"),
     raw_email: Optional[str] = Form(default=None, description="Raw email text content"),
@@ -61,6 +62,36 @@ async def analyze_email_endpoint(
     uploaded_file = file or email
     raw_text = raw_email or raw_email_text
 
+    # Support application/json payloads (e.g. from frontend form or API callers)
+    if uploaded_file is None and (raw_text is None or not raw_text.strip()):
+        content_type = request.headers.get("content-type", "")
+        if "application/json" in content_type:
+            try:
+                json_data = await request.json()
+                if isinstance(json_data, dict):
+                    raw_text = (
+                        json_data.get("raw_email_text")
+                        or json_data.get("raw_email")
+                        or json_data.get("raw_eml")
+                    )
+                    if not raw_text or not raw_text.strip():
+                        sender = json_data.get("senderEmail") or json_data.get("sender_email") or ""
+                        subj = json_data.get("subject") or ""
+                        headers = json_data.get("rawHeaders") or json_data.get("raw_headers") or ""
+                        body = json_data.get("emailBody") or json_data.get("email_body") or ""
+
+                        parts = []
+                        if headers:
+                            parts.append(headers.strip())
+                        if sender and "From:" not in headers:
+                            parts.append(f"From: {sender}")
+                        if subj and "Subject:" not in headers:
+                            parts.append(f"Subject: {subj}")
+                        parts.append("")
+                        parts.append(body)
+                        raw_text = "\r\n".join(parts)
+            except Exception as e:
+                logger.debug(f"Could not parse request body as JSON: {e}")
     if uploaded_file is not None:
         filename = uploaded_file.filename
         try:

@@ -1,0 +1,17 @@
+Received: by mx.google.com with SMTP id ab1cd2ef3gh4; Wed, 03 Sep 2026 09:05:12 +0000
+Received: from mail-relay.college.edu (mail-relay.college.edu [103.21.244.15]) by mx.google.com with ESMTPS id qw9er8ty7; Wed, 03 Sep 2026 09:05:08 +0000
+Authentication-Results: mx.google.com; spf=pass smtp.mailfrom=college.edu; dkim=pass header.i=@college.edu; dmarc=pass
+From: "Registrar Office" <registrar@college.edu>
+Return-Path: <registrar@college.edu>
+Message-ID: <20260903090512.qw9er8ty7@college.edu>
+Subject: Semester Fee Payment Reminder
+To: student@college.edu
+Content-Type: text/plain
+
+Dear Student,
+
+This is a reminder that semester fee payment is due by 15 September 2026.
+Please log in to the student portal to complete payment.
+
+Regards,
+Registrar Office
