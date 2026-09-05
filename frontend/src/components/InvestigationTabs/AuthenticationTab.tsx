@@ -63,7 +63,7 @@ export const AuthenticationTab: React.FC<AuthenticationTabProps> = ({ data }) =>
 
           <div className="alignment-row">
             <span className="align-label">Return-Path:</span>
-            <span className="align-val text-red">{auth.returnPathDomain}</span>
+            <span className={auth.alignmentMatched ? "align-val text-green" : "align-val text-red"}>{auth.returnPathDomain}</span>
           </div>
 
           {!auth.alignmentMatched ? (

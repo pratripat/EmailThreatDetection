@@ -51,12 +51,19 @@ export const DashboardCaseCard: React.FC<DashboardCaseCardProps> = ({
           {/* Quick Signals Checklist */}
           <div className="case-signals-list">
             <div className="signals-title">DETECTED ANOMALIES:</div>
-            {data.suspiciousReasons.slice(0, 3).map((reason, idx) => (
-              <div key={idx} className="signal-item">
-                <span className="text-amber">⚠️</span>
-                <span className="text-muted">{reason}</span>
+            {data.suspiciousReasons.length === 0 ? (
+              <div className="signal-item">
+                <span className="text-green">✓</span>
+                <span className="text-muted">No header, routing, or content anomalies detected</span>
               </div>
-            ))}
+            ) : (
+              data.suspiciousReasons.slice(0, 3).map((reason, idx) => (
+                <div key={idx} className="signal-item">
+                  <span className="text-amber">⚠️</span>
+                  <span className="text-muted">{reason}</span>
+                </div>
+              ))
+            )}
           </div>
         </div>
 

@@ -37,11 +37,31 @@ export const UrlsTab: React.FC<UrlsTabProps> = ({ data }) => {
 
                 <div className="meta-col">
                   <span className="meta-col-label">Reputation:</span>
-                  <span className={u.reputation === 'MALICIOUS' ? 'text-red font-bold' : 'text-green'}>
+                  <span className={
+                    u.reputation === 'MALICIOUS' ? 'text-red font-bold' :
+                    u.reputation === 'SUSPICIOUS' ? 'text-amber font-bold' :
+                    u.reputation === 'SAFE' ? 'text-green' : 'text-muted'
+                  }>
                     {u.reputation}
                   </span>
                 </div>
               </div>
+
+              {u.grok_analysis && (
+                <div className="redirect-chain-box">
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="chain-title">Grok AI Forensics:</span>
+                    <span className={u.grok_analysis.verdict === 'BENIGN' ? 'text-green font-bold' : 'text-red font-bold'}>
+                      [{u.grok_analysis.verdict} &bull; {(u.grok_analysis.confidence * 100).toFixed(0)}%]
+                    </span>
+                  </div>
+                  {u.grok_analysis.reason && (
+                    <div className="text-muted text-xs">
+                      {u.grok_analysis.reason}
+                    </div>
+                  )}
+                </div>
+              )}
 
               {u.redirectChain && u.redirectChain.length > 1 && (
                 <div className="redirect-chain-box">

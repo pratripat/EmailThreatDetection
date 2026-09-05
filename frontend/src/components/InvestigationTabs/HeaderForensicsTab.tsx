@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { InvestigationData, IpHopIntelligence } from '../../types/threat';
 
 interface HeaderForensicsTabProps {
@@ -6,7 +6,11 @@ interface HeaderForensicsTabProps {
 }
 
 export const HeaderForensicsTab: React.FC<HeaderForensicsTabProps> = ({ data }) => {
-  const [selectedHop, setSelectedHop] = useState<IpHopIntelligence | null>(data.headerHops[1] || data.headerHops[0]);
+  const [selectedHop, setSelectedHop] = useState<IpHopIntelligence | null>(data.headerHops[0] || null);
+
+  useEffect(() => {
+    setSelectedHop(data.headerHops[0] || null);
+  }, [data.id, data.headerHops]);
 
   return (
     <div className="tab-pane-grid">

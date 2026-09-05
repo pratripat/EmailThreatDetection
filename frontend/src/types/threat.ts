@@ -17,7 +17,7 @@ export interface IpHopIntelligence {
   reputation: 'MALICIOUS' | 'SUSPICIOUS' | 'CLEAN' | 'UNKNOWN';
   firstSeen: string;
   threatFeeds: {
-    abuseIpDb: 'HIGH RISK' | 'MEDIUM RISK' | 'CLEAN';
+    abuseIpDb: 'HIGH RISK' | 'MEDIUM RISK' | 'CLEAN' | 'NOT_CHECKED' | 'UNKNOWN';
     virusTotal: string; // e.g. "8 / 92 engines"
     spamhausListed: boolean;
   };
@@ -37,10 +37,15 @@ export interface ExtractedUrl {
   url: string;
   domain: string;
   registeredAgeDays: number;
-  reputation: 'MALICIOUS' | 'SUSPICIOUS' | 'SAFE';
+  reputation: 'MALICIOUS' | 'SUSPICIOUS' | 'SAFE' | 'UNKNOWN';
   threatScore: number;
   flags: string[];
   redirectChain?: string[];
+  grok_analysis?: {
+    verdict: 'BENIGN' | 'PHISHING' | 'MALICIOUS' | 'SUSPICIOUS' | 'UNKNOWN';
+    confidence: number;
+    reason?: string;
+  } | null;
 }
 
 export interface ContentAiAnalysis {

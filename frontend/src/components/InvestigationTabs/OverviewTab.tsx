@@ -99,12 +99,19 @@ export const OverviewTab: React.FC<OverviewTabProps> = ({ data }) => {
         </div>
 
         <div className="suspicious-reasons-list font-mono">
-          {data.suspiciousReasons.map((reason, idx) => (
-            <div key={idx} className="suspicious-reason-row">
-              <span className="reason-icon-col">⚠️</span>
-              <span className="reason-text">{reason}</span>
+          {data.suspiciousReasons.length === 0 ? (
+            <div className="suspicious-reason-row">
+              <span className="reason-icon-col text-green">✓</span>
+              <span className="reason-text text-green font-bold">No suspicious anomalies or routing deviations detected.</span>
             </div>
-          ))}
+          ) : (
+            data.suspiciousReasons.map((reason, idx) => (
+              <div key={idx} className="suspicious-reason-row">
+                <span className="reason-icon-col">⚠️</span>
+                <span className="reason-text">{reason}</span>
+              </div>
+            ))
+          )}
         </div>
 
         <div className="action-callout-box font-mono">

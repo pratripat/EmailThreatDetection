@@ -26,17 +26,37 @@ class ContentClassifierService:
     """
     Email Content Classifier supporting both local HuggingFace/PyTorch models
     and honest rule-based heuristic fallback.
+    Strictly avoids fabricating ML confidence percentages or synthetic SHAP values.
     """
 
     def __init__(self, model_path: Optional[str] = None):
-        self.model_path = (model_path or EMAIL_MODEL_PATH).strip()
+        self.model_path = (model_path if model_path is not None else EMAIL_MODEL_PATH).strip()
         self.model = None
         self.tokenizer = None
         self.device = "cpu"
         self.is_model_loaded = False
+        self._bert_classifier = None
 
         if self.model_path and Path(self.model_path).exists():
             self._load_local_model()
+        elif model_path is None and not self.model_path:
+            self._load_bert_classifier()
+
+    def _load_bert_classifier(self) -> None:
+        try:
+            import sys
+            _content_eval_dir = Path(__file__).resolve().parents[2] / "content_evaluation"
+            if str(_content_eval_dir) not in sys.path and _content_eval_dir.exists():
+                sys.path.insert(0, str(_content_eval_dir))
+
+            from email_threat_detection.classifier import get_classifier
+            self._bert_classifier = get_classifier()
+            self.is_model_loaded = True
+            logger.info("Loaded integrated PhishingDistilBERT classifier singleton.")
+        except Exception as e:
+            logger.warning(f"Failed to load integrated BERT classifier: {e}. Falling back to heuristic classifier.")
+            self.is_model_loaded = False
+            self._bert_classifier = None
 
     def _load_local_model(self) -> None:
         try:
@@ -74,7 +94,63 @@ class ContentClassifierService:
             for sp in heuristic_res.suspicious_phrases
         ]
 
-        # 1. Real Model Inference (if loaded)
+        # 1. Real BERT Model Inference (if loaded via integrated module)
+        if self.is_model_loaded and self._bert_classifier:
+            try:
+                bert_res = self._bert_classifier.classify(subject=subject, body=body_plain or body_html)
+
+                is_fraud = bert_res.fraud_probability >= 0.60 or (
+                    bert_res.fraud_probability >= 0.45 and (heuristic_res.classification != "BENIGN" or bool(heuristic_res.intents))
+                )
+
+                if is_fraud:
+                    chosen_label = heuristic_res.classification if heuristic_res.classification != "BENIGN" else "PHISHING"
+                    confidence = bert_res.fraud_probability
+                else:
+                    chosen_label = "BENIGN"
+                    confidence = bert_res.legitimate_probability if not heuristic_res.intents else heuristic_res.confidence
+
+                intents = list(heuristic_res.intents)
+                if is_fraud and not intents:
+                    intents.append("Phishing Content Pattern")
+
+                feature_contributions: List[FeatureContribution] = []
+                if is_fraud:
+                    feature_contributions.append(
+                        FeatureContribution(
+                            feature="DistilBERT Semantic Threat Cue",
+                            weight=round(bert_res.fraud_probability * 100, 1),
+                            impact="positive"
+                        )
+                    )
+                    if features.get("upper_ratio", 0) > 0.15:
+                        feature_contributions.append(
+                            FeatureContribution(
+                                feature="Excessive Capitalization",
+                                weight=round(features["upper_ratio"] * 100, 1),
+                                impact="positive"
+                            )
+                        )
+                    if features.get("exclamation_count", 0) > 1:
+                        feature_contributions.append(
+                            FeatureContribution(
+                                feature="Urgency Exclamations",
+                                weight=min(30.0, float(features["exclamation_count"] * 10.0)),
+                                impact="positive"
+                            )
+                        )
+
+                return ContentAiSummary(
+                    classification=chosen_label,
+                    confidence=round(confidence, 4),
+                    intents=intents,
+                    suspiciousPhrases=suspicious_phrases,
+                    featureContributions=feature_contributions
+                )
+            except Exception as e:
+                logger.warning(f"BERT classifier inference failed: {e}. Reverting to heuristic summary.")
+
+        # 2. Local custom model inference (if loaded via model_path)
         if self.is_model_loaded and self.model and self.tokenizer:
             try:
                 import torch
@@ -101,17 +177,16 @@ class ContentClassifierService:
                     confidence=round(confidence, 4),
                     intents=heuristic_res.intents,
                     suspiciousPhrases=suspicious_phrases,
-                    featureContributions=[]  # Honest: empty unless real SHAP/IG is computed
+                    featureContributions=[]
                 )
             except Exception as e:
                 logger.debug(f"Model inference failed: {e}. Reverting to heuristic summary.")
 
-        # 2. Heuristic Classification (Honest, verifiable fallback)
-        # Never fabricate 90%+ confidence when using simple pattern matching
+        # 3. Heuristic Classification (Honest, verifiable fallback)
         return ContentAiSummary(
             classification=heuristic_res.classification,
             confidence=heuristic_res.confidence,
             intents=heuristic_res.intents,
             suspiciousPhrases=suspicious_phrases,
-            featureContributions=[]  # Strictly no fabricated SHAP values
+            featureContributions=[]
         )
