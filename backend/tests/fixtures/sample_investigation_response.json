@@ -1,0 +1,230 @@
+{
+  "id": "50696da3-077c-46c1-942e-a3dec16e415f",
+  "subject": "Urgent: Your Account Has Been Limited - Verify Now",
+  "from": "PayPal Security Team <security@freehostingnow.net>",
+  "to": "victim@example.com",
+  "receivedDate": "",
+  "threatScore": 85,
+  "threatLevel": "HIGH",
+  "threatType": "PHISHING",
+  "confidence": 0.0,
+  "authStatus": "FAILED",
+  "breakdown": {
+    "headerAnomalies": 85,
+    "authentication": 45,
+    "urlRisk": 100,
+    "contentNlp": 80,
+    "senderReputation": 0
+  },
+  "suspiciousReasons": [
+    "SPF check: FAIL (hard failure \u2014 domain owner explicitly disavows this sender)",
+    "DKIM check: none (expected 'pass')",
+    "DMARC check: fail (expected 'pass')",
+    "Display name impersonates 'paypal' but sending domain is 'freehostingnow.net' with failing authentication \u2014 critical display-name spoofing indicator",
+    "Embedded URL 'http://paypal-verify-account.freehostingnow.net/login' flagged as MALICIOUS: Uses unencrypted HTTP instead of HTTPS (+20), Multiple hyphens in domain (+15), Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25), Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)",
+    "Email body exhibits social engineering indicators: Credential Harvesting, Urgent Coercion"
+  ],
+  "headerHops": [
+    {
+      "hopNumber": 1,
+      "ip": "0.0.0.0",
+      "hostname": "mail.suspicious-relay.ru",
+      "country": "UNKNOWN",
+      "city": null,
+      "asn": "UNKNOWN",
+      "isp": "UNKNOWN",
+      "reputation": "UNKNOWN",
+      "firstSeen": "UNKNOWN",
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhausListed": false
+      }
+    },
+    {
+      "hopNumber": 2,
+      "ip": "185.220.101.47",
+      "hostname": "unknown [185.220.101.47]",
+      "country": "UNKNOWN",
+      "city": null,
+      "asn": "UNKNOWN",
+      "isp": "UNKNOWN",
+      "reputation": "SUSPICIOUS",
+      "firstSeen": "UNKNOWN",
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhausListed": false
+      }
+    },
+    {
+      "hopNumber": 3,
+      "ip": "45.135.232.19",
+      "hostname": "mx1.freehostingnow.net (mx1.freehostingnow.net [45.135.232.19])",
+      "country": "UNKNOWN",
+      "city": null,
+      "asn": "UNKNOWN",
+      "isp": "UNKNOWN",
+      "reputation": "UNKNOWN",
+      "firstSeen": "UNKNOWN",
+      "threatFeeds": {
+        "abuseIpDb": "NOT_CHECKED",
+        "virusTotal": "NOT_QUERIED",
+        "spamhausListed": false
+      }
+    }
+  ],
+  "authentication": {
+    "spf": "FAILED",
+    "dkim": "NONE",
+    "dmarc": "FAILED",
+    "fromDomain": "freehostingnow.net",
+    "returnPathDomain": "freehostingnow.net",
+    "alignmentMatched": true,
+    "notes": [
+      "Authserv ID (mx.google.com) does not match top receiving MTA (mail.suspicious-relay.ru)"
+    ]
+  },
+  "urls": [
+    {
+      "url": "http://paypal-verify-account.freehostingnow.net/login",
+      "domain": "freehostingnow.net",
+      "registeredAgeDays": -1,
+      "reputation": "MALICIOUS",
+      "threatScore": 100,
+      "flags": [
+        "Uses unencrypted HTTP instead of HTTPS (+20)",
+        "Multiple hyphens in domain (+15)",
+        "Contains security-sensitive keywords: ['login', 'verify', 'account'] (+25)",
+        "Possible brand impersonation: Brand 'paypal' found in subdomain of unrelated domain ('paypal-verify-account.freehostingnow.net') (+40)"
+      ],
+      "redirectChain": []
+    }
+  ],
+  "contentAi": {
+    "classification": "PHISHING",
+    "confidence": 0.5,
+    "intents": [
+      "Credential Harvesting",
+      "Urgent Coercion"
+    ],
+    "suspiciousPhrases": [
+      {
+        "phrase": "unusual activity ",
+        "signalType": "Credential request"
+      },
+      {
+        "phrase": "urgent",
+        "signalType": "Urgency signal"
+      },
+      {
+        "phrase": "limited",
+        "signalType": "Urgency signal"
+      },
+      {
+        "phrase": "immediately",
+        "signalType": "Urgency signal"
+      },
+      {
+        "phrase": "suspended",
+        "signalType": "Urgency signal"
+      },
+      {
+        "phrase": "within 24 hours",
+        "signalType": "Urgency signal"
+      },
+      {
+        "phrase": "account has been limited",
+        "signalType": "Urgency signal"
+      }
+    ],
+    "featureContributions": []
+  },
+  "iocs": {
+    "ipAddresses": [
+      "185.220.101.47",
+      "45.135.232.19"
+    ],
+    "domains": [
+      "example.com",
+      "freehostingnow.net"
+    ],
+    "urls": [
+      "http://paypal-verify-account.freehostingnow.net/login"
+    ],
+    "emailAddresses": [
+      "bounce@freehostingnow.net",
+      "security@freehostingnow.net",
+      "victim@example.com"
+    ],
+    "hashes": []
+  },
+  "attackGraph": {
+    "nodes": [
+      {
+        "id": "node_email",
+        "label": "Urgent: Your Account Has Been Limited - Verify Now",
+        "sublabel": "Target Artifact",
+        "type": "email",
+        "status": "critical"
+      },
+      {
+        "id": "domain_freehostingnow.net",
+        "label": "freehostingnow.net",
+        "sublabel": "Sender Domain",
+        "type": "domain",
+        "status": "critical"
+      },
+      {
+        "id": "ip_45.135.232.19",
+        "label": "45.135.232.19",
+        "sublabel": "Originating Relay",
+        "type": "ip",
+        "status": "warning"
+      },
+      {
+        "id": "url_0",
+        "label": "http://paypal-verify-account.freehostingnow.net/login",
+        "sublabel": "Risk Score 100",
+        "type": "page",
+        "status": "critical"
+      },
+      {
+        "id": "action_harvest",
+        "label": "Harvest Credentials",
+        "sublabel": "Observed Intent",
+        "type": "action",
+        "status": "critical"
+      }
+    ],
+    "edges": [
+      {
+        "from": "node_email",
+        "to": "domain_freehostingnow.net",
+        "label": "From Domain"
+      },
+      {
+        "from": "domain_freehostingnow.net",
+        "to": "ip_45.135.232.19",
+        "label": "Relayed Via"
+      },
+      {
+        "from": "node_email",
+        "to": "url_0",
+        "label": "Embedded Link"
+      },
+      {
+        "from": "url_0",
+        "to": "domain_freehostingnow.net",
+        "label": "Hosted On"
+      },
+      {
+        "from": "url_0",
+        "to": "action_harvest",
+        "label": "Submits To"
+      }
+    ]
+  },
+  "rawHeaders": "Received: by mail.suspicious-relay.ru (Postfix) with ESMTP id AB12CD34; Wed, 03 Sep 2026 08:12:44 +0000\nReceived: from unknown [185.220.101.47] by mail.suspicious-relay.ru with SMTP id XY98ZW76; Wed, 03 Sep 2026 08:12:40 +0000\nReceived: from mx1.freehostingnow.net (mx1.freehostingnow.net [45.135.232.19]) by mail.suspicious-relay.ru with ESMTP; Wed, 03 Sep 2026 08:12:38 +0000\nAuthentication-Results: mx.google.com; spf=fail smtp.mailfrom=freehostingnow.net; dkim=none; dmarc=fail\nFrom: \"PayPal Security Team\" <security@freehostingnow.net>\nReturn-Path: <bounce@freehostingnow.net>\nMessage-ID: <20260903081244.AB12CD34@freehostingnow.net>\nSubject: Urgent: Your Account Has Been Limited - Verify Now\nTo: victim@example.com\nContent-Type: text/plain",
+  "rawBody": "Dear Customer,\n\nWe have detected unusual activity on your PayPal account. Your account\nhas been temporarily limited. Please verify your information immediately\nby clicking the link below or your account will be permanently suspended\nwithin 24 hours.\n\nhttp://paypal-verify-account.freehostingnow.net/login\n\nRegards,\nPayPal Security Team\n"
+}
